@@ -2,6 +2,7 @@
 def runProgram():
   print('Hello! This program should help you find areas for different shapes.')
   find_shape = input('What shape do you want to find an area for? ')
+  find_shape = find_shape.lower()
 
   ## Square ##
   if find_shape == 'square':
