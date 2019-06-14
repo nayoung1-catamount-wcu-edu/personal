@@ -1,2 +1,2 @@
 # personal
-Safe place for personal projects
+Place for personal projects.
