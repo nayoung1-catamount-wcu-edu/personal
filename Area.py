@@ -6,11 +6,9 @@ spell = SpellChecker()
 ## Area ##
 def runProgram():
   print('Hello! This program will help you find areas for different shapes.')
-  find_shape = spell.correction(input('What shape do you want to find an area for? '))
-
-  shape_input = spell.candidates(input('What shape do you want to find an area for? '))
+  find_shape = spell.candidates(input('What shape do you want to find an area for? '))
   
-  for shape in shape_input:
+  for shape in find_shape:
     if (shape == 'square' or \
       shape == 'rectangle' or \
       shape == 'parallelogram' or \
@@ -40,6 +38,7 @@ def runProgram():
           print('Value cannot be less than or equal to 0.')
       except:
         print('Please enter a numeric value.')
+        continue
 
       # Print area of square
       square = side**2
@@ -61,6 +60,7 @@ def runProgram():
           print('Value cannot be less than or equal to 0.')
       except:
         print('Please enter a numeric value.')
+        continue
 
     # Enter hight
     number = 0
@@ -73,6 +73,7 @@ def runProgram():
           print('Value cannot be less than or equal to 0.')
       except:
         print('Please enter a numeric value.')
+        continue
 
     # Print area of rectangle
     rectangle = length*height
@@ -95,6 +96,7 @@ def runProgram():
           print('Value cannot be less than or equal to 0.')
       except:
         print('Please enter a numeric value.')
+        continue
 
     # Enter hight
     number = 0
@@ -107,6 +109,7 @@ def runProgram():
           print('Value cannot be less than or equal to 0.')
       except:
         print('Please enter a numeric value.')
+        continue
 
     # Print area of parallelogram
     parallelogram = length * height
@@ -129,6 +132,7 @@ def runProgram():
           print('Value cannot be less than or equal to 0.')
       except:
         print('Please enter a numeric value.')
+        continue
 
     # Enter b1
     number = 0
@@ -141,6 +145,7 @@ def runProgram():
           print('Value cannot be less than or equal to 0.')
       except:
         print('Please enter a numeric value.')
+        continue
 
     # Enter b2
     number = 0
@@ -153,6 +158,7 @@ def runProgram():
           print('Value cannot be less than or equal to 0.')
       except:
         print('Please enter a numeric value.')
+        continue
 
     # Print area of trapezoid
     trapezoid = ((height)/2)*(b1 + b2)
@@ -176,6 +182,7 @@ def runProgram():
           print('Value cannot be less than or equal to 0.')
       except:
         print('Please enter a numeric value.')
+        continue
 
     # Print area of circle
     circle = math.pi*(r**2)
@@ -199,6 +206,7 @@ def runProgram():
           print('Value cannot be less than or equal to 0.')
       except:
         print('Please enter a numeric value.')
+        continue
 
     # Enter r2
     number = 0
@@ -211,6 +219,7 @@ def runProgram():
           print('Value cannot be less than or equal to 0.')
       except:
         print('Please enter a numeric value.')
+        continue
 
     # Print area of ellipse
     ellipse = math.pi*(r_1*r_2)
@@ -233,6 +242,7 @@ def runProgram():
           print('Value cannot be less than or equal to 0.')
       except:
         print('Please enter a numeric value.')
+        continue
 
     # Enter hight
     number = 0
@@ -245,6 +255,7 @@ def runProgram():
           print('Value cannot be less than or equal to 0.')
       except:
         print('Please enter a numeric value.')
+        continue
 
     # Print area of triangle
     triangle = (0.5)*(base)*(height)
@@ -267,6 +278,7 @@ def runProgram():
           print('Value cannot be less than or equal to 0.')
       except:
         print('Please enter a numeric value.')
+        continue
 
     # Print area of equlateral triangle
     eq_triangle = ((3**0.5)/4)*(side_a**2)
