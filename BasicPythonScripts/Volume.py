@@ -26,12 +26,12 @@ def runProgram():
   if find_shape == 'cube':
     print('\nFinding Volume of a Cube')
 
-    # Enter sideA
+    # Enter side
     number = 0
     while number == 0:
       try:
-        sideA = int(input('Enter a value for sideA: '))
-        if sideA > 0:
+        side = int(input('Enter a value for a side: '))
+        if side > 0:
           number = 1
         else:
           number = 0
@@ -41,7 +41,7 @@ def runProgram():
         continue
 
       # Print volume of cube
-      cube = sideA**3
+      cube = side**3
       print('Volume of cube: ',cube,'\n')
 
 
