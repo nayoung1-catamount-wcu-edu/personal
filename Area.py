@@ -1,13 +1,32 @@
+## Imports ##
+from spellchecker import SpellChecker
+import math
+spell = SpellChecker()
+
 ## Area ##
 def runProgram():
-  print('Hello! This program should help you find areas for different shapes.')
-  find_shape = input('What shape do you want to find an area for? ')
-  find_shape = find_shape.lower()
+  print('Hello! This program will help you find areas for different shapes.')
+  find_shape = spell.correction(input('What shape do you want to find an area for? '))
+
+  shape_input = spell.candidates(input('What shape do you want to find an area for? '))
+  
+  for shape in shape_input:
+    if (shape == 'square' or \
+      shape == 'rectangle' or \
+      shape == 'parallelogram' or \
+      shape == 'trapezoid' or \
+      shape == 'circle' or \
+      shape == 'triangle' or \
+      shape == 'equilateral triangle' or \
+      shape == 'ellipse'):
+        find_shape = shape
+    else:
+      shape = 'none'
+
 
   ## Square ##
   if find_shape == 'square':
-    print('\n')
-    print('Finding Area of a Square')
+    print('\nFinding Area of a Square')
 
     # Enter base/height
     number = 0
@@ -144,7 +163,6 @@ def runProgram():
   elif find_shape == 'circle':
     print('\n')
     print('Finding Area of a Circle')
-    import math
     math.pi
 
     # Enter r
@@ -168,7 +186,6 @@ def runProgram():
   elif find_shape == 'ellipse':
     print('\n')
     print('Finding Area of an Ellipse')
-    import math
     math.pi
 
     # Enter r1
@@ -260,10 +277,8 @@ def runProgram():
   else:
     print('Unfortunately, this program cannot find the area for that shape.')
 
-  print('Thanks for using this program!')
-
   while True:
-    print("Enter 'yes' for exit.")
+    print("Thanks for using this program. If you want to exit, enter 'yes'.  If you would like to run the program again, enter 'no'.")
     val = (input('Do you want to exit? '))
     if val == 'yes':
       print('Goodbye!')
@@ -272,6 +287,7 @@ def runProgram():
       exit(0)
     else:
       print('Resetting program...','\n')
+      import time
       time.sleep(2)
       break
 
