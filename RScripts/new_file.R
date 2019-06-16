@@ -1,9 +1,8 @@
 # Set working directory
 setwd('C:\Users\owner\OneDrive\Desktop\personal\RScripts')
 
-area_cube <- x**3
+data(packages = diamonds)
 
-x == 3
+diamonds
 
-print(area_cube)
-
+summary(diamonds)
