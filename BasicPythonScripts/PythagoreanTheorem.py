@@ -6,7 +6,7 @@ def runProgram():
   number = 0
   while number == 0:
     try:
-      variable_a = int(input('Enter a value for side a: '))
+      variable_a = float(input('Enter a value for side a: '))
       number = 1
     except:
       print('Please enter a numeric value.')
@@ -15,7 +15,7 @@ def runProgram():
   number = 0
   while number == 0:
     try:
-      variable_b = int(input('Enter a value for side b: '))
+      variable_b = float(input('Enter a value for side b: '))
       number = 1
     except: 
       print('Please enter a numeric value.')

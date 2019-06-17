@@ -30,7 +30,7 @@ def runProgram():
     number = 0
     while number == 0:
       try:
-        side = int(input('Enter a value for a side: '))
+        side = float(input('Enter a value for a side: '))
         if side > 0:
           number = 1
         else:
@@ -53,7 +53,7 @@ def runProgram():
     number = 0
     while number == 0:
       try:
-        length = int(input('Enter a value for length: '))
+        length = float(input('Enter a value for length: '))
         if length > 0:
           number = 1
         else:
@@ -66,7 +66,7 @@ def runProgram():
     number = 0
     while number == 0:
       try:
-        height = int(input('Enter a value for height: '))
+        height = float(input('Enter a value for height: '))
         if height > 0:
           number = 1
         else:
@@ -89,7 +89,7 @@ def runProgram():
     number = 0
     while number == 0:
       try:
-        length = int(input('Enter a value for length: '))
+        length = float(input('Enter a value for length: '))
         if length > 0:
           number = 1
         else:
@@ -102,7 +102,7 @@ def runProgram():
     number = 0
     while number == 0:
       try:
-        height = int(input('Enter a value for height: '))
+        height = float(input('Enter a value for height: '))
         if height > 0:
           number = 1
         else:
@@ -125,7 +125,7 @@ def runProgram():
     number = 0
     while number == 0:
       try:
-        height = int(input('Enter a value for height: '))
+        height = float(input('Enter a value for height: '))
         if height > 0:
           number = 1
         else:
@@ -138,7 +138,7 @@ def runProgram():
     number = 0
     while number == 0:
       try:
-        b1 = int(input('Enter a value for b1: '))
+        b1 = float(input('Enter a value for b1: '))
         if b1 > 0:
           number = 1
         else:
@@ -151,7 +151,7 @@ def runProgram():
     number = 0
     while number == 0:
       try:
-        b2 = int(input('Enter value for b2: '))
+        b2 = float(input('Enter value for b2: '))
         if b2 > 0:
           number = 1
         else:
@@ -175,7 +175,7 @@ def runProgram():
     number = 0
     while number == 0:
       try:
-        r = int(input('Enter a value for r: '))
+        r = float(input('Enter a value for r: '))
         if r > 0:
           number = 1
         else:
@@ -199,7 +199,7 @@ def runProgram():
     number = 0
     while number == 0:
       try:
-        r_1 = int(input('Enter a value for r1: '))
+        r_1 = float(input('Enter a value for r1: '))
         if r_1 > 0:
           number = 1
         else:
@@ -212,7 +212,7 @@ def runProgram():
     number = 0
     while number == 0:
       try:
-        r_2 = int(input('Enter a value for r2: '))
+        r_2 = float(input('Enter a value for r2: '))
         if r_2 > 0:
           number = 1
         else:
@@ -235,7 +235,7 @@ def runProgram():
     number = 0
     while number == 0:
       try:
-        base = int(input('Enter a value for length: '))
+        base = float(input('Enter a value for length: '))
         if base> 0:
           number = 1
         else:
@@ -248,7 +248,7 @@ def runProgram():
     number = 0
     while number == 0:
       try:
-        height = int(input('Enter a value for height: '))
+        height = float(input('Enter a value for height: '))
         if height> 0:
           number = 1
         else:
@@ -271,7 +271,7 @@ def runProgram():
     number = 0
     while number == 0:
       try:
-        side_a = int(input('Enter a value for length: '))
+        side_a = float(input('Enter a value for length: '))
         if side_a > 0:
           number = 1
         else:
