@@ -1,6 +1,6 @@
 print('Values are as follows: \nx = displacement: xi, xf','\nv = velocity: vi, vf','\nt = time','\na = acceleration')
 
-equation = print(input('\nWhat value are you trying to find? '))
+equation = (input('\nWhat value are you trying to find? '))
 
 if equation == 'xi':
   print('Finding xi')
@@ -12,7 +12,7 @@ if equation == 'xi':
       vf = int(input('Enter value for final velocity: '))
       a = int(input('Enter value for acceleration: '))
       t = int(input('Enter a value for time: '))
-      xi = (xf-(vi*t)-(0.5*(a)*(t**2)))
+      xi = (xf-(vi*t)-(0.5*(-a)*(t**2)))
       xi2 = (xf-((vf-vi)/2)*t)
       print(xi == xi2, xi)
     except:
@@ -28,7 +28,7 @@ elif equation == 'xf':
       vf = int(input('Enter value for final velocity: '))
       t = int(input('Enter a value for time: '))
       a = int(input('Enter value for acceleration: '))
-      xf = (vi*t)+(0.5*a*(t**2))+xi
+      xf = (vi*t)+(0.5*(-a)*(t**2))+xi
       xf2 = (((vf+vi)/2)*t)+xi
       xf == xf2
       print(xf == xf2)
@@ -57,7 +57,7 @@ elif equation == 't':
       vi = int(input('Enter value for initial velocity: '))
       vf = int(input('Enter value for final velocity: '))
       a = int(input('Enter value for acceleration: '))
-      t = ((vf-vi)/a)
+      t = ((vf-vi)/(-a))
       print(t)
     except:
       print('Please enter a number. If you are solving for this varible, press "1".')
@@ -70,7 +70,7 @@ elif equation == 'vi':
 
 
 
-value = 0
+'''value = 0
 while value == 0:
  try:
   vf = int(input('Enter value for final velocity: '))
@@ -99,4 +99,4 @@ while value == 0:
 #(xf-xi) == ((0.5*(vf + vi))*t)
 #(vf**2) == ((vi**2) + (2*a*(xf-xi)))
 #vf == vi + (a*t)
-#(xf-xi) == (vf*t - (0.5(a)(t**2)))"""
+#(xf-xi) == (vf*t - (0.5(a)(t**2)))'''
