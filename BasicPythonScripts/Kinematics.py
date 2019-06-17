@@ -21,6 +21,7 @@ def runProgram():
         t = float(input('Enter a value for time: '))
         di = (df-(vi*t)-(0.5*(-a)*(t**2)))
         print('\nInitial Displacement is: ',di)
+        break
       except:
         break
 
@@ -36,6 +37,7 @@ def runProgram():
         value = 1
         df = (vi*t)+(0.5*(-a)*(t**2))
         print('\nFinal Displacement is: ',df)
+        break
       except:
         break
 
@@ -52,6 +54,7 @@ def runProgram():
         value = 1
         a = ((vf**2-vi**2)/(2*d))
         print('\nAcceleration is: ',a)
+        break
       except:
         break
         
@@ -67,6 +70,7 @@ def runProgram():
         value = 1
         t = (((2*d)/(-a))**0.5)
         print('\nTime is: ',t)
+        break
       except:
         break
     
@@ -82,6 +86,7 @@ def runProgram():
         value = 1
         vf = ((vi**2 + 2*(-a)*d)**0.5)
         print('\nFinal Velocity is: ',vf)
+        break
       except:
         break
 
@@ -98,17 +103,18 @@ def runProgram():
         value = 1
         vi = (vf - (-a)*t)
         print('\nInitial Velocity is: ',vi)
+        break
       except:
         break
 
   while True:
     print("\nThanks for using this program. If you want to exit, enter 'yes'. If you would like to run the program again, enter 'no'.")
-    val = spell.candidates(input('\nDo you want to exit? '))
+    val = (input('Do you want to exit? '))
     if val == 'yes':
       print('Goodbye!')
       import time
       time.sleep(2)
-      exit(0)
+      exit()
     else:
       print('Resetting program...','\n')
       import time
