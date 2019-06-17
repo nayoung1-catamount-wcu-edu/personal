@@ -291,7 +291,7 @@ def runProgram():
 
   while True:
     print("Thanks for using this program. If you want to exit, enter 'yes'.  If you would like to run the program again, enter 'no'.")
-    val = (input('Do you want to exit? '))
+    val = spell.candidates(input('Do you want to exit? '))
     if val == 'yes':
       print('Goodbye!')
       import time
