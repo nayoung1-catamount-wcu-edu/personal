@@ -10,6 +10,7 @@ def runProgram():
    shape == 'rectangle' or \
    shape == 'parallelogram' or \
    shape == 'trapezoid' or \
+   shape == 'irregular' or \
    shape == 'circle' or \
    shape == 'triangle'):
    find_shape = shape
@@ -17,23 +18,42 @@ def runProgram():
    shape = 'none'
 
  if find_shape == 'square' or find_shape == 'rectangle' or find_shape == 'parallelogram':
-  length = int(input('Enter length: '))
-  width = int(input('Enter width: '))
+  length = float(input('Enter length: '))
+  width = float(input('Enter width: '))
   perimeter = 2*(length + width)
   print('Perimeter for',find_shape,'is: ',perimeter)
 
  if find_shape == 'triangle':
-  sideA = int(input('Enter side a: '))
-  sideB = int(input('Enter side b: '))
-  sideC = int(input('Enter side c: '))
+  sideA = float(input('Enter side a: '))
+  sideB = float(input('Enter side b: '))
+  sideC = float(input('Enter side c: '))
   perimeter = sideA + sideB + sideC
   print('Perimeter is: ',perimeter)
 
  if find_shape == 'circle':
-  r = int(input('Enter radius: '))
+  r = float(input('Enter radius: '))
   d = 2*r
   C = math.pi*d
   print('Circumference is: ',C)
+
+ if find_shape == 'trapezoid':
+  a = float(input('Enter side 1: '))
+  b1 = float(input('Enter side 2: '))
+  b2 = float(input('Enter side 3: '))
+  c = float(input('Enter side 4:'))
+  p = a + b1 + b2 + c
+  print('Perimeter for',find_shape,'is :',p)
+
+ if find_shape == 'irregular':
+  sides = float(input('How many sides are there: '))
+  s1 = float(input('Enter side: '))
+  value = 0
+  while value == 0:
+   s = s1 + 1
+   s = (s1 + 1)
+   value = 1
+   p = s
+   print(p)
 
  while True:
    print("\nThanks for using this program. If you want to exit, enter 'yes'.  If you would like to run the program again, enter 'no'.")
