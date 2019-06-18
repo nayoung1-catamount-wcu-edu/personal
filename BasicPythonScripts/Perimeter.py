@@ -10,7 +10,6 @@ def runProgram():
    shape == 'rectangle' or \
    shape == 'parallelogram' or \
    shape == 'trapezoid' or \
-   shape == 'irregular' or \
    shape == 'circle' or \
    shape == 'triangle'):
    find_shape = shape
@@ -43,18 +42,7 @@ def runProgram():
   c = float(input('Enter side 4:'))
   p = a + b1 + b2 + c
   print('Perimeter for',find_shape,'is :',p)
-
- if find_shape == 'irregular':
-  sides = float(input('How many sides are there: '))
-  s1 = float(input('Enter side: '))
-  value = 0
-  while value == 0:
-   s = s1 + 1
-   s = (s1 + 1)
-   value = 1
-   p = s
-   print(p)
-
+  
  while True:
    print("\nThanks for using this program. If you want to exit, enter 'yes'.  If you would like to run the program again, enter 'no'.")
    val = (input('Do you want to exit? '))
