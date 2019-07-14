@@ -1,3 +1,5 @@
+#!/usr/bin/env python3.7
+
 hourly_pay = float(input('Enter hourly pay: '))
 hours_worked = float(input('Enter hours worked: '))
 day_pay = hourly_pay * hours_worked

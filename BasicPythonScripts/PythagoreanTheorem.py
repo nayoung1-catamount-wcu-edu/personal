@@ -1,3 +1,5 @@
+#!/usr/bin/env python3.7
+
 ## Pythagorean Theorem ##
 def runProgram():
   print('Solver for Pythagorean Theorem', '\n')

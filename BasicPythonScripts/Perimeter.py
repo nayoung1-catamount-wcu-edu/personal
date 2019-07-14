@@ -1,3 +1,5 @@
+#!/usr/bin/env python3.7
+
 from spellchecker import SpellChecker
 import math
 spell = SpellChecker()
