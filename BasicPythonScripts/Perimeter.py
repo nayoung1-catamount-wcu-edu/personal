@@ -1,9 +1,12 @@
 #!/usr/bin/env python3.7
 
+## Imports ##
 from spellchecker import SpellChecker
 import math
 spell = SpellChecker()
 
+
+## Perimeter ##
 def runProgram():
  find_shape = spell.candidates(input('What shape do you want to find perimeter for? '))
 
@@ -18,12 +21,16 @@ def runProgram():
   else:
    shape = 'none'
 
+
+## Square ##
  if find_shape == 'square' or find_shape == 'rectangle' or find_shape == 'parallelogram':
   length = float(input('Enter length: '))
   width = float(input('Enter width: '))
   perimeter = 2*(length + width)
   print('Perimeter for',find_shape,'is: ',perimeter)
 
+
+## Triangle ##
  if find_shape == 'triangle':
   sideA = float(input('Enter side a: '))
   sideB = float(input('Enter side b: '))
@@ -31,12 +38,16 @@ def runProgram():
   perimeter = sideA + sideB + sideC
   print('Perimeter is: ',perimeter)
 
+
+## Circle ##
  if find_shape == 'circle':
   r = float(input('Enter radius: '))
   d = 2*r
   C = math.pi*d
   print('Circumference is: ',C)
 
+
+## Trapezoid ##
  if find_shape == 'trapezoid':
   a = float(input('Enter side 1: '))
   b1 = float(input('Enter side 2: '))
@@ -44,7 +55,9 @@ def runProgram():
   c = float(input('Enter side 4:'))
   p = a + b1 + b2 + c
   print('Perimeter for',find_shape,'is :',p)
-  
+
+
+## End ##  
  while True:
    print("\nThanks for using this program. If you want to exit, enter 'yes'.  If you would like to run the program again, enter 'no'.")
    val = (input('Do you want to exit? '))

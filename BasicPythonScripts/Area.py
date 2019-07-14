@@ -287,7 +287,7 @@ def runProgram():
     print('Area of equilateral triangle: ',eq_triangle,'\n')
 
 
-  ## Other ##
+  ## End ##
   else:
     print('Unfortunately, this program cannot find the area for that shape.')
 
