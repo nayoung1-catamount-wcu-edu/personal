@@ -1,18 +1,12 @@
 import pandas as pd
 import random
 
+input('Press a key to begin...')
+
 df = pd.read_excel('/Users/owner/Onedrive/Desktop/personal/Data/finished_bible.xlsx')
 
-print(df['identifier'].head())
+#random_number = 1001001
+n = random.randint(0,31102)
+n2 = n+1
 
-""" random_number = random.sample(range(1001001,1050026),1)
-
-print(random_number)
-
-def runProgram():
- for identifier in df_id:
-  if identifier == random_number:
-   print(identifier)
-
-while True:
- runProgram() """
+print(df[n:n2])
