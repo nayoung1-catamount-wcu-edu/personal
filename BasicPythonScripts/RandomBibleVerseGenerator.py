@@ -17,7 +17,7 @@ def runProgram():
 
  # Print random verse
   print(df[n:n2])
-  break 
+  break
 
 while True:
  runProgram()
