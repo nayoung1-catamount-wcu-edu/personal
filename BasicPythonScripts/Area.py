@@ -4,7 +4,6 @@
 from spellchecker import SpellChecker
 import math
 spell = SpellChecker()
-
 ## Area ##
 def runProgram():
   print('Hello! This program will help you find areas for different shapes.')
