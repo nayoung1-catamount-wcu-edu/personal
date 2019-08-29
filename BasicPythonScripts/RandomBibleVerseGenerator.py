@@ -6,7 +6,7 @@ def runProgram():
  input('Press a key to begin...')
 
  # Load dataframe
- df = pd.read_excel('/Users/owner/Onedrive/Desktop/personal/Data/finished_bible.xlsx')
+ df = pd.read_excel('/Users/natha/Onedrive/Desktop/personal/Data/finished_bible.xlsx')
 
  enternumber = 0
  while True:
