@@ -30,6 +30,8 @@ def runProgram():
   print('Side c is: ',theorem)
 
   print('Thanks for using this program!')
+  import time
+  time.sleep(2)
 
   # Exit or rerun program
   print("Enter 'yes' for exit, 'no' to run the program again.")
