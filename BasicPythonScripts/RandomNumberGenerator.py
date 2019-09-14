@@ -1,13 +1,13 @@
 #!/usr/bin/env python3.7
 
-## This code is an attempt to use a random number generator to create a 5 number summary.
+## This code is an attempt to use a random number generator to eventually create a 5 number summary.
 
 # User input for the lowest value in a range.
 enternumber = 0
   
 while enternumber == 0:
   try:
-    range_low = float(input("Lowest number of range: "))
+    range_low = int(input("Lowest number of range: "))
     enternumber = 1
   except:
     print("Bummer. That broke. Please enter a numeric value.")
@@ -17,7 +17,7 @@ enternumber = 0
 
 while enternumber == 0:
   try:
-    range_high = float(input("Highest number of range: "))
+    range_high = int(input("Highest number of range: "))
     enternumber = 1
   except:
     print("Bummer. That broke. Please enter a numeric value.")
@@ -27,7 +27,7 @@ enternumber = 0
 
 while enternumber == 0:
   try: 
-    amount_of_variables = float(input("How many numbers do you want? "))
+    amount_of_variables = int(input("How many numbers do you want? "))
     enternumber = 1
   except:
     print("Bummer. That broke. Please enter a numeric value.")
