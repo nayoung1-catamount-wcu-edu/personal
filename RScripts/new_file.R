@@ -53,7 +53,7 @@ server <- function(input, output) {
       ylab = "Stock Price")
     legend(
       x = "topleft", 
-      as.character(levels(stocks$index)), 
+      as.character(levels(stocks$Date)),
       col = colors[1:4], 
       pch = 19, 
       cex = 1.5)})
@@ -63,4 +63,3 @@ server <- function(input, output) {
 shinyApp(
   ui = ui,
   server = server)
-
