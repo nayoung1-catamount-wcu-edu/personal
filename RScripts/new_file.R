@@ -11,7 +11,7 @@ library(dplyr)
 setwd('C:/Users/natha/OneDrive/Desktop/personal/RScripts')
 
 # Load Data
-stocks <- read.csv("C:/Users/natha/OneDrive/Desktop/personal/Data/closing_stocks.csv")
+stocks <- read.csv("C:/Users/natha/OneDrive/Desktop/personal/Data/closing_stocks_unpivoted.csv")
 
 colors <- brewer.pal(4, "Set3")
 
@@ -30,8 +30,8 @@ ui <- fluidPage(
       checkboxGroupInput(
         inputId = "stockID",
         label = "Stock ID",
-        choices = c("MSFT", "AAPL", "GOOG", "AMZN"),
-        selected = c("MSFT", "AAPL", "GOOG", "AMZN"))),
+        choices = c("MSFT", "AAPL", "GOOG", "AMZN", "IBM"),
+        selected = c("MSFT", "AAPL", "GOOG", "AMZN", "IBM"))),
     mainPanel(
       plotOutput(
         outputId = "plot"))))
@@ -44,16 +44,16 @@ server <- function(input, output) {
     plot(
       x = subset$Date, 
       y = subset$price, 
-      col = colors[as.integer(subset$Rating)], 
+      col = colors[as.integer(stocks$StockName)], 
       pch = 19,
       cex = 1.5,
-      xlim = c(0, 100),
+      xlim = as.Date(c("2010-01-01","2019-12-31")),
       ylim = c(0, 800),
       xlab = "Date",
       ylab = "Stock Price")
     legend(
       x = "topleft", 
-      as.character(levels(stocks$Date)),
+      as.character(levels(stocks$StockName)),
       col = colors[1:4], 
       pch = 19, 
       cex = 1.5)})
