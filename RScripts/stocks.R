@@ -34,7 +34,7 @@ ui <- fluidPage(
         selected = c("MSFT", "AAPL", "GOOG", "AMZN", "IBM")),
     mainPanel(
       plotOutput(
-        outputId = "plot"))))
+        outputId = "plot")))))
 
 # Create a server
 server <- function(input, output) {
@@ -48,3 +48,4 @@ server <- function(input, output) {
 shinyApp(
   ui = ui,
   server = server)
+
