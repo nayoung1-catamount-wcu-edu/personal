@@ -19,4 +19,4 @@ if time_this_week > time_limit:
 elif time_this_week == time_limit:
     print('Max score! Well done!')
 else:
-    print('You have too much free time this week!')
+    print('You have too much free time this week.  Get back to work!')
