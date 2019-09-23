@@ -4,6 +4,3 @@ Currently, I have two major folders with random simple projects in them.  I hope
 
 ### Basic Python Scripts
 This folder includes Python scripts.
-
-### R Scripts
-This folder will include R scripts.
