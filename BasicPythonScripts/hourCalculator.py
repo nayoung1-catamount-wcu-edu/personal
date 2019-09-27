@@ -1,3 +1,4 @@
+# Time Worked #
 time_limit = 25
 
 ra = 17
@@ -20,3 +21,12 @@ elif time_this_week == time_limit:
     print('Max score! Well done!')
 else:
     print('You have too much free time this week.  Get back to work!')
+
+# Pay For Time Worked #
+ra_pay = 10
+tutor_pay = 8
+catTran_pay = 12.20
+dataDashboard_pay = 10
+
+totalPay = (ra*ra_pay) + (tutoring*tutor_pay) + (catTran*catTran_pay) + (dataDashboard*dataDashboard_pay)
+print('Expect a check for: $',totalPay)
