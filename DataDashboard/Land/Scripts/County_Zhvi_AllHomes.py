@@ -13,7 +13,7 @@ import pandas as pd
 
 # Create Backups
 df_backup = pd.read_csv('./Updates/STG_ZLLW_County_Zhvi_AllHomes.txt')
-df_backup.to_csv('./Backups/Data/STG_ZLLW_County_Zhvi_AllHomes_BACKUP.txt')
+df_backup.to_csv('./Backups/STG_ZLLW_County_Zhvi_AllHomes_BACKUP.txt')
 
 
 # In[4]:
