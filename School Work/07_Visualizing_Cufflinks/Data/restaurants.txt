@@ -1,0 +1,51 @@
+Rank,Name,Country
+1,Osteria Francescana ,Italy
+2,El Celler de Can Roca ,Spain
+3,Mirazur ,France
+4,Eleven Madison Park ,USA
+5,Gaggan ,Thailand
+6,Central ,Peru
+7,Maido ,Peru
+8,L’Arpege ,France
+9,Mugaritz ,Spain
+10,Asador Etxebarri ,Spain
+11,Quintonil ,Mexico
+12,Blue Hill at Stone Barns ,USA
+13,Pujol ,Mexico
+14,Steirereck ,Austria
+15,White Rabbit ,Russia
+16,Piazza Duomo ,Italy
+17,Den ,Japan
+18,Disfrutar ,Spain
+19,Geranium ,Denmark
+20,Attica ,Australia
+21,Alain Ducasse au Plaza Athénée ,France
+22,Narisawa ,Japan
+23,Le Calandre ,Italy
+24,Ultraviolet by Paul Pairet ,China
+25,Cosme ,USA
+26,Le Bernardin ,USA
+27,Boragó ,Chile
+28,Odette ,Singapore
+29,Alléno Paris au Pavillon Ledoyen ,France
+30,D.O.M. ,Brazil
+31,Arzak ,Spain
+32,Tickets ,Spain
+33,The Clove Club ,UK
+34,Alinea ,USA
+35,Maaemo ,Norway
+36,Reale ,Italy
+37,Restaurant Tim Raue ,Germany
+38,Lyle’s ,UK
+39,Astrid y Gastón ,Peru
+40,Septime ,France
+41,Nihonryori RyuGin ,Japan
+42,The Ledbury ,UK
+43,Azurmendi ,Spain
+44,Mikla ,Turkey
+45,Dinner by Heston Blumenthal ,UK
+46,Saison ,USA
+47,Schloss Schauenstein ,Switzerland
+48,Hiša Franko ,Slovenia
+49,Nahm ,Thailand
+50,The Test Kitchen ,South Africa

@@ -1,0 +1,6 @@
+Store Data,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,
+0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+1,OrderID,Order Date,Product,Size (US),Colour,Price ($),Store
+2,1,42006,Boots,7,Gold,25,California
+3,2,42006,Boots,4,Black,25,New York
+4,3,42006,Boots,6,Red,25,Georgia

@@ -1,0 +1,1001 @@
+OrderID,Order Date,Product,Size (US),Colour,Price ($),Store
+1,1/2/2015,Boots,7,Gold,25,California
+2,1/2/2015,Boots,4,Black,25,New York
+3,1/2/2015,Boots,6,Red,25,Georgia
+4,1/3/2015,House Slippers,11,Black,8,Internet
+5,1/3/2015,Boots,6,Silver,25,California
+6,1/3/2015,Boots,5,Gold,25,New York
+7,1/3/2015,Boots,10,Black,25,California
+8,1/3/2015,Boots,9,Black,25,New York
+9,1/3/2015,House Slippers,8,Black,8,Internet
+10,1/4/2015,Boots,12,Black,25,New York
+11,1/5/2015,Boots,7,Black,25,New York
+12,1/5/2015,House Slippers,5,Red,8,Internet
+13,1/6/2015,Boots,7,Red,25,New York
+14,1/6/2015,Boots,11,Red,25,Texas
+15,1/6/2015,Boots,6,Gold,25,Internet
+16,1/7/2015,House Slippers,8,Gold,8,Internet
+17,1/7/2015,Boots,9,Red,25,Internet
+18,1/7/2015,Boots,11,Silver,25,Internet
+19,1/9/2015,Boots,12,Silver,25,New York
+20,1/9/2015,Boots,6,Silver,25,California
+21,1/9/2015,Boots,8,Black,25,Internet
+22,1/9/2015,Sneakers,11,Black,20,California
+23,1/10/2015,House Slippers,11,Red,8,California
+24,1/10/2015,Sandals,9,Black,12,Internet
+25,1/10/2015,Sneakers,9,Gold,20,Texas
+26,1/11/2015,Slip-on Shoes,6,Black,25,Washington
+27,1/12/2015,Boots,10,Black,25,Internet
+28,1/12/2015,House Slippers,5,Gold,8,Washington
+29,1/14/2015,Sandals,6,Gold,12,Washington
+30,1/14/2015,Slip-on Shoes,11,Black,25,Internet
+31,1/15/2015,Sandals,11,Black,12,Georgia
+32,1/15/2015,Slip-on Shoes,5,Black,25,Internet
+33,1/15/2015,Stilletos,4,Gold,30,Georgia
+34,1/15/2015,Stilletos,12,Silver,30,Internet
+35,1/16/2015,House Slippers,6,Gold,8,New York
+36,1/16/2015,Sandals,8,Black,12,Washington
+37,1/16/2015,Stilletos,4,Red,30,Internet
+38,1/17/2015,House Slippers,11,Gold,8,California
+39,1/18/2015,Sandals,9,Red,12,New York
+40,1/18/2015,Stilletos,8,Red,30,Internet
+41,1/19/2015,Sandals,7,Black,12,New York
+42,1/19/2015,Slip-on Shoes,6,Black,25,California
+43,1/19/2015,Slip-on Shoes,5,Gold,25,Internet
+44,1/19/2015,Sneakers,4,Gold,20,New York
+45,1/20/2015,Boots,8,Silver,25,Internet
+46,1/20/2015,House Slippers,4,Silver,8,California
+47,1/20/2015,Stilletos,9,Red,30,Internet
+48,1/21/2015,Boots,9,Black,25,Internet
+49,1/21/2015,Sandals,8,Silver,12,Internet
+50,1/21/2015,Stilletos,10,Red,30,Internet
+51,1/22/2015,Beach Shoes,11,Black,10,California
+52,1/22/2015,Boots,11,Gold,25,New York
+53,1/22/2015,House Slippers,8,Silver,8,California
+54,1/22/2015,Slip-on Shoes,7,Black,25,Internet
+55,1/23/2015,Boots,12,Black,25,Washington
+56,1/23/2015,Slip-on Shoes,8,Silver,25,Texas
+57,1/24/2015,Beach Shoes,12,Gold,10,Washington
+58,1/24/2015,Beach Shoes,7,Gold,10,Internet
+59,1/24/2015,Slip-on Shoes,6,Gold,25,New York
+60,1/24/2015,Sneakers,10,Red,20,Georgia
+61,1/25/2015,Slip-on Shoes,10,Gold,25,Washington
+62,1/26/2015,House Slippers,12,Black,8,Washington
+63,1/26/2015,Sandals,6,Gold,12,Internet
+64,1/26/2015,Slip-on Shoes,12,Red,25,Texas
+65,1/27/2015,Sandals,5,Black,12,New York
+66,1/27/2015,Sneakers,10,Gold,20,California
+67,1/27/2015,Stilletos,11,Gold,30,California
+68,1/28/2015,Stilletos,12,Silver,30,Texas
+69,1/28/2015,Boots,10,Black,25,Internet
+70,1/28/2015,Slip-on Shoes,11,Red,25,California
+71,1/28/2015,Stilletos,5,Red,30,California
+72,1/29/2015,Slip-on Shoes,6,Black,25,Washington
+73,1/29/2015,Sandals,7,Gold,12,Washington
+74,1/29/2015,Slip-on Shoes,10,Gold,25,Washington
+75,1/30/2015,Slip-on Shoes,5,Gold,25,Internet
+76,1/30/2015,Slip-on Shoes,12,Silver,25,California
+77,1/30/2015,Stilletos,9,Gold,30,Washington
+78,1/31/2015,Slip-on Shoes,10,Gold,25,Georgia
+79,1/31/2015,Slip-on Shoes,8,Gold,25,Texas
+80,1/31/2015,Slip-on Shoes,10,Silver,25,California
+81,1/31/2015,Boots,10,Red,25,Internet
+82,2/1/2015,House Slippers,6,Black,8,Georgia
+83,2/1/2015,Sneakers,11,Red,20,Texas
+84,2/1/2015,Stilletos,8,Red,30,New York
+85,2/3/2015,Slip-on Shoes,12,Gold,25,Georgia
+86,2/4/2015,Slip-on Shoes,10,Silver,25,New York
+87,2/4/2015,Stilletos,8,Red,30,Internet
+88,2/5/2015,Slip-on Shoes,12,Gold,25,California
+89,2/6/2015,House Slippers,9,Silver,8,Texas
+90,2/7/2015,Boots,9,Red,25,Washington
+91,2/7/2015,House Slippers,11,Red,8,Georgia
+92,2/7/2015,Sneakers,11,Red,20,Internet
+93,2/9/2015,Boots,10,Black,25,California
+94,2/10/2015,Boots,11,Black,25,Georgia
+95,2/11/2015,Slip-on Shoes,9,Gold,25,New York
+96,2/11/2015,Boots,6,Black,25,Georgia
+97,2/12/2015,Boots,5,Gold,25,Internet
+98,2/12/2015,Sandals,5,Silver,12,Georgia
+99,2/12/2015,Sandals,12,Red,12,Internet
+100,2/12/2015,Slip-on Shoes,4,Gold,25,New York
+101,2/12/2015,Slip-on Shoes,11,Black,25,Georgia
+102,2/13/2015,Slip-on Shoes,5,Silver,25,Washington
+103,2/14/2015,Sandals,7,Silver,12,New York
+104,2/14/2015,Slip-on Shoes,12,Black,25,Internet
+105,2/15/2015,Sneakers,11,Gold,20,Washington
+106,2/16/2015,Slip-on Shoes,7,Gold,25,New York
+107,2/16/2015,Sneakers,11,Gold,20,Washington
+108,2/17/2015,Boots,4,Silver,25,Washington
+109,2/17/2015,Sneakers,11,Red,20,Internet
+110,2/18/2015,Beach Shoes,9,Silver,10,Internet
+111,2/19/2015,Slip-on Shoes,7,Gold,25,Internet
+112,2/19/2015,Slip-on Shoes,5,Silver,25,California
+113,2/19/2015,Sneakers,5,Gold,20,Texas
+114,2/19/2015,Sneakers,12,Black,20,Texas
+115,2/20/2015,Sandals,7,Black,12,Washington
+116,2/20/2015,Sneakers,5,Red,20,New York
+117,2/20/2015,Stilletos,5,Gold,30,Internet
+118,2/21/2015,Boots,7,Silver,25,Washington
+119,2/21/2015,House Slippers,12,Silver,8,New York
+120,2/21/2015,Sandals,7,Red,12,California
+121,2/22/2015,Stilletos,10,Silver,30,Georgia
+122,2/23/2015,Slip-on Shoes,9,Gold,25,California
+123,2/23/2015,Boots,8,Black,25,New York
+124,2/23/2015,Stilletos,12,Gold,30,California
+125,2/25/2015,Boots,7,Red,25,Internet
+126,2/25/2015,Sandals,12,Black,12,Washington
+127,2/25/2015,Stilletos,6,Red,30,Texas
+128,2/25/2015,Stilletos,12,Black,30,Washington
+129,2/25/2015,Stilletos,4,Gold,30,California
+130,2/26/2015,Sneakers,7,Black,20,California
+131,2/27/2015,Boots,5,Silver,25,Internet
+132,2/27/2015,Sneakers,9,Black,20,California
+133,2/27/2015,Stilletos,4,Black,30,New York
+134,2/28/2015,Sandals,10,Gold,12,Texas
+135,2/28/2015,Sandals,9,Silver,12,California
+136,2/28/2015,Slip-on Shoes,12,Silver,25,Internet
+137,2/28/2015,Sneakers,12,Red,20,New York
+138,2/28/2015,Stilletos,7,Black,30,Georgia
+139,3/1/2015,Slip-on Shoes,10,Black,25,Texas
+140,3/1/2015,Stilletos,6,Silver,30,New York
+141,3/1/2015,Stilletos,5,Black,30,Washington
+142,3/1/2015,Stilletos,9,Red,30,Internet
+143,3/2/2015,Beach Shoes,11,Silver,10,Georgia
+144,3/2/2015,House Slippers,6,Gold,8,New York
+145,3/3/2015,Slip-on Shoes,10,Gold,25,Texas
+146,3/5/2015,House Slippers,9,Gold,8,Washington
+147,3/5/2015,Slip-on Shoes,10,Gold,25,Internet
+148,3/5/2015,Slip-on Shoes,9,Gold,25,Internet
+149,3/6/2015,Slip-on Shoes,10,Black,25,Internet
+150,3/7/2015,House Slippers,11,Black,8,New York
+151,3/7/2015,House Slippers,4,Gold,8,California
+152,3/7/2015,Slip-on Shoes,11,Red,25,Texas
+153,3/7/2015,Stilletos,11,Red,30,Washington
+154,3/8/2015,Slip-on Shoes,4,Gold,25,California
+155,3/9/2015,Sandals,12,Black,12,New York
+156,3/9/2015,Slip-on Shoes,12,Red,25,Washington
+157,3/9/2015,Slip-on Shoes,9,Black,25,Washington
+158,3/9/2015,Stilletos,9,Gold,30,Washington
+159,3/10/2015,House Slippers,8,Red,8,Internet
+160,3/10/2015,House Slippers,10,Gold,8,California
+161,3/10/2015,Sneakers,9,Gold,20,Texas
+162,3/11/2015,Sandals,7,Red,12,Georgia
+163,3/11/2015,Stilletos,7,Silver,30,Georgia
+164,3/12/2015,Slip-on Shoes,11,Silver,25,Washington
+165,3/12/2015,Boots,8,Silver,25,Georgia
+166,3/12/2015,Sandals,7,Black,12,California
+167,3/13/2015,Sneakers,4,Silver,20,Internet
+168,3/13/2015,Stilletos,12,Silver,30,Texas
+169,3/15/2015,Slip-on Shoes,10,Red,25,Georgia
+170,3/16/2015,Sneakers,6,Gold,20,Washington
+171,3/17/2015,Slip-on Shoes,4,Black,25,Georgia
+172,3/18/2015,Slip-on Shoes,6,Gold,25,Georgia
+173,3/19/2015,Beach Shoes,12,Silver,10,Internet
+174,3/19/2015,House Slippers,6,Gold,8,Washington
+175,3/19/2015,Slip-on Shoes,9,Silver,25,Texas
+176,3/19/2015,Sneakers,11,Black,20,Texas
+177,3/20/2015,Boots,4,Gold,25,Washington
+178,3/20/2015,House Slippers,6,Silver,8,Washington
+179,3/20/2015,House Slippers,7,Silver,8,Texas
+180,3/21/2015,Slip-on Shoes,10,Red,25,Internet
+181,3/21/2015,Slip-on Shoes,5,Silver,25,Texas
+182,3/23/2015,House Slippers,7,Black,8,New York
+183,3/23/2015,Sneakers,10,Black,20,Washington
+184,3/24/2015,Slip-on Shoes,5,Gold,25,California
+185,3/24/2015,Stilletos,10,Gold,30,California
+186,3/25/2015,Slip-on Shoes,12,Red,25,Internet
+187,3/25/2015,Sandals,11,Gold,12,Washington
+188,3/25/2015,Sandals,5,Black,12,Texas
+189,3/25/2015,Stilletos,7,Silver,30,Texas
+190,3/25/2015,Stilletos,8,Gold,30,California
+191,3/26/2015,Beach Shoes,5,Silver,10,Washington
+192,3/26/2015,House Slippers,10,Gold,8,Texas
+193,3/26/2015,Sneakers,6,Red,20,Georgia
+194,3/27/2015,Boots,7,Red,25,Georgia
+195,3/27/2015,Slip-on Shoes,4,Black,25,New York
+196,3/27/2015,Slip-on Shoes,11,Black,25,Washington
+197,3/27/2015,Sneakers,4,Black,20,Georgia
+198,3/28/2015,Boots,11,Black,25,California
+199,3/28/2015,Slip-on Shoes,8,Silver,25,Internet
+200,3/28/2015,Sneakers,10,Red,20,Georgia
+201,3/29/2015,Boots,6,Red,25,California
+202,3/29/2015,House Slippers,11,Gold,8,Texas
+203,3/29/2015,Sandals,10,Gold,12,Internet
+204,3/29/2015,Sneakers,7,Gold,20,Texas
+205,3/29/2015,Stilletos,7,Black,30,Texas
+206,3/30/2015,Stilletos,8,Silver,30,Georgia
+207,3/31/2015,Boots,12,Black,25,Internet
+208,3/31/2015,Boots,6,Silver,25,Texas
+209,3/31/2015,House Slippers,10,Red,8,New York
+210,3/31/2015,House Slippers,4,Red,8,New York
+211,3/31/2015,Stilletos,9,Gold,30,Georgia
+212,4/1/2015,Slip-on Shoes,6,Silver,25,Washington
+213,4/1/2015,Slip-on Shoes,6,Silver,25,Georgia
+214,4/1/2015,Boots,6,Black,25,Internet
+215,4/1/2015,House Slippers,5,Gold,8,California
+216,4/1/2015,Slip-on Shoes,6,Gold,25,New York
+217,4/2/2015,Boots,9,Black,25,Texas
+218,4/2/2015,Sandals,8,Silver,12,California
+219,4/2/2015,Stilletos,8,Gold,30,New York
+220,4/3/2015,Boots,10,Gold,25,Washington
+221,4/3/2015,Sandals,6,Red,12,Internet
+222,4/3/2015,Slip-on Shoes,4,Red,25,Georgia
+223,4/3/2015,Slip-on Shoes,5,Black,25,Washington
+224,4/4/2015,House Slippers,4,Black,8,Texas
+225,4/4/2015,Sneakers,4,Gold,20,Washington
+226,4/5/2015,Slip-on Shoes,9,Black,25,California
+227,4/6/2015,House Slippers,4,Black,8,Internet
+228,4/6/2015,Sneakers,7,Black,20,New York
+229,4/7/2015,House Slippers,5,Silver,8,New York
+230,4/7/2015,Sandals,12,Silver,12,Washington
+231,4/7/2015,Stilletos,9,Red,30,California
+232,4/8/2015,Sneakers,8,Black,20,California
+233,4/9/2015,Boots,8,Silver,25,California
+234,4/9/2015,Sandals,10,Black,12,Texas
+235,4/10/2015,Sneakers,5,Red,20,Texas
+236,4/11/2015,Slip-on Shoes,11,Black,25,Internet
+237,4/11/2015,House Slippers,6,Black,8,Georgia
+238,4/11/2015,House Slippers,12,Red,8,New York
+239,4/11/2015,Slip-on Shoes,5,Red,25,Texas
+240,4/11/2015,Sneakers,5,Red,20,Washington
+241,4/12/2015,House Slippers,8,Gold,8,Georgia
+242,4/12/2015,House Slippers,9,Gold,8,Internet
+243,4/13/2015,Beach Shoes,9,Silver,10,California
+244,4/13/2015,Boots,4,Red,25,Georgia
+245,4/13/2015,House Slippers,6,Black,8,Georgia
+246,4/14/2015,Boots,4,Black,25,New York
+247,4/14/2015,Boots,7,Red,25,Washington
+248,4/14/2015,House Slippers,6,Black,8,New York
+249,4/14/2015,House Slippers,4,Black,8,Internet
+250,4/14/2015,Sneakers,5,Black,20,Georgia
+251,4/14/2015,Stilletos,12,Black,30,New York
+252,4/15/2015,Sneakers,6,Red,20,Georgia
+253,4/16/2015,House Slippers,8,Red,8,New York
+254,4/16/2015,Sneakers,7,Gold,20,California
+255,4/17/2015,Sandals,6,Red,12,New York
+256,4/17/2015,Slip-on Shoes,6,Red,25,Internet
+257,4/18/2015,Slip-on Shoes,9,Gold,25,New York
+258,4/18/2015,Slip-on Shoes,10,Gold,25,Washington
+259,4/18/2015,Boots,8,Black,25,New York
+260,4/18/2015,Boots,7,Red,25,Texas
+261,4/18/2015,Slip-on Shoes,8,Gold,25,Texas
+262,4/19/2015,House Slippers,8,Red,8,Internet
+263,4/19/2015,Sneakers,6,Gold,20,Georgia
+264,4/20/2015,Slip-on Shoes,4,Silver,25,New York
+265,4/20/2015,Boots,8,Black,25,California
+266,4/20/2015,Sandals,9,Red,12,Texas
+267,4/20/2015,Slip-on Shoes,10,Gold,25,New York
+268,4/22/2015,Boots,11,Gold,25,Internet
+269,4/22/2015,Sandals,11,Gold,12,California
+270,4/22/2015,Sneakers,5,Silver,20,Internet
+271,4/22/2015,Stilletos,5,Red,30,Internet
+272,4/23/2015,Beach Shoes,11,Silver,10,Georgia
+273,4/23/2015,Sneakers,6,Silver,20,Georgia
+274,4/24/2015,Slip-on Shoes,4,Gold,25,California
+275,4/24/2015,Sneakers,5,Black,20,Washington
+276,4/26/2015,Slip-on Shoes,12,Gold,25,Internet
+277,4/26/2015,Boots,7,Black,25,New York
+278,4/26/2015,Stilletos,11,Black,30,Washington
+279,4/27/2015,Slip-on Shoes,12,Red,25,Georgia
+280,4/27/2015,Sandals,11,Red,12,New York
+281,4/27/2015,Stilletos,12,Black,30,Internet
+282,4/28/2015,Slip-on Shoes,11,Gold,25,Georgia
+283,4/28/2015,Boots,7,Gold,25,Washington
+284,4/28/2015,Sandals,8,Gold,12,Washington
+285,4/29/2015,Slip-on Shoes,6,Silver,25,Georgia
+286,4/29/2015,Slip-on Shoes,10,Red,25,Washington
+287,4/29/2015,Sneakers,6,Silver,20,Internet
+288,4/29/2015,Stilletos,9,Red,30,Texas
+289,4/30/2015,Slip-on Shoes,9,Black,25,California
+290,5/1/2015,House Slippers,11,Black,8,Georgia
+291,5/2/2015,Beach Shoes,7,Silver,10,Texas
+292,5/2/2015,House Slippers,12,Black,8,Internet
+293,5/3/2015,Sandals,5,Red,12,Washington
+294,5/3/2015,Stilletos,10,Black,30,Texas
+295,5/3/2015,Slip-on Shoes,5,Red,25,New York
+296,5/4/2015,Stilletos,6,Gold,30,Texas
+297,5/4/2015,Slip-on Shoes,11,Silver,25,Internet
+298,5/5/2015,Beach Shoes,4,Gold,10,Texas
+299,5/5/2015,Sandals,7,Red,12,Texas
+300,5/5/2015,Beach Shoes,7,Black,10,Georgia
+301,5/6/2015,Beach Shoes,8,Silver,10,Washington
+302,5/6/2015,Stilletos,11,Silver,30,Internet
+303,5/6/2015,Stilletos,6,Black,30,New York
+304,5/6/2015,Beach Shoes,12,Red,10,Georgia
+305,5/7/2015,Slip-on Shoes,7,Silver,25,Washington
+306,5/7/2015,Sandals,12,Silver,12,Texas
+307,5/8/2015,House Slippers,5,Silver,8,Washington
+308,5/9/2015,Sneakers,9,Black,20,Internet
+309,5/9/2015,Sandals,6,Red,12,Texas
+310,5/9/2015,Sandals,5,Gold,12,Washington
+311,5/9/2015,Slip-on Shoes,7,Red,25,Washington
+312,5/9/2015,House Slippers,9,Gold,8,Texas
+313,5/10/2015,Sneakers,7,Black,20,Internet
+314,5/10/2015,Stilletos,5,Gold,30,California
+315,5/10/2015,House Slippers,7,Gold,8,Georgia
+316,5/12/2015,Beach Shoes,12,Black,10,Washington
+317,5/12/2015,Stilletos,7,Silver,30,California
+318,5/15/2015,Sandals,11,Red,12,California
+319,5/15/2015,Sneakers,4,Gold,20,Internet
+320,5/16/2015,House Slippers,8,Red,8,Texas
+321,5/16/2015,Beach Shoes,7,Gold,10,Georgia
+322,5/16/2015,Boots,11,Silver,25,Texas
+323,5/16/2015,Boots,10,Silver,25,Georgia
+324,5/16/2015,House Slippers,4,Black,8,Washington
+325,5/16/2015,Stilletos,11,Black,30,Internet
+326,5/17/2015,Beach Shoes,9,Silver,10,California
+327,5/17/2015,Stilletos,7,Black,30,Georgia
+328,5/18/2015,Sandals,10,Red,12,New York
+329,5/18/2015,Boots,12,Black,25,New York
+330,5/18/2015,Slip-on Shoes,12,Gold,25,Internet
+331,5/19/2015,House Slippers,9,Black,8,Georgia
+332,5/20/2015,House Slippers,8,Black,8,California
+333,5/20/2015,Stilletos,6,Black,30,Georgia
+334,5/21/2015,Beach Shoes,10,Gold,10,Washington
+335,5/22/2015,Stilletos,4,Silver,30,Texas
+336,5/22/2015,Sandals,11,Silver,12,California
+337,5/22/2015,Sandals,6,Silver,12,New York
+338,5/22/2015,House Slippers,8,Red,8,Washington
+339,5/23/2015,House Slippers,8,Black,8,Georgia
+340,5/23/2015,Stilletos,11,Red,30,Internet
+341,5/24/2015,House Slippers,6,Red,8,Georgia
+342,5/25/2015,Boots,5,Gold,25,Internet
+343,5/26/2015,Sneakers,9,Black,20,Internet
+344,5/26/2015,Stilletos,8,Red,30,Georgia
+345,5/26/2015,Beach Shoes,7,Red,10,Georgia
+346,5/26/2015,Slip-on Shoes,10,Silver,25,Internet
+347,5/26/2015,Slip-on Shoes,5,Gold,25,Washington
+348,5/27/2015,Sneakers,11,Red,20,Texas
+349,5/27/2015,Slip-on Shoes,4,Gold,25,Texas
+350,5/27/2015,Sneakers,9,Gold,20,Georgia
+351,5/28/2015,Boots,7,Black,25,New York
+352,5/28/2015,Beach Shoes,9,Gold,10,Internet
+353,5/29/2015,Stilletos,12,Silver,30,California
+354,5/30/2015,Sneakers,12,Black,20,Washington
+355,5/30/2015,Slip-on Shoes,11,Gold,25,Georgia
+356,5/30/2015,Stilletos,6,Silver,30,Washington
+357,5/31/2015,Slip-on Shoes,7,Gold,25,Georgia
+358,6/1/2015,Sneakers,4,Black,20,Texas
+359,6/1/2015,Boots,4,Silver,25,California
+360,6/2/2015,Slip-on Shoes,11,Black,25,New York
+361,6/2/2015,Slip-on Shoes,11,Gold,25,New York
+362,6/3/2015,House Slippers,9,Silver,8,Internet
+363,6/3/2015,Stilletos,6,Red,30,New York
+364,6/3/2015,House Slippers,4,Silver,8,Georgia
+365,6/3/2015,Stilletos,11,Silver,30,New York
+366,6/3/2015,Boots,10,Silver,25,Texas
+367,6/4/2015,Boots,7,Black,25,Texas
+368,6/5/2015,Sneakers,6,Gold,20,Georgia
+369,6/5/2015,Sandals,9,Gold,12,Internet
+370,6/5/2015,Boots,9,Black,25,New York
+371,6/5/2015,Beach Shoes,10,Silver,10,California
+372,6/6/2015,Beach Shoes,4,Black,10,Georgia
+373,6/6/2015,Stilletos,8,Silver,30,California
+374,6/6/2015,Stilletos,5,Red,30,California
+375,6/6/2015,Stilletos,4,Black,30,Georgia
+376,6/7/2015,Boots,10,Silver,25,Texas
+377,6/7/2015,Slip-on Shoes,12,Red,25,Internet
+378,6/7/2015,Boots,5,Silver,25,Texas
+379,6/7/2015,House Slippers,11,Red,8,Georgia
+380,6/7/2015,Slip-on Shoes,6,Black,25,New York
+381,6/7/2015,Sandals,10,Silver,12,Washington
+382,6/9/2015,Slip-on Shoes,11,Gold,25,Georgia
+383,6/9/2015,House Slippers,5,Black,8,Texas
+384,6/9/2015,Sneakers,6,Black,20,Washington
+385,6/9/2015,Sandals,8,Red,12,Texas
+386,6/10/2015,Sandals,12,Black,12,Georgia
+387,6/10/2015,Stilletos,4,Gold,30,Internet
+388,6/10/2015,Boots,9,Silver,25,Washington
+389,6/11/2015,Slip-on Shoes,4,Red,25,California
+390,6/11/2015,Slip-on Shoes,6,Black,25,Georgia
+391,6/12/2015,Sandals,11,Silver,12,Georgia
+392,6/13/2015,Boots,8,Gold,25,California
+393,6/14/2015,Boots,12,Gold,25,Texas
+394,6/14/2015,Sandals,11,Gold,12,Internet
+395,6/14/2015,Sneakers,6,Gold,20,Texas
+396,6/15/2015,Stilletos,8,Gold,30,Texas
+397,6/15/2015,Beach Shoes,8,Red,10,Georgia
+398,6/15/2015,House Slippers,6,Gold,8,Georgia
+399,6/16/2015,Sneakers,5,Silver,20,Georgia
+400,6/16/2015,Stilletos,7,Gold,30,Internet
+401,6/16/2015,Slip-on Shoes,9,Red,25,Washington
+402,6/17/2015,Sandals,4,Red,12,California
+403,6/17/2015,Boots,4,Gold,25,Washington
+404,6/17/2015,Stilletos,8,Black,30,New York
+405,6/18/2015,Slip-on Shoes,11,Black,25,Washington
+406,6/18/2015,Stilletos,11,Black,30,Washington
+407,6/18/2015,Slip-on Shoes,11,Gold,25,Internet
+408,6/18/2015,House Slippers,5,Black,8,New York
+409,6/18/2015,Sneakers,4,Red,20,Georgia
+410,6/18/2015,Stilletos,10,Black,30,California
+411,6/20/2015,Sneakers,9,Silver,20,Washington
+412,6/20/2015,Slip-on Shoes,4,Black,25,California
+413,6/21/2015,Slip-on Shoes,9,Black,25,New York
+414,6/21/2015,Stilletos,5,Red,30,Internet
+415,6/21/2015,Sneakers,7,Red,20,Texas
+416,6/22/2015,Sandals,8,Gold,12,New York
+417,6/23/2015,Sandals,10,Red,12,California
+418,6/23/2015,Beach Shoes,6,Black,10,Washington
+419,6/24/2015,House Slippers,7,Red,8,New York
+420,6/25/2015,Stilletos,12,Silver,30,California
+421,6/25/2015,Boots,12,Silver,25,Internet
+422,6/26/2015,House Slippers,10,Black,8,New York
+423,6/27/2015,Stilletos,12,Gold,30,Georgia
+424,6/27/2015,Sneakers,7,Gold,20,New York
+425,6/27/2015,Sneakers,4,Silver,20,Washington
+426,6/27/2015,Stilletos,4,Red,30,New York
+427,6/27/2015,Slip-on Shoes,12,Silver,25,New York
+428,6/27/2015,Stilletos,8,Red,30,Internet
+429,6/27/2015,Stilletos,9,Red,30,Georgia
+430,6/28/2015,Boots,5,Gold,25,California
+431,6/28/2015,Slip-on Shoes,6,Silver,25,New York
+432,6/28/2015,House Slippers,7,Black,8,California
+433,6/28/2015,Sneakers,9,Silver,20,California
+434,6/30/2015,House Slippers,4,Gold,8,Washington
+435,6/30/2015,Boots,6,Black,25,Internet
+436,7/1/2015,Sandals,4,Black,12,New York
+437,7/1/2015,Boots,5,Gold,25,Georgia
+438,7/2/2015,Beach Shoes,4,Gold,10,Texas
+439,7/2/2015,Boots,9,Gold,25,California
+440,7/2/2015,Slip-on Shoes,4,Silver,25,Georgia
+441,7/3/2015,Stilletos,8,Silver,30,Georgia
+442,7/3/2015,House Slippers,6,Red,8,California
+443,7/3/2015,Stilletos,10,Silver,30,Washington
+444,7/4/2015,Sandals,4,Silver,12,Internet
+445,7/5/2015,Stilletos,12,Gold,30,Georgia
+446,7/5/2015,House Slippers,10,Silver,8,New York
+447,7/6/2015,Sandals,10,Red,12,New York
+448,7/7/2015,Boots,6,Red,25,California
+449,7/7/2015,Beach Shoes,7,Gold,10,Georgia
+450,7/7/2015,Stilletos,5,Gold,30,New York
+451,7/7/2015,Sneakers,8,Silver,20,Texas
+452,7/8/2015,Sneakers,8,Red,20,California
+453,7/9/2015,Slip-on Shoes,8,Silver,25,Internet
+454,7/9/2015,Boots,5,Silver,25,New York
+455,7/9/2015,Boots,9,Red,25,Georgia
+456,7/11/2015,Beach Shoes,12,Gold,10,California
+457,7/13/2015,House Slippers,4,Silver,8,California
+458,7/14/2015,Boots,9,Silver,25,Washington
+459,7/15/2015,Beach Shoes,7,Gold,10,Texas
+460,7/15/2015,Beach Shoes,4,Silver,10,Internet
+461,7/15/2015,Slip-on Shoes,4,Gold,25,California
+462,7/17/2015,Sandals,7,Silver,12,California
+463,7/17/2015,Beach Shoes,12,Black,10,New York
+464,7/17/2015,Stilletos,6,Black,30,New York
+465,7/17/2015,Boots,8,Gold,25,Georgia
+466,7/17/2015,Stilletos,7,Gold,30,California
+467,7/17/2015,Beach Shoes,11,Red,10,California
+468,7/19/2015,Stilletos,7,Silver,30,Internet
+469,7/19/2015,Beach Shoes,10,Black,10,California
+470,7/19/2015,Slip-on Shoes,9,Silver,25,Washington
+471,7/19/2015,House Slippers,4,Silver,8,Texas
+472,7/19/2015,Stilletos,5,Red,30,New York
+473,7/20/2015,Sandals,8,Gold,12,Washington
+474,7/20/2015,Sneakers,10,Silver,20,Texas
+475,7/21/2015,Slip-on Shoes,4,Red,25,Internet
+476,7/21/2015,Beach Shoes,9,Black,10,California
+477,7/21/2015,Sneakers,5,Silver,20,Georgia
+478,7/21/2015,Sneakers,6,Black,20,Georgia
+479,7/22/2015,Sandals,11,Black,12,Washington
+480,7/23/2015,House Slippers,4,Black,8,Georgia
+481,7/23/2015,Sneakers,12,Black,20,Washington
+482,7/24/2015,Stilletos,5,Red,30,Washington
+483,7/24/2015,Boots,5,Gold,25,Georgia
+484,7/24/2015,House Slippers,11,Black,8,Texas
+485,7/24/2015,Stilletos,5,Gold,30,Washington
+486,7/25/2015,Stilletos,11,Black,30,Georgia
+487,7/25/2015,House Slippers,10,Gold,8,Georgia
+488,7/25/2015,Beach Shoes,10,Silver,10,Texas
+489,7/25/2015,Stilletos,11,Black,30,Internet
+490,7/25/2015,Sneakers,12,Silver,20,New York
+491,7/26/2015,Beach Shoes,10,Red,10,Georgia
+492,7/26/2015,Beach Shoes,8,Black,10,New York
+493,7/27/2015,Slip-on Shoes,11,Black,25,Internet
+494,7/28/2015,Boots,9,Gold,25,Washington
+495,7/28/2015,Beach Shoes,9,Gold,10,California
+496,7/28/2015,Sneakers,9,Red,20,California
+497,7/29/2015,Sandals,12,Silver,12,Georgia
+498,7/29/2015,Stilletos,5,Black,30,Internet
+499,7/29/2015,Sneakers,9,Silver,20,New York
+500,7/30/2015,Stilletos,9,Red,30,California
+501,7/31/2015,House Slippers,12,Gold,8,Internet
+502,7/31/2015,Beach Shoes,10,Red,10,Texas
+503,7/31/2015,Stilletos,6,Gold,30,Georgia
+504,8/1/2015,House Slippers,7,Black,8,California
+505,8/1/2015,House Slippers,6,Black,8,Georgia
+506,8/2/2015,Sneakers,5,Red,20,Texas
+507,8/2/2015,Beach Shoes,4,Silver,10,Internet
+508,8/2/2015,Stilletos,11,Red,30,New York
+509,8/3/2015,Slip-on Shoes,10,Gold,25,Internet
+510,8/3/2015,Stilletos,7,Gold,30,Texas
+511,8/4/2015,Slip-on Shoes,11,Gold,25,New York
+512,8/5/2015,Sneakers,7,Red,20,Washington
+513,8/5/2015,Stilletos,8,Gold,30,Texas
+514,8/5/2015,Beach Shoes,6,Gold,10,Washington
+515,8/5/2015,Stilletos,8,Gold,30,Internet
+516,8/5/2015,Beach Shoes,6,Black,10,Georgia
+517,8/5/2015,Sandals,6,Black,12,New York
+518,8/6/2015,Beach Shoes,8,Red,10,Texas
+519,8/6/2015,Sneakers,6,Gold,20,Washington
+520,8/6/2015,Sandals,6,Silver,12,Internet
+521,8/7/2015,Stilletos,8,Red,30,Georgia
+522,8/7/2015,Slip-on Shoes,12,Red,25,Texas
+523,8/7/2015,Sandals,12,Red,12,Washington
+524,8/7/2015,Stilletos,5,Gold,30,Texas
+525,8/7/2015,Slip-on Shoes,7,Silver,25,California
+526,8/8/2015,Boots,12,Gold,25,Internet
+527,8/8/2015,Beach Shoes,10,Black,10,Georgia
+528,8/8/2015,Beach Shoes,12,Gold,10,Texas
+529,8/8/2015,House Slippers,9,Red,8,Georgia
+530,8/9/2015,Beach Shoes,4,Red,10,Washington
+531,8/9/2015,Stilletos,4,Silver,30,Washington
+532,8/9/2015,House Slippers,12,Black,8,Texas
+533,8/9/2015,Sandals,6,Gold,12,Texas
+534,8/13/2015,Sneakers,10,Black,20,Texas
+535,8/14/2015,House Slippers,6,Gold,8,Internet
+536,8/15/2015,House Slippers,11,Red,8,Texas
+537,8/15/2015,Slip-on Shoes,4,Silver,25,New York
+538,8/16/2015,Sneakers,10,Gold,20,Internet
+539,8/16/2015,Stilletos,10,Gold,30,New York
+540,8/16/2015,Slip-on Shoes,8,Silver,25,California
+541,8/16/2015,Stilletos,8,Red,30,New York
+542,8/17/2015,Stilletos,5,Silver,30,Internet
+543,8/18/2015,House Slippers,11,Black,8,Texas
+544,8/18/2015,Sandals,10,Gold,12,Washington
+545,8/18/2015,Beach Shoes,6,Red,10,Georgia
+546,8/19/2015,Sandals,7,Red,12,Internet
+547,8/20/2015,House Slippers,10,Gold,8,Georgia
+548,8/20/2015,Slip-on Shoes,8,Black,25,New York
+549,8/20/2015,Boots,7,Red,25,Texas
+550,8/20/2015,Beach Shoes,10,Black,10,Washington
+551,8/21/2015,Stilletos,11,Red,30,Internet
+552,8/21/2015,Boots,5,Red,25,Internet
+553,8/21/2015,Beach Shoes,6,Black,10,Washington
+554,8/22/2015,Stilletos,11,Gold,30,New York
+555,8/22/2015,Boots,10,Red,25,Internet
+556,8/22/2015,Sandals,7,Silver,12,Washington
+557,8/23/2015,House Slippers,5,Gold,8,Texas
+558,8/23/2015,Beach Shoes,7,Gold,10,New York
+559,8/23/2015,Slip-on Shoes,10,Gold,25,Internet
+560,8/23/2015,Sandals,9,Gold,12,Washington
+561,8/24/2015,Sandals,12,Red,12,New York
+562,8/24/2015,Boots,11,Silver,25,Texas
+563,8/24/2015,House Slippers,4,Gold,8,New York
+564,8/24/2015,Stilletos,5,Black,30,New York
+565,8/24/2015,Slip-on Shoes,12,Red,25,Washington
+566,8/25/2015,House Slippers,4,Gold,8,Washington
+567,8/25/2015,Slip-on Shoes,12,Gold,25,Georgia
+568,8/25/2015,Boots,9,Red,25,Internet
+569,8/25/2015,Boots,9,Black,25,California
+570,8/25/2015,Beach Shoes,11,Silver,10,New York
+571,8/25/2015,House Slippers,4,Silver,8,Texas
+572,8/26/2015,Stilletos,6,Black,30,Washington
+573,8/26/2015,Sandals,8,Silver,12,New York
+574,8/27/2015,Sneakers,5,Gold,20,Washington
+575,8/27/2015,House Slippers,10,Silver,8,Texas
+576,8/27/2015,Sandals,4,Black,12,New York
+577,8/27/2015,Boots,9,Silver,25,Internet
+578,8/28/2015,Stilletos,8,Silver,30,New York
+579,8/29/2015,Stilletos,12,Black,30,Texas
+580,8/29/2015,Sandals,6,Gold,12,Texas
+581,8/29/2015,Stilletos,6,Gold,30,Georgia
+582,8/30/2015,Slip-on Shoes,11,Black,25,New York
+583,8/31/2015,Sandals,9,Silver,12,Georgia
+584,8/31/2015,Slip-on Shoes,4,Black,25,Internet
+585,8/31/2015,Sneakers,9,Red,20,Georgia
+586,9/1/2015,Sandals,5,Silver,12,Internet
+587,9/1/2015,Slip-on Shoes,6,Black,25,Texas
+588,9/2/2015,House Slippers,6,Red,8,California
+589,9/2/2015,Stilletos,6,Silver,30,Georgia
+590,9/3/2015,Boots,12,Silver,25,Internet
+591,9/3/2015,House Slippers,7,Black,8,Texas
+592,9/4/2015,Stilletos,6,Red,30,Georgia
+593,9/4/2015,Stilletos,10,Gold,30,New York
+594,9/4/2015,Sneakers,5,Gold,20,Internet
+595,9/4/2015,Sandals,5,Gold,12,Georgia
+596,9/4/2015,Sneakers,12,Black,20,Washington
+597,9/5/2015,Sneakers,6,Black,20,Washington
+598,9/5/2015,House Slippers,5,Silver,8,Internet
+599,9/6/2015,House Slippers,4,Gold,8,Georgia
+600,9/6/2015,Slip-on Shoes,6,Black,25,California
+601,9/6/2015,House Slippers,5,Gold,8,New York
+602,9/6/2015,Stilletos,10,Silver,30,Georgia
+603,9/7/2015,House Slippers,5,Black,8,Internet
+604,9/7/2015,Sandals,6,Black,12,Texas
+605,9/7/2015,Sneakers,8,Black,20,Texas
+606,9/8/2015,Sandals,12,Black,12,Georgia
+607,9/8/2015,Sneakers,4,Black,20,Washington
+608,9/8/2015,House Slippers,9,Gold,8,Internet
+609,9/8/2015,House Slippers,12,Gold,8,Georgia
+610,9/9/2015,Stilletos,11,Gold,30,New York
+611,9/9/2015,Sneakers,12,Silver,20,Washington
+612,9/10/2015,Sneakers,5,Silver,20,Internet
+613,9/10/2015,Stilletos,8,Silver,30,Georgia
+614,9/10/2015,Slip-on Shoes,5,Red,25,Georgia
+615,9/11/2015,House Slippers,4,Red,8,New York
+616,9/11/2015,House Slippers,10,Red,8,New York
+617,9/12/2015,Stilletos,6,Gold,30,Internet
+618,9/12/2015,Sandals,10,Gold,12,Washington
+619,9/12/2015,House Slippers,11,Gold,8,Washington
+620,9/13/2015,House Slippers,12,Black,8,Internet
+621,9/13/2015,Slip-on Shoes,12,Silver,25,Georgia
+622,9/13/2015,Stilletos,7,Silver,30,Texas
+623,9/14/2015,Boots,9,Gold,25,Washington
+624,9/14/2015,Stilletos,12,Black,30,Internet
+625,9/14/2015,House Slippers,5,Red,8,Georgia
+626,9/15/2015,Boots,6,Black,25,California
+627,9/15/2015,Stilletos,7,Gold,30,Texas
+628,9/15/2015,Sneakers,7,Black,20,Internet
+629,9/15/2015,Sandals,9,Red,12,New York
+630,9/16/2015,Sandals,9,Red,12,New York
+631,9/16/2015,Slip-on Shoes,7,Silver,25,Texas
+632,9/17/2015,Sandals,11,Black,12,New York
+633,9/17/2015,Boots,6,Red,25,Internet
+634,9/18/2015,Beach Shoes,9,Red,10,California
+635,9/18/2015,Sneakers,9,Red,20,Texas
+636,9/18/2015,House Slippers,10,Gold,8,Texas
+637,9/19/2015,Stilletos,9,Silver,30,Texas
+638,9/19/2015,Beach Shoes,10,Silver,10,Internet
+639,9/20/2015,Sandals,7,Silver,12,Texas
+640,9/20/2015,House Slippers,11,Silver,8,New York
+641,9/20/2015,House Slippers,4,Gold,8,Texas
+642,9/20/2015,Stilletos,7,Black,30,Internet
+643,9/21/2015,Boots,8,Silver,25,New York
+644,9/21/2015,Sandals,8,Gold,12,Texas
+645,9/21/2015,Sandals,11,Gold,12,Internet
+646,9/21/2015,Sandals,4,Red,12,Internet
+647,9/22/2015,Sneakers,8,Black,20,Georgia
+648,9/22/2015,House Slippers,12,Gold,8,Texas
+649,9/23/2015,Slip-on Shoes,11,Black,25,California
+650,9/24/2015,House Slippers,9,Silver,8,Georgia
+651,9/24/2015,Boots,11,Gold,25,Internet
+652,9/26/2015,Stilletos,9,Gold,30,Washington
+653,9/27/2015,Stilletos,9,Black,30,Texas
+654,9/28/2015,Sandals,8,Red,12,Georgia
+655,9/28/2015,House Slippers,5,Gold,8,Texas
+656,9/29/2015,Stilletos,6,Red,30,Internet
+657,9/29/2015,Stilletos,11,Black,30,New York
+658,9/29/2015,Slip-on Shoes,6,Black,25,California
+659,9/30/2015,Sandals,8,Black,12,New York
+660,9/30/2015,Sandals,11,Red,12,Texas
+661,10/1/2015,Stilletos,7,Gold,30,New York
+662,10/1/2015,Boots,8,Gold,25,Internet
+663,10/1/2015,Stilletos,8,Gold,30,New York
+664,10/1/2015,Sneakers,10,Silver,20,New York
+665,10/2/2015,Beach Shoes,11,Silver,10,Georgia
+666,10/2/2015,Boots,11,Black,25,Washington
+667,10/2/2015,Stilletos,5,Gold,30,Internet
+668,10/3/2015,Beach Shoes,10,Black,10,California
+669,10/3/2015,Stilletos,9,Black,30,New York
+670,10/4/2015,House Slippers,7,Red,8,Georgia
+671,10/5/2015,Stilletos,6,Black,30,Texas
+672,10/5/2015,Stilletos,11,Silver,30,California
+673,10/5/2015,Stilletos,9,Gold,30,Internet
+674,10/5/2015,House Slippers,10,Silver,8,Georgia
+675,10/6/2015,Sandals,11,Red,12,California
+676,10/6/2015,Sneakers,7,Red,20,Washington
+677,10/6/2015,Slip-on Shoes,4,Gold,25,Georgia
+678,10/6/2015,Sneakers,11,Silver,20,Internet
+679,10/6/2015,Sneakers,10,Silver,20,New York
+680,10/7/2015,Sandals,9,Black,12,Washington
+681,10/7/2015,Boots,8,Red,25,California
+682,10/7/2015,Stilletos,12,Black,30,New York
+683,10/7/2015,Boots,7,Gold,25,Internet
+684,10/8/2015,Slip-on Shoes,4,Red,25,California
+685,10/8/2015,Sneakers,11,Red,20,Texas
+686,10/8/2015,Sneakers,9,Silver,20,New York
+687,10/9/2015,Sandals,5,Silver,12,Texas
+688,10/9/2015,Sandals,6,Black,12,Internet
+689,10/9/2015,Boots,5,Black,25,California
+690,10/9/2015,Stilletos,8,Silver,30,Georgia
+691,10/9/2015,Stilletos,6,Silver,30,Internet
+692,10/9/2015,Slip-on Shoes,6,Black,25,California
+693,10/10/2015,Sandals,4,Red,12,Georgia
+694,10/10/2015,Boots,9,Red,25,Internet
+695,10/10/2015,Slip-on Shoes,5,Gold,25,Texas
+696,10/11/2015,Sneakers,4,Red,20,Washington
+697,10/11/2015,House Slippers,4,Red,8,Texas
+698,10/11/2015,Sandals,8,Gold,12,New York
+699,10/11/2015,Sneakers,10,Black,20,Internet
+700,10/11/2015,Sandals,8,Red,12,Washington
+701,10/12/2015,Boots,8,Gold,25,California
+702,10/14/2015,House Slippers,12,Red,8,Texas
+703,10/14/2015,Sneakers,6,Silver,20,Georgia
+704,10/14/2015,Sneakers,6,Silver,20,Internet
+705,10/14/2015,Sandals,12,Gold,12,Internet
+706,10/15/2015,Slip-on Shoes,11,Gold,25,Internet
+707,10/15/2015,Boots,12,Gold,25,Internet
+708,10/16/2015,Sandals,6,Black,12,Washington
+709,10/16/2015,House Slippers,7,Silver,8,Texas
+710,10/17/2015,House Slippers,10,Black,8,California
+711,10/17/2015,House Slippers,6,Gold,8,New York
+712,10/17/2015,House Slippers,9,Silver,8,Georgia
+713,10/19/2015,House Slippers,7,Red,8,Internet
+714,10/19/2015,Sneakers,8,Black,20,Washington
+715,10/19/2015,Slip-on Shoes,5,Black,25,Georgia
+716,10/20/2015,Boots,9,Red,25,Texas
+717,10/20/2015,Sandals,12,Black,12,Washington
+718,10/21/2015,Sandals,8,Red,12,Texas
+719,10/21/2015,Stilletos,12,Black,30,Internet
+720,10/21/2015,Boots,4,Black,25,Texas
+721,10/21/2015,Boots,5,Red,25,New York
+722,10/22/2015,Stilletos,5,Red,30,California
+723,10/22/2015,Boots,4,Red,25,California
+724,10/22/2015,Stilletos,7,Silver,30,Internet
+725,10/22/2015,Stilletos,9,Silver,30,California
+726,10/22/2015,Slip-on Shoes,5,Red,25,Georgia
+727,10/22/2015,Sneakers,6,Gold,20,Washington
+728,10/23/2015,House Slippers,5,Gold,8,Texas
+729,10/23/2015,Slip-on Shoes,12,Red,25,Texas
+730,10/24/2015,Stilletos,11,Red,30,Internet
+731,10/24/2015,Slip-on Shoes,4,Black,25,Georgia
+732,10/24/2015,Slip-on Shoes,5,Gold,25,California
+733,10/24/2015,House Slippers,10,Red,8,Texas
+734,10/25/2015,Sneakers,6,Silver,20,Texas
+735,10/25/2015,Sandals,8,Red,12,Georgia
+736,10/25/2015,Boots,5,Black,25,Internet
+737,10/26/2015,Boots,8,Gold,25,Washington
+738,10/28/2015,House Slippers,11,Black,8,Georgia
+739,10/28/2015,Slip-on Shoes,6,Gold,25,Georgia
+740,10/28/2015,House Slippers,5,Silver,8,Internet
+741,10/28/2015,Stilletos,4,Red,30,Texas
+742,10/28/2015,House Slippers,4,Red,8,Texas
+743,10/28/2015,Sneakers,5,Black,20,New York
+744,10/29/2015,House Slippers,8,Black,8,Georgia
+745,10/29/2015,House Slippers,4,Silver,8,Washington
+746,10/29/2015,Stilletos,12,Red,30,Internet
+747,10/29/2015,House Slippers,8,Red,8,Georgia
+748,10/29/2015,Stilletos,11,Black,30,California
+749,10/29/2015,Sneakers,6,Silver,20,New York
+750,10/29/2015,Sandals,7,Silver,12,Texas
+751,10/30/2015,House Slippers,6,Gold,8,Georgia
+752,10/30/2015,House Slippers,11,Red,8,Texas
+753,10/30/2015,Sandals,8,Gold,12,Internet
+754,10/30/2015,Stilletos,11,Gold,30,Washington
+755,10/30/2015,Sneakers,9,Red,20,Washington
+756,10/31/2015,Boots,9,Silver,25,Georgia
+757,10/31/2015,Stilletos,5,Silver,30,California
+758,10/31/2015,Sneakers,6,Red,20,Georgia
+759,11/1/2015,Sandals,6,Gold,12,Washington
+760,11/1/2015,Sandals,5,Black,12,Internet
+761,11/1/2015,Sneakers,9,Red,20,Georgia
+762,11/2/2015,House Slippers,5,Silver,8,Washington
+763,11/3/2015,Boots,10,Silver,25,California
+764,11/3/2015,House Slippers,12,Gold,8,New York
+765,11/3/2015,Sandals,8,Red,12,Washington
+766,11/3/2015,Sandals,7,Silver,12,Texas
+767,11/3/2015,Stilletos,10,Gold,30,Internet
+768,11/4/2015,Stilletos,9,Red,30,California
+769,11/5/2015,House Slippers,6,Silver,8,New York
+770,11/5/2015,House Slippers,5,Silver,8,New York
+771,11/5/2015,Sandals,11,Red,12,Texas
+772,11/6/2015,Beach Shoes,10,Red,10,Georgia
+773,11/6/2015,House Slippers,8,Red,8,Georgia
+774,11/7/2015,Sandals,5,Gold,12,Internet
+775,11/8/2015,Stilletos,4,Red,30,Georgia
+776,11/8/2015,Slip-on Shoes,6,Silver,25,Georgia
+777,11/9/2015,Sandals,6,Silver,12,Georgia
+778,11/9/2015,Beach Shoes,11,Red,10,California
+779,11/9/2015,Slip-on Shoes,9,Silver,25,Texas
+780,11/9/2015,Sandals,12,Gold,12,Internet
+781,11/10/2015,Sneakers,6,Silver,20,Georgia
+782,11/10/2015,Stilletos,10,Silver,30,Texas
+783,11/11/2015,Stilletos,6,Red,30,New York
+784,11/12/2015,Sneakers,6,Black,20,Texas
+785,11/12/2015,Sneakers,8,Red,20,New York
+786,11/12/2015,House Slippers,4,Silver,8,Internet
+787,11/14/2015,Slip-on Shoes,9,Gold,25,New York
+788,11/14/2015,Stilletos,12,Gold,30,Washington
+789,11/14/2015,House Slippers,11,Silver,8,Georgia
+790,11/15/2015,Slip-on Shoes,12,Silver,25,Georgia
+791,11/15/2015,Stilletos,7,Black,30,Internet
+792,11/16/2015,Stilletos,4,Gold,30,Washington
+793,11/17/2015,Boots,6,Black,25,Texas
+794,11/18/2015,Slip-on Shoes,5,Black,25,New York
+795,11/19/2015,Boots,7,Silver,25,Georgia
+796,11/19/2015,Slip-on Shoes,5,Gold,25,Texas
+797,11/20/2015,Boots,6,Black,25,Internet
+798,11/21/2015,Slip-on Shoes,7,Gold,25,Washington
+799,11/21/2015,Stilletos,9,Silver,30,Washington
+800,11/22/2015,Boots,9,Silver,25,California
+801,11/22/2015,Slip-on Shoes,8,Red,25,Georgia
+802,11/22/2015,Stilletos,8,Black,30,Washington
+803,11/22/2015,House Slippers,9,Red,8,Internet
+804,11/23/2015,Boots,5,Gold,25,Georgia
+805,11/24/2015,Boots,8,Red,25,California
+806,11/24/2015,House Slippers,12,Silver,8,California
+807,11/24/2015,Boots,11,Silver,25,Washington
+808,11/25/2015,Sandals,4,Gold,12,Internet
+809,11/25/2015,Stilletos,12,Silver,30,Georgia
+810,11/26/2015,Sneakers,10,Red,20,Washington
+811,11/26/2015,Slip-on Shoes,7,Black,25,California
+812,11/28/2015,House Slippers,9,Black,8,Washington
+813,11/29/2015,Slip-on Shoes,9,Silver,25,Internet
+814,11/29/2015,Sneakers,10,Red,20,Georgia
+815,11/29/2015,Slip-on Shoes,9,Silver,25,New York
+816,11/30/2015,Slip-on Shoes,12,Black,25,Internet
+817,11/30/2015,House Slippers,5,Silver,8,Internet
+818,11/30/2015,Sandals,8,Gold,12,Internet
+819,12/1/2015,Slip-on Shoes,5,Black,25,Internet
+820,12/1/2015,Sneakers,7,Gold,20,New York
+821,12/1/2015,Sandals,5,Silver,12,Internet
+822,12/1/2015,Sandals,10,Silver,12,Internet
+823,12/1/2015,Slip-on Shoes,11,Gold,25,New York
+824,12/2/2015,Slip-on Shoes,10,Gold,25,Texas
+825,12/2/2015,Slip-on Shoes,10,Black,25,New York
+826,12/2/2015,Slip-on Shoes,8,Silver,25,Internet
+827,12/2/2015,Slip-on Shoes,4,Black,25,Internet
+828,12/2/2015,House Slippers,12,Red,8,California
+829,12/2/2015,Boots,11,Red,25,Washington
+830,12/2/2015,Slip-on Shoes,12,Silver,25,Washington
+831,12/2/2015,Stilletos,9,Red,30,Internet
+832,12/3/2015,Slip-on Shoes,7,Black,25,Internet
+833,12/3/2015,Slip-on Shoes,9,Silver,25,California
+834,12/3/2015,Stilletos,5,Black,30,Internet
+835,12/3/2015,House Slippers,12,Black,8,Washington
+836,12/3/2015,Stilletos,6,Red,30,Internet
+837,12/3/2015,Slip-on Shoes,12,Silver,25,Washington
+838,12/4/2015,Slip-on Shoes,11,Gold,25,Washington
+839,12/4/2015,Sneakers,7,Gold,20,Internet
+840,12/4/2015,Slip-on Shoes,9,Black,25,New York
+841,12/4/2015,Sandals,4,Gold,12,Texas
+842,12/5/2015,Stilletos,6,Black,30,Internet
+843,12/5/2015,Boots,5,Red,25,California
+844,12/5/2015,Sneakers,11,Red,20,California
+845,12/5/2015,Stilletos,8,Silver,30,Internet
+846,12/5/2015,House Slippers,6,Gold,8,California
+847,12/5/2015,Sandals,12,Gold,12,Internet
+848,12/6/2015,Beach Shoes,8,Gold,10,Internet
+849,12/6/2015,Stilletos,10,Silver,30,Internet
+850,12/6/2015,Sneakers,7,Silver,20,Internet
+851,12/6/2015,Beach Shoes,7,Red,10,Internet
+852,12/6/2015,House Slippers,9,Red,8,California
+853,12/6/2015,Stilletos,11,Black,30,Internet
+854,12/7/2015,House Slippers,7,Gold,8,Washington
+855,12/7/2015,Stilletos,8,Black,30,Internet
+856,12/7/2015,House Slippers,12,Red,8,California
+857,12/7/2015,Sandals,8,Gold,12,Internet
+858,12/7/2015,Sandals,5,Silver,12,California
+859,12/8/2015,Boots,7,Red,25,Internet
+860,12/8/2015,Slip-on Shoes,11,Gold,25,Washington
+861,12/9/2015,Stilletos,9,Red,30,Internet
+862,12/9/2015,House Slippers,5,Black,8,Internet
+863,12/9/2015,Slip-on Shoes,11,Red,25,Georgia
+864,12/9/2015,Sandals,6,Red,12,Washington
+865,12/9/2015,Boots,7,Gold,25,Internet
+866,12/10/2015,Sandals,7,Gold,12,California
+867,12/10/2015,Sneakers,8,Gold,20,Internet
+868,12/10/2015,Stilletos,6,Black,30,Texas
+869,12/10/2015,Stilletos,9,Gold,30,Internet
+870,12/10/2015,House Slippers,10,Gold,8,Internet
+871,12/10/2015,Sneakers,5,Red,20,Internet
+872,12/10/2015,Stilletos,9,Silver,30,Internet
+873,12/10/2015,Slip-on Shoes,9,Red,25,Washington
+874,12/10/2015,Sneakers,9,Gold,20,Internet
+875,12/10/2015,Stilletos,4,Silver,30,Texas
+876,12/11/2015,House Slippers,7,Silver,8,Internet
+877,12/11/2015,Stilletos,6,Silver,30,Internet
+878,12/11/2015,House Slippers,10,Gold,8,Internet
+879,12/11/2015,Sneakers,7,Black,20,California
+880,12/12/2015,Stilletos,6,Gold,30,Internet
+881,12/12/2015,Stilletos,5,Gold,30,New York
+882,12/12/2015,Boots,8,Red,25,Internet
+883,12/12/2015,Sandals,5,Red,12,Internet
+884,12/12/2015,Sneakers,5,Silver,20,Internet
+885,12/12/2015,Stilletos,4,Gold,30,California
+886,12/13/2015,Slip-on Shoes,8,Black,25,Internet
+887,12/13/2015,House Slippers,12,Gold,8,California
+888,12/13/2015,Stilletos,5,Silver,30,Internet
+889,12/13/2015,Slip-on Shoes,6,Black,25,Washington
+890,12/13/2015,Boots,12,Black,25,Internet
+891,12/13/2015,Stilletos,6,Gold,30,Georgia
+892,12/13/2015,House Slippers,6,Red,8,Internet
+893,12/13/2015,Boots,7,Red,25,Georgia
+894,12/13/2015,Sneakers,4,Black,20,Internet
+895,12/13/2015,Stilletos,9,Silver,30,Georgia
+896,12/14/2015,House Slippers,9,Gold,8,Internet
+897,12/14/2015,Stilletos,9,Silver,30,Internet
+898,12/14/2015,Stilletos,5,Silver,30,Internet
+899,12/14/2015,Sneakers,7,Silver,20,California
+900,12/14/2015,Stilletos,11,Black,30,Internet
+901,12/14/2015,Boots,6,Black,25,Internet
+902,12/14/2015,Slip-on Shoes,7,Black,25,Internet
+903,12/14/2015,Stilletos,11,Gold,30,California
+904,12/14/2015,House Slippers,5,Black,8,Internet
+905,12/14/2015,Slip-on Shoes,10,Silver,25,Washington
+906,12/15/2015,Sneakers,12,Black,20,Internet
+907,12/15/2015,Sneakers,4,Black,20,Internet
+908,12/15/2015,Sneakers,7,Gold,20,California
+909,12/15/2015,Sandals,11,Red,12,Internet
+910,12/15/2015,Stilletos,4,Gold,30,Georgia
+911,12/16/2015,Stilletos,5,Gold,30,Internet
+912,12/16/2015,Slip-on Shoes,6,Silver,25,Georgia
+913,12/16/2015,Stilletos,6,Gold,30,Internet
+914,12/16/2015,House Slippers,8,Red,8,California
+915,12/16/2015,House Slippers,5,Silver,8,Internet
+916,12/16/2015,Sneakers,5,Gold,20,California
+917,12/16/2015,Slip-on Shoes,6,Gold,25,Internet
+918,12/16/2015,Slip-on Shoes,9,Red,25,Georgia
+919,12/17/2015,Slip-on Shoes,10,Silver,25,Internet
+920,12/17/2015,House Slippers,11,Red,8,Internet
+921,12/17/2015,Boots,4,Gold,25,Internet
+922,12/17/2015,Stilletos,7,Black,30,Internet
+923,12/17/2015,House Slippers,10,Red,8,New York
+924,12/18/2015,Sneakers,12,Gold,20,Texas
+925,12/18/2015,Slip-on Shoes,11,Black,25,Internet
+926,12/18/2015,Sandals,5,Red,12,Washington
+927,12/18/2015,Sneakers,7,Silver,20,Internet
+928,12/18/2015,House Slippers,8,Silver,8,New York
+929,12/18/2015,Slip-on Shoes,12,Black,25,Internet
+930,12/18/2015,Stilletos,8,Red,30,Internet
+931,12/18/2015,House Slippers,4,Red,8,Internet
+932,12/18/2015,Sandals,10,Red,12,California
+933,12/18/2015,Stilletos,10,Red,30,Georgia
+934,12/19/2015,Stilletos,4,Black,30,Internet
+935,12/19/2015,Slip-on Shoes,9,Silver,25,Washington
+936,12/19/2015,Sneakers,5,Black,20,Internet
+937,12/19/2015,Boots,5,Gold,25,Internet
+938,12/19/2015,Sandals,6,Black,12,Internet
+939,12/19/2015,Stilletos,12,Red,30,Internet
+940,12/19/2015,Slip-on Shoes,12,Silver,25,Internet
+941,12/19/2015,Slip-on Shoes,6,Silver,25,Internet
+942,12/19/2015,Stilletos,10,Black,30,Georgia
+943,12/19/2015,Sneakers,11,Gold,20,California
+944,12/19/2015,Sandals,4,Red,12,Georgia
+945,12/20/2015,House Slippers,7,Gold,8,Internet
+946,12/20/2015,Slip-on Shoes,12,Gold,25,Internet
+947,12/20/2015,Stilletos,6,Gold,30,Internet
+948,12/20/2015,Stilletos,9,Black,30,Internet
+949,12/20/2015,Stilletos,11,Red,30,California
+950,12/20/2015,Sandals,6,Silver,12,Georgia
+951,12/22/2015,Sandals,12,Black,12,Texas
+952,12/22/2015,House Slippers,8,Silver,8,Georgia
+953,12/22/2015,Boots,8,Gold,25,Georgia
+954,12/23/2015,Stilletos,11,Silver,30,California
+955,12/23/2015,Sneakers,9,Silver,20,Internet
+956,12/23/2015,House Slippers,9,Silver,8,Internet
+957,12/23/2015,Sneakers,12,Gold,20,New York
+958,12/23/2015,Stilletos,12,Red,30,New York
+959,12/24/2015,Sneakers,11,Silver,20,California
+960,12/24/2015,Sandals,4,Gold,12,Texas
+961,12/24/2015,House Slippers,11,Red,8,Washington
+962,12/24/2015,Sneakers,10,Red,20,Texas
+963,12/24/2015,Boots,6,Silver,25,Texas
+964,12/24/2015,Slip-on Shoes,8,Silver,25,Texas
+965,12/26/2015,Sandals,4,Gold,12,Washington
+966,12/26/2015,Boots,7,Black,25,Internet
+967,12/26/2015,Sneakers,7,Red,20,New York
+968,12/26/2015,Slip-on Shoes,12,Red,25,California
+969,12/26/2015,Sandals,5,Black,12,Washington
+970,12/27/2015,House Slippers,10,Red,8,Internet
+971,12/27/2015,Slip-on Shoes,10,Gold,25,Texas
+972,12/27/2015,Stilletos,7,Red,30,Washington
+973,12/27/2015,Stilletos,6,Gold,30,Internet
+974,12/27/2015,Boots,5,Black,25,California
+975,12/27/2015,Sneakers,6,Silver,20,New York
+976,12/27/2015,Boots,11,Black,25,Internet
+977,12/27/2015,House Slippers,5,Gold,8,New York
+978,12/28/2015,Sandals,6,Red,12,Internet
+979,12/29/2015,Sneakers,10,Black,20,Washington
+980,12/29/2015,Boots,10,Silver,25,Internet
+981,12/29/2015,Boots,12,Gold,25,Georgia
+982,12/29/2015,Stilletos,9,Gold,30,Internet
+983,12/29/2015,Sandals,5,Black,12,California
+984,12/29/2015,Boots,11,Red,25,Washington
+985,12/29/2015,Boots,11,Red,25,Washington
+986,12/30/2015,Beach Shoes,12,Silver,10,Internet
+987,12/30/2015,Stilletos,12,Silver,30,Georgia
+988,12/30/2015,Sandals,12,Black,12,Internet
+989,12/30/2015,House Slippers,8,Black,8,Internet
+990,12/30/2015,Boots,7,Silver,25,Georgia
+991,12/30/2015,Slip-on Shoes,12,Gold,25,California
+992,12/30/2015,Boots,9,Gold,25,Washington
+993,12/30/2015,Beach Shoes,12,Silver,10,Internet
+994,12/30/2015,Stilletos,12,Silver,30,Georgia
+995,12/30/2015,Sandals,12,Black,12,Internet
+996,12/31/2015,Sandals,11,Gold,12,California
+997,12/31/2015,Stilletos,5,Silver,30,Georgia
+998,12/31/2015,Slip-on Shoes,5,Black,25,Internet
+999,12/31/2015,Sandals,7,Gold,12,Georgia
+1000,12/31/2015,Sandals,9,Gold,12,Internet
