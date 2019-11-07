@@ -12,3 +12,5 @@ git commit -m "Land Update MM/YYYY"
 git push origin master
 git diff origin/master
 git merge origin/master 
+
+pause
