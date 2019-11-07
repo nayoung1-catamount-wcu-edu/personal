@@ -6,11 +6,4 @@ Scripts\GeoFRED_All_Transactions_House_Price_Index.py
 Scripts\GeoFRED_Homeownership_Rate_by_County.py
 Scripts\GeoFRED_New_Private_Housing_Structures.py
 
-git status
-git add .
-git commit -m "Land Update MM/YYYY"
-git push origin master
-git diff origin/master
-git merge origin/master 
-
 pause
