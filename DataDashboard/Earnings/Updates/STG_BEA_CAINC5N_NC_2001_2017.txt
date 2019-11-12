@@ -13230,7 +13230,3 @@
 13228	" ""37199"""	Yancey, NC	5.0	CAINC5N	2010.0	...	   State and local	Thousands of dollars	28167	28867	28799	30640	31795	34020	35289	38136	37230	37667	36941	36602	37421	37065	38209	45656	47134
 13229	" ""37199"""	Yancey, NC	5.0	CAINC5N	2011.0	...	    State government	Thousands of dollars	5028	5552	4710	4847	4874	5501	5856	6035	6036	5825	5599	5728	5874	5322	5246	5539	5556
 13230	" ""37199"""	Yancey, NC	5.0	CAINC5N	2012.0	...	    Local government	Thousands of dollars	23139	23315	24089	25793	26921	28519	29433	32101	31194	31842	31342	30874	31547	31743	32963	40117	41578
-13231	Note: See the included footnote file.																								
-13232	CAINC5N: Personal Income by Major Component and Earnings by NAICS Industry 1/																								
-13233	Last updated: November 15, 2018-- new statistics for 2017; revised statistics for 2001-2016. 																								
-13234	Source: U.S. Department of Commerce / Bureau of Economic Analysis / Regional Economic Accounts																								
