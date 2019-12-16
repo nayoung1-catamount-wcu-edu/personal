@@ -22,9 +22,7 @@ REM cd..
 
 pause
 git status
-pause
-git commit -m "updates"
-
-pause
+git commit -m "Data Update 12/2019"
 git push
+
 pause
