@@ -21,11 +21,10 @@ REM start health.bat
 REM cd..
 
 pause
-git commit -a -m "updating .bat files"
 git status
+pause
+git commit -m "updates"
 
 pause
 git push
-
-git status
 pause

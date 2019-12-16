@@ -6,4 +6,8 @@ python -W ignore Scripts\GeoFRED_All_Transactions_House_Price_Index.py
 python -W ignore Scripts\GeoFRED_Homeownership_Rate_by_County.py
 python -W ignore Scripts\GeoFRED_New_Private_Housing_Structures.py
 
-exit
+git status
+git commit -m "Land Update 2019"
+git push
+
+pause
