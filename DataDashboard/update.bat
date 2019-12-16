@@ -16,6 +16,10 @@ cd Demographics
 start Demographics.bat
 cd..
 
+REM cd Health
+REM start health.bat
+REM cd..
+
 pause
 git commit -a -m "updating .bat files"
 git status
