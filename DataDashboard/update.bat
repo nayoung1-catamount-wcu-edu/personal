@@ -21,8 +21,3 @@ REM start health.bat
 REM cd..
 
 pause
-git status
-git commit -m "Data Update 12/2019"
-git push
-
-pause
