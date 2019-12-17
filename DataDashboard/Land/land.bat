@@ -1,7 +1,3 @@
-import datetime
-
-echo on
-
 python -W ignore Scripts\County_MedianListingPrice_AllHomes.py
 python -W ignore Scripts\County_MedianListingPricePerSqft_AllHomes.py
 python -W ignore Scripts\County_MedianValuePerSqft_AllHomes.py
