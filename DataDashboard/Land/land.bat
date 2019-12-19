@@ -7,14 +7,11 @@ python -W ignore Scripts\GeoFRED_Homeownership_Rate_by_County.py
 python -W ignore Scripts\GeoFRED_New_Private_Housing_Structures.py
 pause
 cd Updates
-
 git status
-pause
 
+pause
 git commit -a -m "Land Update %date%"
 git status
-pause
 
-git push
 pause
 

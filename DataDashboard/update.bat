@@ -21,3 +21,6 @@ REM start health.bat
 REM cd..
 
 pause
+git status
+
+pause

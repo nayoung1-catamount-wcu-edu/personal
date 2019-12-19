@@ -11,6 +11,3 @@ git commit -a -m "Demographics Update %Date%"
 git status
 
 pause
-git push
-
-pause
