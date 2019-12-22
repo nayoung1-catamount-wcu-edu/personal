@@ -20,6 +20,10 @@ REM cd Health
 REM start health.bat
 REM cd..
 
+REM cd Natural Products
+REM start natproducts.bat
+REM cd..
+
 pause
 git status
 
