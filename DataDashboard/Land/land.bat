@@ -14,5 +14,6 @@ git commit -a -m "Land Update %date%"
 git status
 
 pause
+git push
 
 
