@@ -1,3 +1,0 @@
-python Stocks.py
-
-Pause
