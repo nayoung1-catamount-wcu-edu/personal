@@ -14,6 +14,6 @@ git status
 
 git push
 
-exit
+cd..
 
 
