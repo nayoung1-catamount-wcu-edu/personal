@@ -6,3 +6,5 @@ pip install tensorflow
 pip install ZipFile
 pip install Requests
 pip install watermark
+pip install xlrd
+
