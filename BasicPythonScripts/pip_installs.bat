@@ -7,4 +7,5 @@ pip install ZipFile --upgrade
 pip install Requests --upgrade
 pip install watermark --upgrade
 pip install xlrd --upgrade
-
+pip install cufflinks --upgrade
+pip install plotly --upgrade
