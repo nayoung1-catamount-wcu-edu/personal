@@ -6,6 +6,7 @@ pip install tensorflow --upgrade
 pip install Requests --upgrade
 pip install watermark --upgrade
 pip install xlrd --upgrade
+pip install pyodbc --upgrade
 
 git config --global user.name "nathayoung"
 
