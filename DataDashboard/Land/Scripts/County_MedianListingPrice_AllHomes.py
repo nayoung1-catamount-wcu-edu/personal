@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[ ]:
 
 
 #Imports
@@ -13,24 +13,24 @@ import urllib
 import numpy as np
 
 
-# In[2]:
+# In[ ]:
 
 
 # Watermark
-print('Nathan Young\nJunior Data Analyst\nCenter for the Study of Free Enterprise')
-get_ipython().run_line_magic('load_ext', 'watermark')
-get_ipython().run_line_magic('watermark', '-a "Western Carolina University" -u -d -p pandas')
+#print('Nathan Young\nJunior Data Analyst\nCenter for the Study of Free Enterprise')
+#get_ipython().run_line_magic('load_ext', 'watermark')
+#get_ipython().run_line_magic('watermark', '-a "Western Carolina University" -u -d -p pandas')
 
 
-# In[3]:
+# In[ ]:
 
 
 # Create Backups
-#df_backup = pd.read_csv('./Updates/STG_ZLLW_County_MedianListingPrice_AllHomes.txt')
-#df_backup.to_csv('./Backups/STG_ZLLW_County_MedianListingPrice_AllHomes_BACKUP.txt')
+df_backup = pd.read_csv('./Updates/STG_ZLLW_County_MedianListingPrice_AllHomes.txt')
+df_backup.to_csv('./Backups/STG_ZLLW_County_MedianListingPrice_AllHomes_BACKUP.txt')
 
 
-# In[4]:
+# In[ ]:
 
 
 #Load Land data
@@ -41,7 +41,7 @@ df_mlp = pd.read_csv('http://files.zillowstatic.com/research/public/County/Count
 df_mlp.head()
 
 
-# In[5]:
+# In[ ]:
 
 
 #Filter data to NC
@@ -52,14 +52,14 @@ df_mlp_nc = df_mlp[filter1]
 df_mlp_nc.head(5)
 
 
-# In[6]:
+# In[ ]:
 
 
 #View data types of dataframe
 df_mlp_nc.dtypes
 
 
-# In[7]:
+# In[ ]:
 
 
 #Change MunicipalCodeFIPS dtype to add leading 0's
@@ -67,7 +67,7 @@ df_mlp_nc.loc[ :, 'MunicipalCodeFIPS'] = df_mlp_nc['MunicipalCodeFIPS'].astype(s
 df_mlp_nc.dtypes
 
 
-# In[8]:
+# In[ ]:
 
 
 #Add leading 0's and check to ensure they were added
@@ -75,7 +75,7 @@ df_mlp_nc.loc[ :, 'MunicipalCodeFIPS'] = df_mlp_nc['MunicipalCodeFIPS'].str.zfil
 df_mlp_nc.head(5)
 
 
-# In[9]:
+# In[ ]:
 
 
 # Set Index to Region Name
@@ -83,7 +83,7 @@ df_mlp_nc.set_index(df_mlp_nc['RegionName'], inplace = True)
 df_mlp_nc
 
 
-# In[10]:
+# In[ ]:
 
 
 # Drop Region Name column
@@ -91,21 +91,21 @@ df_mlp_nc.drop('RegionName', axis = 1, inplace = True)
 df_mlp_nc
 
 
-# In[11]:
+# In[ ]:
 
 
 #Save to csv file for export in Excel
-#df_mlp_nc.to_csv('./Updates/STG_ZLLW_County_MedianListingPrice_AllHomes.txt', sep ='\t')
+df_mlp_nc.to_csv('./Updates/STG_ZLLW_County_MedianListingPrice_AllHomes.txt', sep ='\t')
 
 
-# In[12]:
+# In[ ]:
 
 
 #Reset Index for upload to database
 df_mlp_nc = df_mlp_nc.reset_index()    
 
 
-# In[13]:
+# In[ ]:
 
 
 #Fill NaN values for upload to database
@@ -116,19 +116,20 @@ for i in column_list:
     df_mlp_nc.loc[df_mlp_nc[i].isnull(),i]=0
 
 
-# In[14]:
+# In[ ]:
 
 
 #Connect to database and create cursor
 con = pyodbc.connect('Driver={SQL Server};'
                       'Server=TITANIUM-BOOK;'
                       'Database=DataDashboard;'
-                      'Trusted_Connection=yes;')
+                      'Trusted_Connection=yes;',
+                    autocommit=True)
 
 c = con.cursor()
 
 
-# In[15]:
+# In[ ]:
 
 
 #Verify data is in database
@@ -137,31 +138,21 @@ for row in c:
     print(row)
 
 
-# In[16]:
+# In[ ]:
 
 
 #Drop old backup table
 c.execute('drop table STG_ZLLW_County_MedianListingPrice_AllHomes_BACKUP')
 
 
-# In[17]:
+# In[ ]:
 
 
 #Create new backup
-c.execute("sp_rename 'dbo.STG_ZLLW_County_MedianListingPrice_AllHomes','STG_ZLLW_County_MedianListingPrice_AllHomes_BACKUP';")
-con.commit()
+c.execute('''sp_rename 'dbo.STG_ZLLW_County_MedianListingPrice_AllHomes','STG_ZLLW_County_MedianListingPrice_AllHomes_BACKUP';''')
 
 
-# In[18]:
-
-
-#Verify backups are created
-c.execute('select top(1) * from dbo.STG_ZLLW_County_MedianListingPrice_AllHomes_BACKUP')
-for row in c:
-    print(row)
-
-
-# In[19]:
+# In[ ]:
 
 
 c.execute('''USE [DataDashboard]
@@ -312,16 +303,9 @@ CREATE TABLE [dbo].[STG_ZLLW_County_MedianListingPrice_AllHomes](
 ) ON [PRIMARY]''')
 
 
-# In[20]:
+# In[ ]:
 
 
-con.commit()
-
-
-# In[21]:
-
-
-from sqlalchemy import create_engine
 params = urllib.parse.quote_plus(r'Driver={SQL Server};' 
                                  r'Server=TITANIUM-BOOK;'
                                  r'Database=DataDashboard;'
