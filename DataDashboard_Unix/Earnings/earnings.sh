@@ -3,7 +3,7 @@ Python -W ignore Scripts/CAINC5N_NC.py
 cd Updates
 git status
 
-git commit -a -m "Earnings Update %Date%"
+git commit -a -m "Earnings Update" date +"%m-%d-%Y"
 git status
 
 git push

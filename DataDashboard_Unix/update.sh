@@ -1,31 +1,39 @@
-REM easy_install pip --upgrade
-REM pip install jupyter --upgrade
-REM pip install jupyter lab --upgrade
-REM pip install pandas --upgrade
-REM pip install tensorflow --upgrade
-REM pip install Requests --upgrade
-REM pip install watermark --upgrade
-REM pip install xlrd --upgrade
-REM pip install pyodbc --upgrade
-REM pip install sqlalchemy --upgrade
-REM pip install numpy --upgrade
+echo Checking Installs
+easy_install pip >nul
+pip install jupyter --upgrade >nul
+pip install jupyter lab --upgrade >nul
+pip install pandas --upgrade >nul
+pip install tensorflow --upgrade >nul
+pip install Requests --upgrade >nul
+pip install watermark --upgrade >nul
+pip install xlrd --upgrade >nul
+pip install pyodbc --upgrade >nul
+pip install sqlalchemy --upgrade >nul
+pip install numpy --upgrade >nul
+echo Check complete!
 
-git config --global user.name 'nathayoung'
-
+echo Updating Land...
 cd Land
 bash land.sh
 cd ..
+echo Update complete!
 
+echo Updating Demographics...
 cd Demographics
 bash demographics.sh
 cd ..
+echo Update complete!
 
+echo Updating Labor...
 cd Labor
 bash labor.sh
 cd ..
+echo Update complete!
 
+echo Update Earnings...
 cd Earnings
 bash earnings.sh
 cd ..
+echo Update complete!
 
 sleep 5

@@ -6,7 +6,7 @@ Scripts\GeoFRED_Resident_Population_by_County_Thousands_of_Persons.py
 cd Updates
 git status
 
-git commit -a -m "Demographics Update %Date%"
+git commit -a -m "Demographics Update" date +"%m-%d-%Y"
 git status
 
 git push
