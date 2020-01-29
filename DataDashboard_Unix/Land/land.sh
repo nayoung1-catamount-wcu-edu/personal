@@ -13,7 +13,7 @@ cd ..
 cd Updates
 git status
 
-git commit -a -m "Land Update date +"%m-%d-%Y""
+git commit -a -m "Land Update" date +"%m-%d-%Y"
 git status
 
 git push
