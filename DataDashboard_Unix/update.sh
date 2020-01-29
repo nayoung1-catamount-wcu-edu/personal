@@ -1,15 +1,15 @@
 echo Checking Installs
-easy_install pip >nul
-pip install jupyter --upgrade >nul
-pip install jupyter lab --upgrade >nul
-pip install pandas --upgrade >nul
-pip install tensorflow --upgrade >nul
-pip install Requests --upgrade >nul
-pip install watermark --upgrade >nul
-pip install xlrd --upgrade >nul
-pip install pyodbc --upgrade >nul
-pip install sqlalchemy --upgrade >nul
-pip install numpy --upgrade >nul
+Rem easy_install pip
+Rem pip install jupyter --upgrade
+Rem pip install jupyter lab --upgrade
+Rem pip install pandas --upgrade
+Rem pip install tensorflow --upgrade
+Rem pip install Requests --upgrade
+Rem pip install watermark --upgrade
+Rem pip install xlrd --upgrade
+Rem pip install pyodbc --upgrade
+Rem pip install sqlalchemy --upgrade
+Rem pip install numpy --upgrade
 echo Check complete!
 
 echo Updating Land...
