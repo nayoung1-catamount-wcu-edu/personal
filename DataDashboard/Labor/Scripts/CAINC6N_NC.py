@@ -87,7 +87,7 @@ df.head()
 
 
 # Save as tab-delimited txt file for export to SSMS
-df_clean.to_csv('./Updates/STG_BEA_CAINC6N_NC.txt', sep = '\t')
+df.to_csv('./Updates/STG_BEA_CAINC6N_NC.txt', sep = '\t')
 
 
 # In[ ]:
