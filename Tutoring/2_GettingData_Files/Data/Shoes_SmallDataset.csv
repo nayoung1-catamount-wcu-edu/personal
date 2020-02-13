@@ -1,0 +1,13 @@
+OrderID,Order Date,Product,Size (US),Colour,Price ($)
+0010,04/01/2015,Boots,12,Black,25
+0007,03/01/2015,Boots,10,Black,25
+0008,03/01/2015,Boots,9,Black,25
+0011,05/01/2015,Boots,7,Black,25
+0002,02/01/2015,Boots,4,Black,25
+0001,02/01/2015,Boots,7,Gold,25
+0006,03/01/2015,Boots,5,Gold,25
+0003,02/01/2015,Boots,6,Red,25
+0005,03/01/2015,Boots,6,Silver,25
+0004,03/01/2015,House Slippers,11,Black,8
+0009,03/01/2015,House Slippers,8,Black,8
+0012,05/01/2015,House Slippers,5,Red,8
