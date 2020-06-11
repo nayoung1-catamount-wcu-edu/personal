@@ -31,7 +31,7 @@ def runProgram():
                 di = df - (vi * t) - (0.5 * (-a) * (t ** 2))
                 print("\nInitial Displacement is: ", di)
                 break
-            except:
+            except BaseException:
                 break
 
     # Final displacement
@@ -47,7 +47,7 @@ def runProgram():
                 df = (vi * t) + (0.5 * (-a) * (t ** 2))
                 print("\nFinal Displacement is: ", df)
                 break
-            except:
+            except BaseException:
                 break
 
     # Acceleration
@@ -64,7 +64,7 @@ def runProgram():
                 a = (vf ** 2 - vi ** 2) / (2 * d)
                 print("\nAcceleration is: ", a)
                 break
-            except:
+            except BaseException:
                 break
 
     # Time
@@ -80,7 +80,7 @@ def runProgram():
                 t = ((2 * d) / (-a)) ** 0.5
                 print("\nTime is: ", t)
                 break
-            except:
+            except BaseException:
                 break
 
     # Final Velocity
@@ -96,7 +96,7 @@ def runProgram():
                 vf = (vi ** 2 + 2 * (-a) * d) ** 0.5
                 print("\nFinal Velocity is: ", vf)
                 break
-            except:
+            except BaseException:
                 break
 
     # Initial Velocity
@@ -113,7 +113,7 @@ def runProgram():
                 vi = vf - (-a) * t
                 print("\nInitial Velocity is: ", vi)
                 break
-            except:
+            except BaseException:
                 break
 
     ## End ##

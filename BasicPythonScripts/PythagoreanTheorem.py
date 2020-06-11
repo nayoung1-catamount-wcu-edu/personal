@@ -10,7 +10,7 @@ def runProgram():
         try:
             variable_a = float(input("Enter a value for side a: "))
             number = 1
-        except:
+        except BaseException:
             print("Please enter a numeric value.")
 
     # Enter sideB
@@ -19,7 +19,7 @@ def runProgram():
         try:
             variable_b = float(input("Enter a value for side b: "))
             number = 1
-        except:
+        except BaseException:
             print("Please enter a numeric value.")
 
     if variable_b <= 0:

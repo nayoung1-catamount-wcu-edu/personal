@@ -4,6 +4,7 @@
 # In[3]:
 
 
+import seaborn as sns
 import matplotlib.pyplot as plt
 import pandas as pd
 
@@ -37,9 +38,37 @@ end = dt.datetime(2020, 12, 31)
 # In[6]:
 
 
-stocks_to_retrieve = ['MMM', 'AXP', 'AAPL', 'BA', 'CAT', 'CVX', 'CSCO', 'KO', 'DIS', 'DOW', 'XOM', 
-                      'GS', 'HD', 'IBM', 'INTC', 'JNJ', 'JPM', 'MCD', 'MRK', 'MSFT', 'NKE', 'PFE',
-                      'PG', 'TRV', 'UTX', 'UNH', 'VZ', 'V', 'WMT', 'WBA']
+stocks_to_retrieve = [
+    'MMM',
+    'AXP',
+    'AAPL',
+    'BA',
+    'CAT',
+    'CVX',
+    'CSCO',
+    'KO',
+    'DIS',
+    'DOW',
+    'XOM',
+    'GS',
+    'HD',
+    'IBM',
+    'INTC',
+    'JNJ',
+    'JPM',
+    'MCD',
+    'MRK',
+    'MSFT',
+    'NKE',
+    'PFE',
+    'PG',
+    'TRV',
+    'UTX',
+    'UNH',
+    'VZ',
+    'V',
+    'WMT',
+    'WBA']
 #stocks_to_retrieve = ['DJIA']
 df = web.DataReader(stocks_to_retrieve, 'yahoo', start, end)
 df.head()
@@ -56,18 +85,17 @@ df_closing.head()
 
 
 df_closing.iplot(kind='line',
-                title='DOW Close: 01/1900-06/2020')
+                 title='DOW Close: 01/1900-06/2020')
 
 
 # In[ ]:
 
 
-import seaborn as sns
 sns.set()
 
-f, ax = plt.subplots(figsize=(500,200))
+f, ax = plt.subplots(figsize=(500, 200))
 sns.heatmap(df_closing, annot=True, linewidths=.5, ax=ax
-        )
+            )
 
 
 # df_closing.to_csv('C:/Users/natha/OneDrive/Desktop/personal/Data/closing_stocks.csv')

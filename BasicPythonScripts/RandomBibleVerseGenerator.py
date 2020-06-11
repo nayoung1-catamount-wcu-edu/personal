@@ -7,7 +7,7 @@
 
 
 import pandas as pd
-import random 
+import random
 
 
 # # Bible Verse Data
@@ -17,7 +17,8 @@ import random
 # In[2]:
 
 
-df = pd.read_excel('/Users/natha/Onedrive/Desktop/GitHub/personal/Data/bible_kjv.xlsx')
+df = pd.read_excel(
+    '/Users/natha/Onedrive/Desktop/GitHub/personal/Data/bible_kjv.xlsx')
 
 df.head(2)
 
@@ -33,12 +34,12 @@ df.columns
 # In[4]:
 
 
-rename_columns = {'b':'book',
-                 'c':'chapter',
-                 'v':'verse',
-                 't':'text'}
+rename_columns = {'b': 'book',
+                  'c': 'chapter',
+                  'v': 'verse',
+                  't': 'text'}
 
-df.rename(columns = rename_columns, inplace=True)
+df.rename(columns=rename_columns, inplace=True)
 df.head(2)
 
 
@@ -53,7 +54,7 @@ df.dtypes
 # In[6]:
 
 
-df['book']=pd.to_numeric(df['book']).astype(object)
+df['book'] = pd.to_numeric(df['book']).astype(object)
 df.dtypes
 
 
@@ -64,7 +65,8 @@ df.dtypes
 # In[7]:
 
 
-df_books = pd.read_excel('/Users/natha/Onedrive/Desktop/GitHub/personal/Data/bible_books.xlsx')
+df_books = pd.read_excel(
+    '/Users/natha/Onedrive/Desktop/GitHub/personal/Data/bible_books.xlsx')
 
 df_books.head(2)
 
@@ -92,7 +94,7 @@ df_books.dtypes
 # In[10]:
 
 
-df_bible = pd.merge(df_books, df, on = 'book', how = 'left')
+df_bible = pd.merge(df_books, df, on='book', how='left')
 df_bible.head()
 
 
@@ -101,12 +103,12 @@ df_bible.head()
 # In[11]:
 
 
-new_column_order = ['id','book','book_name','chapter','verse','text']
+new_column_order = ['id', 'book', 'book_name', 'chapter', 'verse', 'text']
 
 df_bible = df_bible[new_column_order]
 
-print('Number of rows: ',df_bible.shape[0])
-print('Number of columns: ',df_bible.shape[1])
+print('Number of rows: ', df_bible.shape[0])
+print('Number of columns: ', df_bible.shape[1])
 df_bible.head()
 
 
@@ -115,7 +117,8 @@ df_bible.head()
 
 #df_bible = df_bible.set_index('id')
 
-df_bible.to_csv('/Users/natha/Onedrive/Desktop/GitHub/personal/Data/finished_bible.csv')
+df_bible.to_csv(
+    '/Users/natha/Onedrive/Desktop/GitHub/personal/Data/finished_bible.csv')
 
 
 # In[13]:
@@ -146,5 +149,8 @@ amount_of_variables = int(input('How many verses do you want? '))
 
 
 random_verse = random.sample(range(range_low, range_high), amount_of_variables)
-print(df_bible.book_name.loc[random_verse].to_string(), df_bible.chapter.loc[random_verse].to_string(), df_bible.verse.loc[random_verse].to_string(), df_bible.text.loc[random_verse].to_string())
-
+print(
+    df_bible.book_name.loc[random_verse].to_string(),
+    df_bible.chapter.loc[random_verse].to_string(),
+    df_bible.verse.loc[random_verse].to_string(),
+    df_bible.text.loc[random_verse].to_string())

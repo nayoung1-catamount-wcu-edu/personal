@@ -7,6 +7,8 @@ import math
 spell = SpellChecker()
 
 ## Volume ##
+
+
 def runProgram():
     print("Hello! This program will help you find volumes for different shapes.")
     find_shape = spell.candidates(
@@ -41,7 +43,7 @@ def runProgram():
                 else:
                     number = 0
                     print("Value cannot be less than or equal to 0.")
-            except:
+            except BaseException:
                 print("Please enter a numeric value.")
                 continue
 
@@ -63,7 +65,7 @@ def runProgram():
                     number = 1
                 else:
                     print("Value cannot be less than or equal to 0.")
-            except:
+            except BaseException:
                 print("Please enter a numeric value.")
                 continue
 
@@ -76,7 +78,7 @@ def runProgram():
                     number = 1
                 else:
                     print("Value cannot be less than or equal to 0.")
-            except:
+            except BaseException:
                 print("Please enter a numeric value.")
                 continue
 
@@ -89,7 +91,7 @@ def runProgram():
                     number = 1
                 else:
                     print("Value cannot be less than or equal to 0.")
-            except:
+            except BaseException:
                 print("Please enter a numeric value.")
                 continue
 
@@ -111,7 +113,7 @@ def runProgram():
                     number = 1
                 else:
                     print("Value cannot be less than or equal to 0.")
-            except:
+            except BaseException:
                 print("Please enter a numeric value.")
                 continue
 
@@ -133,7 +135,7 @@ def runProgram():
                     number = 1
                 else:
                     print("Value cannot be less than or equal to 0.")
-            except:
+            except BaseException:
                 print("Please enter a numeric value.")
                 continue
 
@@ -146,7 +148,7 @@ def runProgram():
                     number = 1
                 else:
                     print("Value cannot be less than or equal to 0.")
-            except:
+            except BaseException:
                 print("Please enter a numeric value.")
                 continue
 
@@ -169,7 +171,7 @@ def runProgram():
                     number = 1
                 else:
                     print("Value cannot be less than or equal to 0.")
-            except:
+            except BaseException:
                 print("Please enter a numeric value.")
                 continue
 
@@ -182,7 +184,7 @@ def runProgram():
                     number = 1
                 else:
                     print("Value cannot be less than or equal to 0.")
-            except:
+            except BaseException:
                 print("Please enter a numeric value.")
                 continue
 
@@ -204,7 +206,7 @@ def runProgram():
                     number = 1
                 else:
                     print("Value cannot be less than or equal to 0.")
-            except:
+            except BaseException:
                 print("Please enter a numeric value.")
                 continue
 
@@ -217,7 +219,7 @@ def runProgram():
                     number = 1
                 else:
                     print("Value cannot be less than or equal to 0.")
-            except:
+            except BaseException:
                 print("Please enter a numeric value.")
                 continue
 
@@ -230,7 +232,7 @@ def runProgram():
                     number = 1
                 else:
                     print("Value cannot be less than or equal to 0.")
-            except:
+            except BaseException:
                 print("Please enter a numeric value.")
                 continue
 
@@ -252,7 +254,7 @@ def runProgram():
                     number = 1
                 else:
                     print("Value cannot be less than or equal to 0.")
-            except:
+            except BaseException:
                 print("Please enter a numeric value.")
                 continue
 
@@ -265,7 +267,7 @@ def runProgram():
                     number = 1
                 else:
                     print("Value cannot be less than or equal to 0.")
-            except:
+            except BaseException:
                 print("Please enter a numeric value.")
                 continue
 
