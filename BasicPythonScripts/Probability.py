@@ -2,6 +2,8 @@ import statistics
 from tabulate import tabulate
 import numpy as np
 import math
+import scipy.stats as st
+from scipy.integrate import quad
 
 # Random Variable Mean
 def random_mean():
@@ -66,13 +68,13 @@ def probability_distribution():
 # Binomial Distribution
 def binomial_distribution():
     # n = number of trials
-    n = int(input("Enter number of trials: "))
+    n = int(input("Enter n, numer of trials: "))
 
     # x = number of successes
-    x = int(input("Enter number of successes: "))
+    x = int(input("Enter x, number of successes: "))
 
     # p = probability as decimal
-    p = float(input("Enter probability as a decimal: "))
+    p = float(input("Enter p as a decimal: "))
 
     # Pr = what we are solving for
     Pr = (
@@ -86,9 +88,9 @@ def binomial_distribution():
 
 # Normal Distributions
 def normal_distribution():
-    x = int(input("\nWhat value are you solving for? "))
-    mean = int(input("Enter mean: "))
-    std_dev = int(input("Enter std dev: "))
+    x = float(input("\nWhat value are you solving for? "))
+    mean = float(input("Enter mean: "))
+    std_dev = float(input("Enter std dev: "))
 
     # z score
     z = (x - mean) / std_dev
@@ -97,6 +99,10 @@ def normal_distribution():
     else:
         print("\nNegative z-score of:", round(z, 4))
 
+    # probability
+    def normalProbabilityDensity(x):
+        constant = 1.0 / np.sqrt(2*np.pi)
+        return(constant * np.exp((-x**2) / 2.0) )
 
 # Program
 try:
