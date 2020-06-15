@@ -1,12 +1,9 @@
 import statistics
 from tabulate import tabulate
 import numpy as np
+import math
 
 # Random Variable Mean
-# x_bar = sample
-# mu = population
-
-
 def random_mean():
     x = [
         float(x) for x in input("Enter all values for x, separated by spaces: ").split()
@@ -25,14 +22,6 @@ def random_mean():
 
 
 # Probablility Distribution
-# Variance
-# sigma^2 = sum((x^2)*p(x)-mu^2)
-# Standard Variation
-# sigma = sqrt(variance)
-# Mean
-# mu = sum(x*p(x))
-
-
 def probability_distribution():
     # x values
     x = [
@@ -74,28 +63,58 @@ def probability_distribution():
         exit()
 
 
-def error():
-    print("\nThat did not work.",)
+# Binomial Distribution
+def binomial_distribution():
+    # n = number of trials
+    n = int(input("Enter number of trials: "))
+
+    # x = number of successes
+    x = int(input("Enter number of successes: "))
+
+    # p = probability as decimal
+    p = float(input("Enter probability as a decimal: "))
+
+    # Pr = what we are solving for
+    Pr = (
+        (math.factorial(n) / (math.factorial(x) * (math.factorial(n - x))))
+        * (p ** x)
+        * ((1 - p) ** (n - x))
+    )
+
+    print("\nProbability of", x, "successes from", n, "trials is:", round(Pr, 4))
 
 
+# Normal Distributions
+def normal_distribution():
+    x = int(input("\nWhat value are you solving for? "))
+    mean = int(input("Enter mean: "))
+    std_dev = int(input("Enter std dev: "))
+
+    # z score
+    z = (x - mean) / std_dev
+    if z >= 0:
+        print("\nPostitive z-score of:", round(z, 4))
+    else:
+        print("\nNegative z-score of:", round(z, 4))
+
+
+# Program
 try:
-    problem = int(input("What are you solving for? "))
+    problem = int(input("What type of problem are you solving? "))
     if problem == 1:
         random_mean()
     elif problem == 2:
         probability_distribution()
+    elif problem == 3:
+        binomial_distribution()
+    elif problem == 4:
+        normal_distribution()
     else:
         exit()
 
+# Error catching
 except statistics.StatisticsError:
     print("\nPlease enter at least 2 values.\n")
-    random_mean()
-    probability_distribution()
 
 except ValueError:
     print("\nThat did not work.  Please enter a numerical value.\n")
-    random_mean()
-    probability_distribution()
-
-# except TypeError:
-# error()
