@@ -57,7 +57,6 @@ def event_probability():
         runProgram()
 
 
-
 # Random Variable Mean
 def random_mean():
     x = [
@@ -141,6 +140,10 @@ def binomial_distribution():
 
 # Normal Distributions
 def normal_distribution():
+    import numpy as np
+    import matplotlib.pyplot as plt
+    from scipy.stats import norm
+
     x = float(input("\nWhat value are you solving for? "))
     mean = float(input("Enter mean: "))
     std_dev = float(input("Enter std dev: "))
@@ -151,6 +154,14 @@ def normal_distribution():
         print("\nPostitive z-score of:", round(z, 10))
     else:
         print("\nNegative z-score of:", round(z, 10))
+
+    def draw_z_score(x, cond, mean, std_dev, title):
+        y = norm.pdf(x, mean, std_dev)
+        z = x[cond]
+        plt.plot(x, y)
+        plt.fill_between(z, 0, norm.pdf(z, mean, std_dev))
+        plt.title(title)
+        plt.show()
 
     # probability
     def normalProbabilityDensity(x):
