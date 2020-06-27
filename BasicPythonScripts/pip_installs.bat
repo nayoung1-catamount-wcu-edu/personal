@@ -9,3 +9,6 @@ pip install watermark --upgrade
 pip install xlrd --upgrade
 pip install cufflinks --upgrade
 pip install plotly --upgrade
+pip install black --upgrade
+pip install plotnine --upgrade
+pip install tabulate --upgrade
