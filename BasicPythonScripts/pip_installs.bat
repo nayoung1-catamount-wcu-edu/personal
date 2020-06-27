@@ -12,3 +12,5 @@ pip install plotly --upgrade
 pip install black --upgrade
 pip install plotnine --upgrade
 pip install tabulate --upgrade
+pip install statsmodels --upgrade
+pip install scipy --upgrade
