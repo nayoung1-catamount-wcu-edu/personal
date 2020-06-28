@@ -15,3 +15,4 @@ pip install tabulate --upgrade
 pip install statsmodels --upgrade
 pip install scipy --upgrade
 pip install autopep8 --upgrade
+pip install bamboolib --upgrade
