@@ -1,18 +1,18 @@
 python -m pip install --upgrade pip --user
-pip install jupyter --upgrade
-pip install jupyter lab --upgrade
-pip install pandas --upgrade
-pip install tensorflow --upgrade
-pip install ZipFile --upgrade
-pip install Requests --upgrade
-pip install watermark --upgrade
-pip install xlrd --upgrade
-pip install cufflinks --upgrade
-pip install plotly --upgrade
-pip install black --upgrade
-pip install plotnine --upgrade
-pip install tabulate --upgrade
-pip install statsmodels --upgrade
-pip install scipy --upgrade
-pip install autopep8 --upgrade
-pip install bamboolib --upgrade
+python -m pip install jupyter --upgrade
+python -m pip install jupyter lab --upgrade
+python -m pip install pandas --upgrade
+python -m pip install tensorflow --upgrade
+python -m pip install Requests --upgrade
+python -m pip install watermark --upgrade
+python -m pip install xlrd --upgrade
+python -m pip install cufflinks --upgrade
+python -m pip install plotly --upgrade
+python -m pip install black --upgrade
+python -m pip install plotnine --upgrade
+python -m pip install tabulate --upgrade
+python -m pip install statsmodels --upgrade
+python -m pip install scipy --upgrade
+python -m pip install autopep8 --upgrade
+python -m pip install bamboolib --upgrade
+python -m pip install virtualenv --upgrade
