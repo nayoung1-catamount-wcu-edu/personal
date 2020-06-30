@@ -1,5 +1,7 @@
 # Welcome!
 
-### Basic Python Scripts
-This folder includes Python scripts for simple math problems and scripts I have made for myself or friends.
+### [Basic Python Scripts](https://github.com/nathayoung/personal/tree/master/BasicPythonScripts)
+This folder includes random Python scripts I have made for myself or friends.
 
+### [Basic R Scripts](https://github.com/nathayoung/personal/tree/master/BasicRScripts)
+This folder includes random R scripts I have made for myself.
