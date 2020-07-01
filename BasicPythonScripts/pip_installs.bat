@@ -16,3 +16,6 @@ python -m pip install scipy --upgrade
 python -m pip install autopep8 --upgrade
 python -m pip install bamboolib --upgrade
 python -m pip install virtualenv --upgrade
+python -m pip install pydotplus --upgrade
+python -m pip install sklearn --upgrade
+python -m pip install graphviz --upgrade
