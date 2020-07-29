@@ -22,3 +22,4 @@ python -m pip install graphviz --upgrade
 python -m pip install pandas_datareader --upgrade
 python -m pip install chart_studio --upgrade
 python -m pip install pandas_bokeh --upgrade
+py -m pip install pylint --upgrade
