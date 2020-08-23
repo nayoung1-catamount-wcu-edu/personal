@@ -90,12 +90,4 @@ df_closing.iplot(kind='line',
 
 # In[ ]:
 
-
-sns.set()
-
-f, ax = plt.subplots(figsize=(500, 200))
-sns.heatmap(df_closing, annot=True, linewidths=.5, ax=ax
-            )
-
-
-# df_closing.to_csv('C:/Users/natha/OneDrive/Desktop/personal/Data/closing_stocks.csv')
+df_closing.to_csv('C:/Users/natha/OneDrive/Desktop/personal/Data/closing_stocks.csv')
