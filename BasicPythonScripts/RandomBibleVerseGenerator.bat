@@ -1,0 +1,3 @@
+py RandomBibleVerseGenerator.py
+
+pause
