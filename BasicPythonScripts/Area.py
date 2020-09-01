@@ -1,5 +1,3 @@
-#!/usr/bin/env python3.9
-
 ## Imports ##
 from spellchecker import SpellChecker
 import math
@@ -297,7 +295,7 @@ def runProgram():
             import time
 
             time.sleep(2)
-            exit(0)
+            sys.exit(0)
         else:
             print("Resetting program...", "\n")
             import time
