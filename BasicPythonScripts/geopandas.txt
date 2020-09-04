@@ -1,0 +1,5 @@
+if having issues with goepandas, download and install GDAL-3.1.2-cp38-cp38.whl
+(https://download.lfd.uci.edu/pythonlibs/w3jqiv8s/GDAL-3.1.2-cp38-cp38-win32.whl)
+
+then download and install Fiona-1.8.13-cp38-cp38.win32.whl 
+(https://download.lfd.uci.edu/pythonlibs/w3jqiv8s/Fiona-1.8.13-cp38-cp38-win32.whl)
