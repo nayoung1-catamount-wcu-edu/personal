@@ -50,7 +50,7 @@ For each question, type the answer and the Python code you used to determine the
 4.  What percentage of the vote did Bill Clinton receive in New York in the 1996 election? 
 5. Bonus: Senator Kay Bailey Hutchison is not coded as "hutchison". Using any method, find the row that corresponds to Kay Bailey Hutchinson. Describe the method you used. 
 
-[Jupyter Notebook](Week1_Checkpoint2.ipynb)
+[Jupyter Notebook]()
 
 ### Week 1, Activity 1
 Create a post where you ask two questions about how to do something in pandas.

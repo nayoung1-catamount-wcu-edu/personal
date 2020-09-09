@@ -1,25 +1,26 @@
-jupyter --upgrade
-jupyter lab --upgrade
-pandas --upgrade
-tensorflow --upgrade
-Requests --upgrade
-watermark --upgrade
-xlrd --upgrade
-cufflinks --upgrade
-plotly --upgrade
-black --upgrade
-plotnine --upgrade
-tabulate --upgrade
-statsmodels --upgrade
-scipy --upgrade
-autopep8 --upgrade
-bamboolib --upgrade
-virtualenv --upgrade
-pydotplus --upgrade
-sklearn --upgrade
-graphviz --upgrade
-pandas_datareader --upgrade
-chart_studio --upgrade
-pandas_bokeh --upgrade
-pylint --upgrade
-spellchecker --upgrade
+jupyter  
+pandas 
+tensorflow 
+Requests 
+watermark 
+xlrd 
+cufflinks 
+plotly 
+black 
+plotnine 
+tabulate 
+statsmodels 
+scipy 
+autopep8 
+bamboolib 
+virtualenv 
+pydotplus 
+sklearn 
+graphviz 
+pandas_datareader 
+chart_studio 
+pandas_bokeh 
+pylint 
+spellchecker 
+folium 
+geopandas 
