@@ -8,6 +8,7 @@ import "fmt"
 The main function, when part of the main package, identified the entry point
 of an application.
 */
+
 func main() {
-	fmt.Println("\nHello, world.")
+	fmt.Println("Hello world")
 }
