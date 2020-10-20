@@ -2,7 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/School Work/MATH_475/Python-Machine-Learning-Third-Edition" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/School Work/MATH_475/python-machine-learning-book-3rd-edition" vcs="Git" />
   </component>
 </project>
