@@ -1,0 +1,52 @@
+DataFile,TreeSpecies,CommonName,ScientificName
+corner_trees,ALDER, Alder ,Alnus sp.
+corner_trees,ALPINE FIR, Subalpine fir ,Abies lasiocarpa
+corner_trees,BALM, Black cottonwood ,Populus balsamifera
+corner_trees,BALSAM FIR, Grand fir ,Abies grandis
+corner_trees,BIRCH, Birch ,Betula sp.
+corner_trees,BLACK PINE, Lodgepole pine ,Pinus contorta
+corner_trees,B--RBERY, Bearberry ,Arctostaphylos uva-ursi
+corner_trees,BULL PINE, pine,Pinus sp.
+corner_trees,CHERRY, Cherry ,Prunus sp.
+corner_trees,COTTONWOOD, Black cottonwood ,Populus balsamifera
+corner_trees,DEAD FIR, Douglas-fir ,Pseudotsuga menziesii
+corner_trees,DEAD PINE, Ponderosa pine ,Pinus ponderosa
+corner_trees,DOUBLE FIR, Douglas fir ,Pseudotsuga menziesii
+corner_trees,DOUBLE PINE, Ponderosa pine ,Pinus ponderosa
+corner_trees,DOUBLE SPRUCE, Engelmann spruce ,Picea engelmannii
+corner_trees,DOUBLE WHITE PINE, Western white pine ,Pinus monticola
+corner_trees,FIR, Douglas fir ,Pseudotsuga menziesii
+corner_trees,HEMLOCK, Mountan hemlock ,Tsuga mertensiana
+corner_trees,JUNIPER, Western juniper ,Juniperus occidentalis
+corner_trees,LARCH, Western larch ,Larix occidentalis
+corner_trees,LODGEPOLE PINE, Lodgepole pine ,Pinus contorta
+corner_trees,MAHOGANY, Mountain mahogany ,Cercocarpus ledifolius
+corner_trees,MESQUITE, Mesquite ,Prosopis sp.
+corner_trees,PINE, Ponderosa pine ,Pinus ponderosa
+corner_trees,POPLAR, Black cottonwood ,Populus trichocarpa
+corner_trees,QUAKING ASH, Quaking aspen ,Populus tremuloides
+corner_trees,QUAKING ASPEN, Quaking aspen ,Populus tremuloides
+corner_trees,RED FIR, Douglas fir ,Pseudotsuga menziesii
+corner_trees,ROCKY MTN MAPLE, Rocky Mountain maple ,Acer glabrum
+corner_trees,SILVER FIR, Grand fir ,Abies grandis
+corner_trees,SPRUCE, Englemann spruce ,Picea engelmannii
+corner_trees,SPRUCE PINE, Lodgepole pine ,Pinus contorta
+corner_trees,WESTERN LARCH, Western larch ,Larix occidentalis
+corner_trees,WHITE FIR, Grand fir ,Abies grandis
+corner_trees,WHITE PINE, Western white pine ,Pinus monticola
+corner_trees,WILLOW, Black willow ,Salix nigra
+corner_trees,YELLOW FIR, Grand fir ,Abies grandis
+corner_trees,YELLOW PINE, Ponderosa pine ,Pinus ponderosa
+corner_trees,YEW, Pacific yew ,Taxus brevifolia
+line_trees,BLACK PINE, Lodgepole pine ,Pinus contorta
+line_trees,BULL PINE, pine,Pinus sp.
+line_trees,COTTONWOOD, Black cottonwood ,Populus balsamifera
+line_trees,FIR, Douglas fir ,Pseudotsuga menziesii
+line_trees,JUNIPER, Western juniper ,Juniperus occidentalis
+line_trees,PINE, Ponderosa pine ,Pinus ponderosa
+line_trees,RED FIR, Douglas fir ,Pseudotsuga menziesii
+line_trees,SPRUCE, Englemann spruce ,Picea engelmannii
+line_trees,WESTERN LARCH, Western larch ,Larix occidentalis
+line_trees,WHITE FIR, Grand fir ,Abies grandis
+line_trees,WHITE PINE, Western white pine ,Pinus monticola
+line_trees,YELLOW PINE, Ponderosa pine ,Pinus ponderosa
