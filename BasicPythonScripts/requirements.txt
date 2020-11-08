@@ -22,5 +22,6 @@ chart_studio
 pandas_bokeh 
 pylint 
 spellchecker 
-folium 
+folium
+gdal
 geopandas 
