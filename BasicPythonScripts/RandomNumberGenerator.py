@@ -5,6 +5,7 @@
 
 # User input for the lowest value in a range.
 import random
+
 enternumber = 0
 
 while enternumber == 0:

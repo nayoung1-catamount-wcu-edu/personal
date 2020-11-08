@@ -101,5 +101,6 @@ def runProgram():
     except KeyboardInterrupt:
         exit()
 
+
 while True:
     runProgram()

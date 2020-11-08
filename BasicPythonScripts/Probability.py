@@ -14,7 +14,9 @@ def clear():
 
 # Event probability
 def event_probability():
-    options = int(input("\nMenu:\n1 Single Event\n2 Multi Event\nWhat are you solving for? "))
+    options = int(
+        input("\nMenu:\n1 Single Event\n2 Multi Event\nWhat are you solving for? ")
+    )
     if options == 1:
         n = int(input("\nNumber of possible outcomes: "))
         x = int(input("Number of events occured: "))
@@ -228,6 +230,7 @@ def sample_proportion():
 # Program
 
 try:
+
     def runProgram():
         clear()
         problem = int(
@@ -265,6 +268,7 @@ try:
             sample_proportion()
         else:
             exit()
+
     while True:
         runProgram()
 
