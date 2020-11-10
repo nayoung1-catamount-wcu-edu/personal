@@ -4,8 +4,8 @@
 normalcdf <- function(x, mean, sd) {
   x <- as.double(readline(prompt="Enter value for x: "))
   mean <- as.double(readline(prompt="Enter value for mean: "))
-  sd <- as.double(readline(prompt="Enter value for std dev: ")) 
-  ans_greater_than_x <- 1 - pnorm(x, mean=mean, sd=sd) 
+  sd <- as.double(readline(prompt="Enter value for std dev: "))
+  ans_greater_than_x <- 1 - pnorm(x, mean=mean, sd=sd)
   ans_less_than_x <- 1 - ans_greater_than_x
   cat("Answer if looking for greater than x:",
         round(ans_greater_than_x, digits=4))
