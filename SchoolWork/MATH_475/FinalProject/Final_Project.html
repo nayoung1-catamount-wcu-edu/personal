@@ -13090,36 +13090,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Predicting-Hazardous-Asteroids">Predicting Hazardous Asteroids<a class="anchor-link" href="#Predicting-Hazardous-Asteroids">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><h1>Table of Contents<span class="tocSkip"></span></h1></p>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Intro" data-toc-modified-id="Intro-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Intro</a></span><ul class="toc-item"><li><span><a href="#What" data-toc-modified-id="What-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span>What</a></span></li><li><span><a href="#Why" data-toc-modified-id="Why-1.2"><span class="toc-item-num">1.2&nbsp;&nbsp;</span>Why</a></span></li></ul></li><li><span><a href="#Imports" data-toc-modified-id="Imports-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Imports</a></span></li><li><span><a href="#Process-Data" data-toc-modified-id="Process-Data-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Process Data</a></span><ul class="toc-item"><li><span><a href="#Load-data" data-toc-modified-id="Load-data-3.1"><span class="toc-item-num">3.1&nbsp;&nbsp;</span>Load data</a></span></li><li><span><a href="#Understand-data" data-toc-modified-id="Understand-data-3.2"><span class="toc-item-num">3.2&nbsp;&nbsp;</span>Understand data</a></span></li><li><span><a href="#Automation" data-toc-modified-id="Automation-3.3"><span class="toc-item-num">3.3&nbsp;&nbsp;</span>Automation</a></span></li></ul></li></ul></div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Intro">Intro<a class="anchor-link" href="#Intro">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="What">What<a class="anchor-link" href="#What">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>NASA (National Aeronautics and Space Administration) is a world-renown organization headquartered in the United States.  The organization was created during the Space Race with Russia, in response to Sputnik 1 being launched into orbit around Earth.  Since then, NASA has landed people on the moon, rovers on Mars, telescopes into deep space, built (with international partnerships) a space station, and is still working to develop new technologies every day.  Part of their research takes a look at asteroids and attempts to determine if asteroids are hazardous or safe to Earth, so that we can take proper action should it be necessary.  The data used in this project comes from <a href="https://www.kaggle.com/shrutimehta/nasa-asteroids-classification">Kaggle</a>, but originates from NASA.</p>
+<h1 id="Predicting-Hazardous-Asteroids">Predicting Hazardous Asteroids<a class="anchor-link" href="#Predicting-Hazardous-Asteroids">&#182;</a></h1><h3 id="What">What<a class="anchor-link" href="#What">&#182;</a></h3><p>NASA (National Aeronautics and Space Administration) is a world-renown organization headquartered in the United States.  The organization was created during the Space Race with Russia, in response to Sputnik 1 being launched into orbit around Earth.  Since then, NASA has landed people on the moon, rovers on Mars, telescopes into deep space, built (with international partnerships) a space station, and is still working to develop new technologies every day.  Part of their research takes a look at asteroids and attempts to determine if asteroids are hazardous or safe to Earth, so that we can take proper action should it be necessary.  The data used in this project comes from <a href="https://www.kaggle.com/shrutimehta/nasa-asteroids-classification">Kaggle</a>, but originates from NASA.</p>
 <p>This data contains 40 variables which can be summarized as follows:</p>
 <ul>
 <li>The first two columns contain identical identifier values and are not too important or beneficial for a model. </li>
@@ -13133,108 +13104,11 @@ div#notebook {
 <ul>
 <li>The target variable is <code>hazardous</code> column, showing whether the asteroid is hazardous or not, based on size, speed, and orbit.</li>
 </ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Why">Why<a class="anchor-link" href="#Why">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>My grandfather worked for NASA during the Apollo missions.  This alone got me interested in a career in aeronautics, as well as witnessing SpaceX's many successes (and failures) and eventual partnership with NASA to launch American astronauts from American soil.  Today, my interest in space continues to grow and one of my goals is to work for an aeronautics company in the future.  Chances of me getting that a role like that are slim, right now, so the best thing I can do is work with data they provide to continue building my skills and experience.</p>
+<h3 id="Why">Why<a class="anchor-link" href="#Why">&#182;</a></h3><p>My grandfather worked for NASA during the Apollo missions.  This alone got me interested in a career in aeronautics, as well as witnessing SpaceX's many successes (and failures) and eventual partnership with NASA to launch American astronauts from American soil.  Today, my interest in space continues to grow and one of my goals is to work for an aeronautics company in the future.  Chances of me getting that a role like that are slim, right now, so the best thing I can do is work with data they provide to continue building my skills and experience.</p>
 <p>Let's get started!</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Imports">Imports<a class="anchor-link" href="#Imports">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>First, we will import "global" packages that we will use throughout our code.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># global imports</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">matplotlib.colors</span> <span class="kn">import</span> <span class="n">ListedColormap</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">classification_report</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">GridSearchCV</span><span class="p">,</span> <span class="n">train_test_split</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Process-Data">Process Data<a class="anchor-link" href="#Process-Data">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Load-data">Load data<a class="anchor-link" href="#Load-data">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Thanks to this data coming from Kaggle, there are no special steps or attributes necessary to load data into a data frame.  We can just use the <code>read_csv()</code> function included in the Pandas library.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># load csv into pandas dataframe</span>
-<span class="n">asteroids</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;nasa.csv&quot;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Understand-data">Understand data<a class="anchor-link" href="#Understand-data">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Now that the data has been loaded, let's take a run-down of contents.  Again, this data comes from Kaggle and thus has already been preprocessed, but we might want to do more to make it our own.</p>
+<h2 id="Imports">Imports<a class="anchor-link" href="#Imports">&#182;</a></h2><p>First, we will import "global" packages that we will use throughout our code. We will import <code>pandas</code>, <code>numpy</code>, <code>seaborn</code>, <code>matplotlib</code>, and various sklearn libraries.</p>
+<h3 id="Load-data">Load data<a class="anchor-link" href="#Load-data">&#182;</a></h3><p>Thanks to this data coming from Kaggle, there are no special steps or attributes necessary to load data into a data frame.  We can just use the <code>read_csv()</code> function included in the Pandas library.</p>
+<h3 id="Understand-data">Understand data<a class="anchor-link" href="#Understand-data">&#182;</a></h3><p>Now that the data has been loaded, let's take a run-down of contents.  Again, this data comes from Kaggle and thus has already been preprocessed, but we might want to do more to make it our own.  We can use <code>.info()</code> to get information on the columns.</p>
 
 </div>
 </div>
@@ -13321,446 +13195,38 @@ memory usage: 1.4+ MB
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Each column has the same number of non-null rows which matches the number of rows the dataframe contains (see RangeIndex value at the top of the result pane).  That means there are likely no nulls in the data.  We can see here that there are four (4) columns with the <code>object</code> data type and five (5) columns with the <code>int64</code> data type.  Let's look at what these columns contain to see if they are helpful. We already plan on dropping the first two <code>int64</code> columns, but we will take a look to understand why. We will look at the others following in order, for readability.</p>
-<p>First, <code>Neo Reference ID</code>.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># see unique values in column</span>
-<span class="n">asteroids</span><span class="p">[</span><span class="s2">&quot;Neo Reference ID&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[4]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([3703080, 3723955, 2446862, 3092506, 3514799], dtype=int64)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>As mentioned before, these values just identify asteroids.  Interesting enough, if you put <code>.sum()</code> at the end, it will give you the sum of the column, adding each value together.  That is not the interesting part, as that should be obvious.  What is interesting is if you add <code>.sum()</code> to <code>.unique()</code> you get a smaller value when you would expect the same value.  This means some asteroids can be found more than once in this data set.  We might want to remove duplicates as they may throw the model off or train it too well.</p>
-<p>The <code>Name</code> column should contain the same values, but we can check just to make sure.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># see unique values in column</span>
-<span class="n">asteroids</span><span class="p">[</span><span class="s2">&quot;Name&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[5]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([3703080, 3723955, 2446862, 3092506, 3514799], dtype=int64)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Sure enough, as expected, both <code>Neo Reference ID</code> and <code>Name</code> contain the same values.  We can drop these columns after we use them to remove duplicates.</p>
-<p>Let's look at <code>Close Approach Date</code>.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># look at &#39;Close Approach Date&#39;</span>
-<span class="n">asteroids</span><span class="p">[</span><span class="s2">&quot;Close Approach Date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[6]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([&#39;1995-01-01&#39;, &#39;1995-01-08&#39;, &#39;1995-01-15&#39;], dtype=object)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We don't have access to the metadata, but from the column name, <code>Close Approach Date</code> is most likely the date the asteroid will pass closest to the earth.  While it might be interesting to see if there is a pattern in dates relating to if an asteroid is hazardous or not, that exploration is for another project.  If we wanted to use this column, we could encode it, but that would result in over 4000 new columns.  Instead of doing that, for this project, we will drop this column.</p>
-<p>Let's look at <code>Epoch Date Close Approach</code>.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># see unique values in column</span>
-<span class="n">asteroids</span><span class="p">[</span><span class="s2">&quot;Epoch Date Close Approach&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[7]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([788947200000, 789552000000, 790156800000], dtype=int64)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>There are a number of unique values, but it might be the <code>Close Approach Date</code> in epoch format.  Since we are not completely sure, we will drop this column too.</p>
-<p>Let's look at <code>Orbiting Body</code>.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># see unique values in column</span>
-<span class="n">asteroids</span><span class="p">[</span><span class="s2">&quot;Orbiting Body&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[8]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([&#39;Earth&#39;], dtype=object)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Looking at the data in the <code>Orbiting Body</code> column, we can tell that the value is the body the asteroid is orbiting.  Now, basic knowledge of the solar system will tell us that we (Earth) orbit the sun, as does everything else in our the solar system.  We then have an idea of what this column will contain for the values we cannot see.  When <code>.unique()</code> argument, we are able to find each distinct value in a column.  Having 4686 rows with the same value  ('Earth') seems odd, but since this data is determining if an asteroid is hazardous to Earth and not the entire solar system, it makes sense.  We can remove this column as it provides no helpful information for classification.</p>
-<p>Let's take a look at <code>Orbit ID</code>.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># see unique values</span>
-<span class="n">asteroids</span><span class="p">[</span><span class="s2">&quot;Orbit ID&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[9]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([17, 21, 22,  7, 25], dtype=int64)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>If we were to look at a map of asteroids orbiting Earth, we would see rings going around the planet.  Without the meta data it is difficult to be certain what this column is trying to share with us, but it could be an identifier of an orbital pattern.  Because we don't know exactly what this column means, we will remove it from this classification project.</p>
-<p>Let's look at <code>Orbit Determination Date</code>.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># look at &#39;Orbit Determination Date&#39;</span>
-<span class="n">asteroids</span><span class="p">[</span><span class="s2">&quot;Orbit Determination Date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[10]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([&#39;2017-04-06 08:36:37&#39;, &#39;2017-04-06 08:32:49&#39;,
-       &#39;2017-04-06 09:20:19&#39;, &#39;2017-04-06 09:15:49&#39;,
-       &#39;2017-04-06 08:57:58&#39;], dtype=object)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>This column contains more dates but this column contains times as well.  Again, without meta data we cannot conclude for sure what the definition of this column is, but it might be pertaining to the date and time an asteroid completes an orbit around Earth.  Much like <code>Close Approach Date</code>, <code>Orbit Determination Date</code> is not helpful for this classification project, thought it might provide helpful insight for other projects.</p>
-<p>Next, we will check out the <code>Orbit Uncertainity</code> column.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">asteroids</span><span class="p">[</span><span class="s2">&quot;Orbit Uncertainity&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[11]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([5, 3, 0, 6, 1], dtype=int64)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The column name has a spelling error, adding an extra 'i' so if we keeping it we could make that change.  However, we do not have much information about this column and therefore we will not use it in this classification project.</p>
-<p>Finally, let's look at <code>Equinox</code>.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># see unique values in `Equinox` column</span>
-<span class="n">asteroids</span><span class="p">[</span><span class="s2">&quot;Equinox&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[12]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([&#39;J2000&#39;], dtype=object)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The "equinox" is the time or date when the equator of the sun matches the equator of the earth, causing day and night to be equal lengths.  In this case, the values are obviously not in standard date and time, however they are in date and time.  This format is called the "standard equinox (and epoch)" where "J" stands for "Julian epoch" and "2000" refers to January 1, 2000, 12:00 Terrestrial Time (<a href="https://community.esri.com/t5/coordinate-reference-systems/drifting-of-the-celestial-sphere-what-is-j2000/ba-p/902058">more here</a>).  This is a standard value being used since 1984 and is not helpful to determining if an asteroid is hazardous or not, so we will remove this column from our project.</p>
+<p>First, <code>Neo Reference ID</code>.
+As mentioned before, these values just identify asteroids.  Interesting enough, if you put <code>.sum()</code> at the end, it will give you the sum of the column, adding each value together.  That is not the interesting part, as that should be obvious.  What is interesting is if you add <code>.sum()</code> to <code>.unique()</code> you get a smaller value when you would expect the same value.  This means some asteroids can be found more than once in this data set.  We might want to remove duplicates as they may throw the model off or train it too well.</p>
+<p>The <code>Name</code> column should contain the same values, but we can check just to make sure.
+Sure enough, as expected, both <code>Neo Reference ID</code> and <code>Name</code> contain the same values.  We can drop these columns after we use them to remove duplicates.</p>
+<p>Let's look at <code>Close Approach Date</code>.
+We don't have access to the metadata, but from the column name, <code>Close Approach Date</code> is most likely the date the asteroid will pass closest to the earth.  While it might be interesting to see if there is a pattern in dates relating to if an asteroid is hazardous or not, that exploration is for another project.  If we wanted to use this column, we could encode it, but that would result in over 4000 new columns.  Instead of doing that, for this project, we will drop this column.</p>
+<p>Let's look at <code>Epoch Date Close Approach</code>.
+There are a number of unique values, but it might be the <code>Close Approach Date</code> in epoch format.  Since we are not completely sure, we will drop this column too.</p>
+<p>Let's look at <code>Orbiting Body</code>.
+Looking at the data in the <code>Orbiting Body</code> column, we can tell that the value is the body the asteroid is orbiting.  Now, basic knowledge of the solar system will tell us that we (Earth) orbit the sun, as does everything else in our the solar system.  We then have an idea of what this column will contain for the values we cannot see.  When <code>.unique()</code> argument, we are able to find each distinct value in a column.  Having 4686 rows with the same value  ('Earth') seems odd, but since this data is determining if an asteroid is hazardous to Earth and not the entire solar system, it makes sense.  We can remove this column as it provides no helpful information for classification.</p>
+<p>Let's take a look at <code>Orbit ID</code>.
+If we were to look at a map of asteroids orbiting Earth, we would see rings going around the planet.  Without the meta data it is difficult to be certain what this column is trying to share with us, but it could be an identifier of an orbital pattern.  Because we don't know exactly what this column means, we will remove it from this classification project.</p>
+<p>Let's look at <code>Orbit Determination Date</code>.
+This column contains more dates but this column contains times as well.  Again, without meta data we cannot conclude for sure what the definition of this column is, but it might be pertaining to the date and time an asteroid completes an orbit around Earth.  Much like <code>Close Approach Date</code>, <code>Orbit Determination Date</code> is not helpful for this classification project, thought it might provide helpful insight for other projects.</p>
+<p>Next, we will check out the <code>Orbit Uncertainity</code> column.
+The column name has a spelling error, adding an extra 'i' so if we keeping it we could make that change.  However, we do not have much information about this column and therefore we will not use it in this classification project.</p>
+<p>Finally, let's look at <code>Equinox</code>.
+The "equinox" is the time or date when the equator of the sun matches the equator of the earth, causing day and night to be equal lengths.  In this case, the values are obviously not in standard date and time, however they are in date and time.  This format is called the "standard equinox (and epoch)" where "J" stands for "Julian epoch" and "2000" refers to January 1, 2000, 12:00 Terrestrial Time (<a href="https://community.esri.com/t5/coordinate-reference-systems/drifting-of-the-celestial-sphere-what-is-j2000/ba-p/902058">more here</a>).  This is a standard value being used since 1984 and is not helpful to determining if an asteroid is hazardous or not, so we will remove this column from our project.</p>
 <p>None of the columns with an <code>object</code> or <code>int64</code> data type are helpful when determining if an asteroid is hazardous or not so we will drop them when we clean the data.</p>
 <p>Also, earlier we mentioned removing the first two columns as they are identifiers and contain the exact same data.  We will do this in the next step as well.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <p><a href="https://stackoverflow.com/questions/48817592/how-to-drop-dataframe-columns-based-on-dtype">Code from Stack Overflow</a></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <p><a href="https://stackoverflow.com/questions/44026832/valueerror-number-of-features-of-the-model-must-match-the-input/44028890#44028890">Help from Stack Overflow</a></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Automation">Automation<a class="anchor-link" href="#Automation">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
-<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
-
-<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#</span>
-<span class="k">def</span> <span class="nf">random_forest_class</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">dtypes_to_drop</span><span class="p">,</span> <span class="n">nestimators</span><span class="p">,</span> <span class="n">mdepth</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">random_forest_class</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">dtypes_to_drop</span><span class="p">,</span> <span class="n">nestimators</span><span class="p">,</span> <span class="n">mdepth</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Input:</span>
 <span class="sd">        data : str : path to data</span>
@@ -13768,19 +13234,21 @@ memory usage: 1.4+ MB
 <span class="sd">        nestimators : list : number of trees to build</span>
 <span class="sd">        mdepth : np.arange int : range of depths</span>
 <span class="sd">        target : str : target variable</span>
-<span class="sd">        </span>
+
 <span class="sd">    Output:</span>
 <span class="sd">        cm : graph : confusion matrix</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-    
-    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">exclude</span> <span class="o">=</span> <span class="n">dtypes_to_drop</span><span class="p">)</span>
-    
-    <span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">exclude</span><span class="o">=</span><span class="n">dtypes_to_drop</span><span class="p">)</span>
+
+    <span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
     <span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">target</span><span class="p">]</span>
 
-    <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">train_size</span> <span class="o">=</span> <span class="o">.</span><span class="mi">7</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="o">.</span><span class="mi">3</span><span class="p">)</span>
-    
+    <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+        <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">train_size</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span>
+    <span class="p">)</span>
+
     <span class="n">sc</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
     <span class="n">sc</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
     <span class="n">X_train_std</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
@@ -13788,33 +13256,37 @@ memory usage: 1.4+ MB
 
     <span class="n">X_combined_std</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">X_train_std</span><span class="p">,</span> <span class="n">X_test_std</span><span class="p">))</span>
     <span class="n">y_combined</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span><span class="p">))</span>
-    
+
     <span class="n">rfc</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">()</span>
-    
+
     <span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s2">&quot;n_estimators&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="n">e</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">nestimators</span><span class="p">],</span>
-        <span class="s2">&quot;max_depth&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="n">d</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">mdepth</span><span class="p">],</span>
-        <span class="s2">&quot;criterion&quot;</span> <span class="p">:</span> <span class="p">(</span><span class="s1">&#39;gini&#39;</span><span class="p">,</span> <span class="s1">&#39;entropy&#39;</span><span class="p">)</span>
+        <span class="s2">&quot;n_estimators&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">nestimators</span><span class="p">],</span>
+        <span class="s2">&quot;max_depth&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">d</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">mdepth</span><span class="p">],</span>
+        <span class="s2">&quot;criterion&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;gini&quot;</span><span class="p">,</span> <span class="s2">&quot;entropy&quot;</span><span class="p">),</span>
     <span class="p">}</span>
 
     <span class="n">grid_search</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">rfc</span><span class="p">,</span> <span class="n">parameters</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
     <span class="n">grid_search_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">grid_search</span><span class="o">.</span><span class="n">cv_results_</span><span class="p">)</span>
-    
+
     <span class="n">best_model</span> <span class="o">=</span> <span class="n">grid_search_data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:</span><span class="s2">&quot;mean_test_score&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
-    
+
     <span class="n">best_rfc</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span>
-        <span class="n">n_estimators</span> <span class="o">=</span> <span class="n">best_model</span><span class="o">.</span><span class="n">param_n_estimators</span><span class="p">,</span>
-        <span class="n">max_depth</span> <span class="o">=</span> <span class="n">best_model</span><span class="o">.</span><span class="n">param_max_depth</span><span class="p">,</span>
-        <span class="n">criterion</span> <span class="o">=</span> <span class="n">best_model</span><span class="o">.</span><span class="n">param_criterion</span><span class="p">,</span>
-        <span class="n">n_jobs</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
-        <span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">n_estimators</span><span class="o">=</span><span class="n">best_model</span><span class="o">.</span><span class="n">param_n_estimators</span><span class="p">,</span>
+        <span class="n">max_depth</span><span class="o">=</span><span class="n">best_model</span><span class="o">.</span><span class="n">param_max_depth</span><span class="p">,</span>
+        <span class="n">criterion</span><span class="o">=</span><span class="n">best_model</span><span class="o">.</span><span class="n">param_criterion</span><span class="p">,</span>
+        <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
     <span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 
     <span class="n">sr</span> <span class="o">=</span> <span class="n">classification_report</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">best_rfc</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">))</span>
-    
+
     <span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">best_rfc</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">))</span>
 
-    <span class="k">return</span> <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">cm</span><span class="p">,</span> <span class="n">annot</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">fmt</span> <span class="o">=</span> <span class="s2">&quot;d&quot;</span><span class="p">)),</span> <span class="nb">print</span><span class="p">(</span><span class="n">sr</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">cm</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;d&quot;</span><span class="p">)),</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">sr</span><span class="p">),</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of features: &quot;</span><span class="p">,</span> <span class="n">best_rfc</span><span class="o">.</span><span class="n">n_features_</span><span class="p">),</span>
+    <span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13824,15 +13296,15 @@ memory usage: 1.4+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">random_forest_class</span><span class="p">(</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="s2">&quot;nasa.csv&quot;</span><span class="p">,</span> 
-    <span class="n">dtypes_to_drop</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;object&quot;</span><span class="p">,</span> <span class="s2">&quot;int64&quot;</span><span class="p">],</span> 
-    <span class="n">nestimators</span> <span class="o">=</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">101</span><span class="p">),</span>
-    <span class="n">mdepth</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
-    <span class="n">target</span> <span class="o">=</span> <span class="s2">&quot;Hazardous&quot;</span>
+    <span class="n">data</span><span class="o">=</span><span class="s2">&quot;nasa.csv&quot;</span><span class="p">,</span>
+    <span class="n">dtypes_to_drop</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;object&quot;</span><span class="p">,</span> <span class="s2">&quot;int64&quot;</span><span class="p">],</span>
+    <span class="n">nestimators</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">1000</span><span class="p">),</span>
+    <span class="n">mdepth</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+    <span class="n">target</span><span class="o">=</span><span class="s2">&quot;Hazardous&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 </pre></div>
 
@@ -13850,11 +13322,498 @@ memory usage: 1.4+ MB
 
 
 
+<div class="output_svg output_subarea ">
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with matplotlib (https://matplotlib.org/) -->
+<svg height="248.518125pt" version="1.1" viewBox="0 0 358.980125 248.518125" width="358.980125pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+*{stroke-linecap:butt;stroke-linejoin:round;}
+  </style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M -0 248.518125 
+L 358.980125 248.518125 
+L 358.980125 0 
+L -0 0 
+z
+" style="fill:none;"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 23.878125 224.64 
+L 291.718125 224.64 
+L 291.718125 7.2 
+L 23.878125 7.2 
+z
+" style="fill:#ffffff;"/>
+   </g>
+   <g id="QuadMesh_1">
+    <path clip-path="url(#p7b3f782c1c)" d="M 23.878125 7.2 
+L 157.798125 7.2 
+L 157.798125 115.92 
+L 23.878125 115.92 
+L 23.878125 7.2 
+" style="fill:#faebdd;"/>
+    <path clip-path="url(#p7b3f782c1c)" d="M 157.798125 7.2 
+L 291.718125 7.2 
+L 291.718125 115.92 
+L 157.798125 115.92 
+L 157.798125 7.2 
+" style="fill:#03051a;"/>
+    <path clip-path="url(#p7b3f782c1c)" d="M 23.878125 115.92 
+L 157.798125 115.92 
+L 157.798125 224.64 
+L 23.878125 224.64 
+L 23.878125 115.92 
+" style="fill:#03051a;"/>
+    <path clip-path="url(#p7b3f782c1c)" d="M 157.798125 115.92 
+L 291.718125 115.92 
+L 291.718125 224.64 
+L 157.798125 224.64 
+L 157.798125 115.92 
+" style="fill:#481c48;"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path d="M 0 0 
+L 0 3.5 
+" id="m9982821de3" style="stroke:#000000;stroke-width:0.8;"/>
+      </defs>
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="90.838125" xlink:href="#m9982821de3" y="224.64"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <!-- 0 -->
+      <defs>
+       <path d="M 31.78125 66.40625 
+Q 24.171875 66.40625 20.328125 58.90625 
+Q 16.5 51.421875 16.5 36.375 
+Q 16.5 21.390625 20.328125 13.890625 
+Q 24.171875 6.390625 31.78125 6.390625 
+Q 39.453125 6.390625 43.28125 13.890625 
+Q 47.125 21.390625 47.125 36.375 
+Q 47.125 51.421875 43.28125 58.90625 
+Q 39.453125 66.40625 31.78125 66.40625 
+z
+M 31.78125 74.21875 
+Q 44.046875 74.21875 50.515625 64.515625 
+Q 56.984375 54.828125 56.984375 36.375 
+Q 56.984375 17.96875 50.515625 8.265625 
+Q 44.046875 -1.421875 31.78125 -1.421875 
+Q 19.53125 -1.421875 13.0625 8.265625 
+Q 6.59375 17.96875 6.59375 36.375 
+Q 6.59375 54.828125 13.0625 64.515625 
+Q 19.53125 74.21875 31.78125 74.21875 
+z
+" id="DejaVuSans-48"/>
+      </defs>
+      <g transform="translate(87.656875 239.238437)scale(0.1 -0.1)">
+       <use xlink:href="#DejaVuSans-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="224.758125" xlink:href="#m9982821de3" y="224.64"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <!-- 1 -->
+      <defs>
+       <path d="M 12.40625 8.296875 
+L 28.515625 8.296875 
+L 28.515625 63.921875 
+L 10.984375 60.40625 
+L 10.984375 69.390625 
+L 28.421875 72.90625 
+L 38.28125 72.90625 
+L 38.28125 8.296875 
+L 54.390625 8.296875 
+L 54.390625 0 
+L 12.40625 0 
+z
+" id="DejaVuSans-49"/>
+      </defs>
+      <g transform="translate(221.576875 239.238437)scale(0.1 -0.1)">
+       <use xlink:href="#DejaVuSans-49"/>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_3">
+      <defs>
+       <path d="M 0 0 
+L -3.5 0 
+" id="m2428ab0d38" style="stroke:#000000;stroke-width:0.8;"/>
+      </defs>
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="23.878125" xlink:href="#m2428ab0d38" y="61.56"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <!-- 0 -->
+      <g transform="translate(14.798438 64.123281)rotate(-90)scale(0.1 -0.1)">
+       <use xlink:href="#DejaVuSans-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_4">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="23.878125" xlink:href="#m2428ab0d38" y="170.28"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <!-- 1 -->
+      <g transform="translate(14.798438 172.843281)rotate(-90)scale(0.1 -0.1)">
+       <use xlink:href="#DejaVuSans-49"/>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="text_5">
+    <!-- 3930 -->
+    <defs>
+     <path d="M 40.578125 39.3125 
+Q 47.65625 37.796875 51.625 33 
+Q 55.609375 28.21875 55.609375 21.1875 
+Q 55.609375 10.40625 48.1875 4.484375 
+Q 40.765625 -1.421875 27.09375 -1.421875 
+Q 22.515625 -1.421875 17.65625 -0.515625 
+Q 12.796875 0.390625 7.625 2.203125 
+L 7.625 11.71875 
+Q 11.71875 9.328125 16.59375 8.109375 
+Q 21.484375 6.890625 26.8125 6.890625 
+Q 36.078125 6.890625 40.9375 10.546875 
+Q 45.796875 14.203125 45.796875 21.1875 
+Q 45.796875 27.640625 41.28125 31.265625 
+Q 36.765625 34.90625 28.71875 34.90625 
+L 20.21875 34.90625 
+L 20.21875 43.015625 
+L 29.109375 43.015625 
+Q 36.375 43.015625 40.234375 45.921875 
+Q 44.09375 48.828125 44.09375 54.296875 
+Q 44.09375 59.90625 40.109375 62.90625 
+Q 36.140625 65.921875 28.71875 65.921875 
+Q 24.65625 65.921875 20.015625 65.03125 
+Q 15.375 64.15625 9.8125 62.3125 
+L 9.8125 71.09375 
+Q 15.4375 72.65625 20.34375 73.4375 
+Q 25.25 74.21875 29.59375 74.21875 
+Q 40.828125 74.21875 47.359375 69.109375 
+Q 53.90625 64.015625 53.90625 55.328125 
+Q 53.90625 49.265625 50.4375 45.09375 
+Q 46.96875 40.921875 40.578125 39.3125 
+z
+" id="DejaVuSans-51"/>
+     <path d="M 10.984375 1.515625 
+L 10.984375 10.5 
+Q 14.703125 8.734375 18.5 7.8125 
+Q 22.3125 6.890625 25.984375 6.890625 
+Q 35.75 6.890625 40.890625 13.453125 
+Q 46.046875 20.015625 46.78125 33.40625 
+Q 43.953125 29.203125 39.59375 26.953125 
+Q 35.25 24.703125 29.984375 24.703125 
+Q 19.046875 24.703125 12.671875 31.3125 
+Q 6.296875 37.9375 6.296875 49.421875 
+Q 6.296875 60.640625 12.9375 67.421875 
+Q 19.578125 74.21875 30.609375 74.21875 
+Q 43.265625 74.21875 49.921875 64.515625 
+Q 56.59375 54.828125 56.59375 36.375 
+Q 56.59375 19.140625 48.40625 8.859375 
+Q 40.234375 -1.421875 26.421875 -1.421875 
+Q 22.703125 -1.421875 18.890625 -0.6875 
+Q 15.09375 0.046875 10.984375 1.515625 
+z
+M 30.609375 32.421875 
+Q 37.25 32.421875 41.125 36.953125 
+Q 45.015625 41.5 45.015625 49.421875 
+Q 45.015625 57.28125 41.125 61.84375 
+Q 37.25 66.40625 30.609375 66.40625 
+Q 23.96875 66.40625 20.09375 61.84375 
+Q 16.21875 57.28125 16.21875 49.421875 
+Q 16.21875 41.5 20.09375 36.953125 
+Q 23.96875 32.421875 30.609375 32.421875 
+z
+" id="DejaVuSans-57"/>
+    </defs>
+    <g style="fill:#262626;" transform="translate(78.113125 64.319375)scale(0.1 -0.1)">
+     <use xlink:href="#DejaVuSans-51"/>
+     <use x="63.623047" xlink:href="#DejaVuSans-57"/>
+     <use x="127.246094" xlink:href="#DejaVuSans-51"/>
+     <use x="190.869141" xlink:href="#DejaVuSans-48"/>
+    </g>
+   </g>
+   <g id="text_6">
+    <!-- 2 -->
+    <defs>
+     <path d="M 19.1875 8.296875 
+L 53.609375 8.296875 
+L 53.609375 0 
+L 7.328125 0 
+L 7.328125 8.296875 
+Q 12.9375 14.109375 22.625 23.890625 
+Q 32.328125 33.6875 34.8125 36.53125 
+Q 39.546875 41.84375 41.421875 45.53125 
+Q 43.3125 49.21875 43.3125 52.78125 
+Q 43.3125 58.59375 39.234375 62.25 
+Q 35.15625 65.921875 28.609375 65.921875 
+Q 23.96875 65.921875 18.8125 64.3125 
+Q 13.671875 62.703125 7.8125 59.421875 
+L 7.8125 69.390625 
+Q 13.765625 71.78125 18.9375 73 
+Q 24.125 74.21875 28.421875 74.21875 
+Q 39.75 74.21875 46.484375 68.546875 
+Q 53.21875 62.890625 53.21875 53.421875 
+Q 53.21875 48.921875 51.53125 44.890625 
+Q 49.859375 40.875 45.40625 35.40625 
+Q 44.1875 33.984375 37.640625 27.21875 
+Q 31.109375 20.453125 19.1875 8.296875 
+z
+" id="DejaVuSans-50"/>
+    </defs>
+    <g style="fill:#ffffff;" transform="translate(221.576875 64.319375)scale(0.1 -0.1)">
+     <use xlink:href="#DejaVuSans-50"/>
+    </g>
+   </g>
+   <g id="text_7">
+    <!-- 13 -->
+    <g style="fill:#ffffff;" transform="translate(84.475625 173.039375)scale(0.1 -0.1)">
+     <use xlink:href="#DejaVuSans-49"/>
+     <use x="63.623047" xlink:href="#DejaVuSans-51"/>
+    </g>
+   </g>
+   <g id="text_8">
+    <!-- 742 -->
+    <defs>
+     <path d="M 8.203125 72.90625 
+L 55.078125 72.90625 
+L 55.078125 68.703125 
+L 28.609375 0 
+L 18.3125 0 
+L 43.21875 64.59375 
+L 8.203125 64.59375 
+z
+" id="DejaVuSans-55"/>
+     <path d="M 37.796875 64.3125 
+L 12.890625 25.390625 
+L 37.796875 25.390625 
+z
+M 35.203125 72.90625 
+L 47.609375 72.90625 
+L 47.609375 25.390625 
+L 58.015625 25.390625 
+L 58.015625 17.1875 
+L 47.609375 17.1875 
+L 47.609375 0 
+L 37.796875 0 
+L 37.796875 17.1875 
+L 4.890625 17.1875 
+L 4.890625 26.703125 
+z
+" id="DejaVuSans-52"/>
+    </defs>
+    <g style="fill:#ffffff;" transform="translate(215.214375 173.039375)scale(0.1 -0.1)">
+     <use xlink:href="#DejaVuSans-55"/>
+     <use x="63.623047" xlink:href="#DejaVuSans-52"/>
+     <use x="127.246094" xlink:href="#DejaVuSans-50"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_3">
+    <path clip-path="url(#pb9ad01a777)" d="M 308.458125 224.64 
+L 308.458125 223.790625 
+L 308.458125 8.049375 
+L 308.458125 7.2 
+L 319.330125 7.2 
+L 319.330125 8.049375 
+L 319.330125 223.790625 
+L 319.330125 224.64 
+z
+" style="fill:#ffffff;stroke:#ffffff;stroke-linejoin:miter;stroke-width:0.01;"/>
+   </g>
+   <image height="217" id="image86d9462dd8" transform="scale(1 -1)translate(0 -217)" width="11" x="308" xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAAAsAAADZCAYAAAD2WsoCAAAABHNCSVQICAgIfAhkiAAAAV9JREFUaIHVmtsNAzEIwHjdEt1/zl5XwB+WaL4RMoakuag5z+eN5ZrM3MbS4ADBXSVlLq3AIhgoM7LhYRzx3OnZODF1qECxKTcym+3WbGgYE2g29sucDa3dEGO/zJOfBI82SMyG125vW61D6fB76qANgCGq05iRjSPMCIPtbpKZFbj+PPhbGySY2PAw5gYGazdhHoRxxIaGMe8+tbgH6wYGspFhMcMCAUYzZhIMRIvqEpwF0yS4SDDCgJnXsTFdXymzWCA47BhzNbABmQEGUifaGG02ELOmrsBVhmGENxteMLj3kMceqo5lBjdzlhncCyYIhsfMMMDPJsxMnixQZhhM3us0G0GeDT0bSWxEt4SBmuJ5ztEKFNtNMqM9CD55VRukgx4GssHOOtRBSx3c3RqGVyDK3Gj4bzCzdqN51jZs3pg60QYp8MbwZz9SZnP4iWfSbvQviysFsnZrZ51V4A9keCojHT7iJgAAAABJRU5ErkJggg==" y="-7"/>
+   <g id="matplotlib.axis_3"/>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_3">
+     <g id="line2d_5">
+      <defs>
+       <path d="M 0 0 
+L 3.5 0 
+" id="m94405ca6fe" style="stroke:#000000;stroke-width:0.8;"/>
+      </defs>
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="319.330125" xlink:href="#m94405ca6fe" y="197.072505"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <!-- 500 -->
+      <defs>
+       <path d="M 10.796875 72.90625 
+L 49.515625 72.90625 
+L 49.515625 64.59375 
+L 19.828125 64.59375 
+L 19.828125 46.734375 
+Q 21.96875 47.46875 24.109375 47.828125 
+Q 26.265625 48.1875 28.421875 48.1875 
+Q 40.625 48.1875 47.75 41.5 
+Q 54.890625 34.8125 54.890625 23.390625 
+Q 54.890625 11.625 47.5625 5.09375 
+Q 40.234375 -1.421875 26.90625 -1.421875 
+Q 22.3125 -1.421875 17.546875 -0.640625 
+Q 12.796875 0.140625 7.71875 1.703125 
+L 7.71875 11.625 
+Q 12.109375 9.234375 16.796875 8.0625 
+Q 21.484375 6.890625 26.703125 6.890625 
+Q 35.15625 6.890625 40.078125 11.328125 
+Q 45.015625 15.765625 45.015625 23.390625 
+Q 45.015625 31 40.078125 35.4375 
+Q 35.15625 39.890625 26.703125 39.890625 
+Q 22.75 39.890625 18.8125 39.015625 
+Q 14.890625 38.140625 10.796875 36.28125 
+z
+" id="DejaVuSans-53"/>
+      </defs>
+      <g transform="translate(326.330125 200.871724)scale(0.1 -0.1)">
+       <use xlink:href="#DejaVuSans-53"/>
+       <use x="63.623047" xlink:href="#DejaVuSans-48"/>
+       <use x="127.246094" xlink:href="#DejaVuSans-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_6">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="319.330125" xlink:href="#m94405ca6fe" y="169.394297"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <!-- 1000 -->
+      <g transform="translate(326.330125 173.193516)scale(0.1 -0.1)">
+       <use xlink:href="#DejaVuSans-49"/>
+       <use x="63.623047" xlink:href="#DejaVuSans-48"/>
+       <use x="127.246094" xlink:href="#DejaVuSans-48"/>
+       <use x="190.869141" xlink:href="#DejaVuSans-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_7">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="319.330125" xlink:href="#m94405ca6fe" y="141.71609"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <!-- 1500 -->
+      <g transform="translate(326.330125 145.515308)scale(0.1 -0.1)">
+       <use xlink:href="#DejaVuSans-49"/>
+       <use x="63.623047" xlink:href="#DejaVuSans-53"/>
+       <use x="127.246094" xlink:href="#DejaVuSans-48"/>
+       <use x="190.869141" xlink:href="#DejaVuSans-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_8">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="319.330125" xlink:href="#m94405ca6fe" y="114.037882"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <!-- 2000 -->
+      <g transform="translate(326.330125 117.837101)scale(0.1 -0.1)">
+       <use xlink:href="#DejaVuSans-50"/>
+       <use x="63.623047" xlink:href="#DejaVuSans-48"/>
+       <use x="127.246094" xlink:href="#DejaVuSans-48"/>
+       <use x="190.869141" xlink:href="#DejaVuSans-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_9">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="319.330125" xlink:href="#m94405ca6fe" y="86.359674"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <!-- 2500 -->
+      <g transform="translate(326.330125 90.158893)scale(0.1 -0.1)">
+       <use xlink:href="#DejaVuSans-50"/>
+       <use x="63.623047" xlink:href="#DejaVuSans-53"/>
+       <use x="127.246094" xlink:href="#DejaVuSans-48"/>
+       <use x="190.869141" xlink:href="#DejaVuSans-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_10">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="319.330125" xlink:href="#m94405ca6fe" y="58.681466"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <!-- 3000 -->
+      <g transform="translate(326.330125 62.480685)scale(0.1 -0.1)">
+       <use xlink:href="#DejaVuSans-51"/>
+       <use x="63.623047" xlink:href="#DejaVuSans-48"/>
+       <use x="127.246094" xlink:href="#DejaVuSans-48"/>
+       <use x="190.869141" xlink:href="#DejaVuSans-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_11">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="319.330125" xlink:href="#m94405ca6fe" y="31.003259"/>
+      </g>
+     </g>
+     <g id="text_15">
+      <!-- 3500 -->
+      <g transform="translate(326.330125 34.802477)scale(0.1 -0.1)">
+       <use xlink:href="#DejaVuSans-51"/>
+       <use x="63.623047" xlink:href="#DejaVuSans-53"/>
+       <use x="127.246094" xlink:href="#DejaVuSans-48"/>
+       <use x="190.869141" xlink:href="#DejaVuSans-48"/>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="patch_4">
+    <path d="M 308.458125 224.64 
+L 308.458125 223.790625 
+L 308.458125 8.049375 
+L 308.458125 7.2 
+L 319.330125 7.2 
+L 319.330125 8.049375 
+L 319.330125 223.790625 
+L 319.330125 224.64 
+z
+" style="fill:none;"/>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p7b3f782c1c">
+   <rect height="217.44" width="267.84" x="23.878125" y="7.2"/>
+  </clipPath>
+  <clipPath id="pb9ad01a777">
+   <rect height="217.44" width="10.872" x="308.458125" y="7.2"/>
+  </clipPath>
+ </defs>
+</svg>
 
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWcAAAD4CAYAAAAw/yevAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjEsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+j8jraAAAXy0lEQVR4nO3dfbhWdZ3v8feHhwAFE0dlYINChseAMUxFzCdKS4YscBodegKNc7bDwbKpmRLnXJNpzEUl00ihp20aD5m4Z5QgRyolTTnxaMdAQI4MEGzZQT6QYOPGve/v+eNe4B1u1r03bPa99uLz4vpde93f9fRb18X13b/9Xb97LUUEZmaWLZ0q3QEzM3s7J2czswxycjYzyyAnZzOzDHJyNjPLoC5H+wRvvrTZ00HsbXr0u6TSXbAMatz3oo70GK3JOV1PftcRn+9o8cjZzCyDjvrI2cysXRWaKt2DNuHkbGb50tRY6R60CSdnM8uViEKlu9AmnJzNLF8KTs5mZtnjkbOZWQb5hqCZWQZ55Gxmlj3h2RpmZhnkG4JmZhnksoaZWQb5hqCZWQZ55GxmlkG+IWhmlkG+IWhmlj0RrjmbmWWPa85mZhnksoaZWQZ55GxmlkFNb1a6B23C7xA0s3wpFFreUkjqLmmlpN9IWifpa0n8VkkvSno2aWNK9pkqaZOkjZKuLImfK2ltsm6mpLIvlvXI2czype3KGg3AByNir6SuwFJJi5N1346IO0o3ljQEGA8MBfoBj0s6M4rTR+4GqoHlwKPAaGAxKTxyNrN8aaORcxTtTT52TVqk7DIWmB8RDRGxBdgEjJDUFzghIpZFRABzgXHlLsPJ2czypRXJWVK1pNUlrbr0UJI6S3oW2AU8FhErklU3Sloj6T5JvZNYFbC9ZPe6JFaVLB8cT+WyhpnlSrTihmBE1AA1KeubgOGSTgQWSBpGsURxO8VR9O3ADOCzQHN15EiJp/LI2czyJQotby09ZMRu4ElgdETsjIimKL7m+x5gRLJZHTCgZLf+wI4k3r+ZeConZzPLl7abrXFKMmJGUg/gCuD5pIa839XAc8nyImC8pG6SBgGDgZURUQ/skTQymaUxAVhY7jJc1jCzfGm72Rp9gTmSOlMcyNZGxCOS5kkaTrE0sRW4ASAi1kmqBdYDjcCUeOtBH5OB2UAPirM0UmdqgJOzmeVNG319OyLWAOc0E/9Myj7TgGnNxFcDw1pzfidnM8sXf33bzCyDGv2wfTOz7PHI2cwsg/zIUDOzDPLI2cwsgzxyNjPLII+czcwyyLM1zMwyKMo+U6hDcHI2s3xxzdnMLIOcnM3MMsg3BM3MMqipqfw2HYCTs5nli8saZmYZ5ORsZpZBrjmbmWVPFDzP2cwse1zWMDPLoJzM1vDbt80sX9ru7dvdJa2U9BtJ6yR9LYmfJOkxSS8kP3uX7DNV0iZJGyVdWRI/V9LaZN3M5C3cqZyczSxf2ig5Aw3AByPivcBwYLSkkcDNwJKIGAwsST4jaQgwHhgKjAbuSt7cDXA3UA0MTtrocid3WeMINDTsY+KUf2Dfm2/S1NjEhz5wMTf+98/w/Aubuf1b3+GP//UG/fqeyje++mV6Hn88a9dv5NZvzAQgCP7nZz/FFZddBMCd35vNop8u4bU9e1n1+IJKXpa1k3tqZvCRMVew6/cvMfycyyvdnfxoowcfRUQAe5OPXZMWwFhgVBKfAzwJfCWJz4+IBmCLpE3ACElbgRMiYhmApLnAOGBx2vk9cj4C73hHV+6bOZ2H59zFv8+Zxf9Z8Qy/eW4DX53+r3xh8vUsmHc3l1/6fn5w/0MAvPtdp/PgvTN5aM4svjfj69z2ze/Q2Fisj4266ALm33NnJS/H2tncubV85KpPVbob+dOKkbOkakmrS1p16aEkdZb0LLALeCwiVgB9IqIeIPl5arJ5FbC9ZPe6JFaVLB8cT1V25CzpLIq/Eaoo/tbYASyKiA3l9s07SRx3XA8AGhsbaWxsRBJbt9Vx3vC/AODC89/HDV/8Rz5XPYEe3bsf2Ldh3z4oKTu9d9h72rfzVnFPL13B6af3r3Q38qcVU+kiogaoSVnfBAyXdCKwQNKwlMM1V0eOlHiq1JGzpK8A85ODrwRWJcsPSLq53MGPBU1NTXx84hQuveoTXHj+OZw99Cze/a6BPLF0OQA/f+JpfrfzpQPbr1n3PGM/dQNXT5jMP/3DjXTp0vlQhzazw9HU1PLWQhGxm2L5YjSwU1JfgOTnrmSzOmBAyW79KQ5m65Llg+OpypU1JgHnR8T0iPhh0qYDI5J1zSr9U+H7cx8o14cOrXPnzjw0ZxZLFsxj7fr/xwubt3L7LX/HAw/9hGs/+zle/+N/0bXrW3+gnD30LBbe/z3mf/9Ovj+vloaGfRXsvVn+RKHQ4pZG0inJiBlJPYArgOeBRcDEZLOJwMJkeREwXlI3SYMo3vhbmZQ+9kgamczSmFCyzyGVK2sUgH7Abw+K903WNav0T4U3X9qcj6/rlHFCr56c/76zWbp8Ndd/8q+551//GYCt2+p46lcr37b9GQNPo0f37ryweSvD3nNme3fXLL/a7huCfYE5yYyLTkBtRDwiaRlQK2kSsA24BiAi1kmqBdYDjcCUpCwCMBmYDfSgeCMw9WYglE/OXwCWSHqBtwrdpwHvBm5s8SXm1Cuv7qZLly6c0KsnbzQ0sHzV/+Wzn76Gl1/dzZ/1PpFCocD35szn2nFjAKjb8Tv+/NRT6NKlMzt+t5Ot2+qo6tunwldhljNt9GyNiFgDnNNM/GWg2ek1ETENmNZMfDWQVq9+m9TkHBE/lXQmxTJGFcV6cx2wquQ3wjHr9y+/yj9+/Q6aCgWiEFz5wUsYddEFzKv9MfMffgSAKy57P1d/5MMA/HrNOu6dV0uXLl3o1En8r7+fQu8T3wnAjFn38uhjT/DGGw1cPu7T/NVHRzNl0qcrdm129P1w3iwuu/RCTj75JLZuXs3XbruDH8yeX+ludXw5ebaG4ii/DPFYKWtY6/Tod0mlu2AZ1LjvxbLfnCvn9X8a3+Kcc/xt84/4fEeLv4RiZvniR4aamWVQTsoaTs5mlivlpsh1FE7OZpYvHjmbmWWQk7OZWQbl5GH7Ts5mlit+h6CZWRY5OZuZZZBna5iZZZBHzmZmGeTkbGaWPdHksoaZWfZ45Gxmlj2eSmdmlkVOzmZmGZSPknPZF7yamXUo0VhocUsjaYCkJyRtkLRO0k1J/FZJL0p6NmljSvaZKmmTpI2SriyJnytpbbJuZvKi11QeOZtZvrTdyLkR+FJE/FpSL+AZSY8l674dEXeUbixpCDAeGErxxdiPSzozeaXf3UA1sBx4FBhNmZe8euRsZrkShWhxSz1ORH1E/DpZ3gNsoPgu1UMZC8yPiIaI2AJsAkZI6gucEBHLovhewLnAuHLX4eRsZvlSaEVrIUkDKb6Je0USulHSGkn3SeqdxKqA7SW71SWxqmT54HgqJ2czy5XWjJwlVUtaXdKqDz6epJ7AQ8AXIuI1iiWKM4DhQD0wY/+mzXUnJZ7KNWczy5dWjIgjogaoOdR6SV0pJub7I+LhZJ+dJevvAR5JPtYBA0p27w/sSOL9m4mn8sjZzHIlGlve0iQzKu4FNkTEv5TE+5ZsdjXwXLK8CBgvqZukQcBgYGVE1AN7JI1MjjkBWFjuOjxyNrNcibabrXER8BlgraRnk9gtwCckDadYmtgK3AAQEesk1QLrKc70mJLM1ACYDMwGelCcpZE6UwOcnM0sb9ooOUfEUpqvFz+ass80YFoz8dXAsNac38nZzHKlDUfOFeXkbGa54uRsZpZB0VT2m9EdgpOzmeWKR85mZhkUBY+czcwyxyNnM7MMivDI2cwsczxyNjPLoIJna5iZZY9vCJqZZZCTs5lZBkU+Xr7t5Gxm+eKRs5lZBnkqnZlZBjV5toaZWfZ45GxmlkGuOZuZZZBna5iZZVBeRs5++7aZ5UpToVOLWxpJAyQ9IWmDpHWSbkriJ0l6TNILyc/eJftMlbRJ0kZJV5bEz5W0Nlk3M3kLdyonZzPLlYiWtzIagS9FxHuAkcAUSUOAm4ElETEYWJJ8Jlk3HhgKjAbuktQ5OdbdQDUwOGmjy53cydnMcqUQanFLExH1EfHrZHkPsAGoAsYCc5LN5gDjkuWxwPyIaIiILcAmYISkvsAJEbEsIgKYW7LPITk5m1muRKjFTVK1pNUlrbq5Y0oaCJwDrAD6RER98VxRD5yabFYFbC/ZrS6JVSXLB8dT+YagmeVKa2ZrREQNUJO2jaSewEPAFyLitZRycXMrIiWe6qgn5+P6XXK0T2Ed0OV9zq50FyynypUrWkNSV4qJ+f6IeDgJ75TUNyLqk5LFriReBwwo2b0/sCOJ928mnsplDTPLlTacrSHgXmBDRPxLyapFwMRkeSKwsCQ+XlI3SYMo3vhbmZQ+9kgamRxzQsk+h+SyhpnlSht+B+Ui4DPAWknPJrFbgOlAraRJwDbgGoCIWCepFlhPcabHlIhoSvabDMwGegCLk5bKydnMcqWtyhoRsZTm68UAlx9in2nAtGbiq4FhrTm/k7OZ5YoffGRmlkE5efm2k7OZ5UscshLRsTg5m1muNLqsYWaWPR45m5llkGvOZmYZ5JGzmVkGeeRsZpZBTR45m5llT07eUuXkbGb5UvDI2cwse3Ly8m0nZzPLF98QNDPLoEL5F1t3CE7OZpYrTeU36RCcnM0sVzxbw8wsgzxbw8wsgzxbw8wsg/JS1vDbt80sVwqtaOVIuk/SLknPlcRulfSipGeTNqZk3VRJmyRtlHRlSfxcSWuTdTOTt3CncnI2s1xpUstbC8wGRjcT/3ZEDE/aowCShgDjgaHJPndJ6pxsfzdQDQxOWnPH/BNOzmaWK205co6Ip4BXWnjqscD8iGiIiC3AJmCEpL7ACRGxLCICmAuMK3cwJ2czy5XWJGdJ1ZJWl7TqFp7mRklrkrJH7yRWBWwv2aYuiVUlywfHUzk5m1muhFrRImoi4rySVtOCU9wNnAEMB+qBGUm8uUJJpMRTebaGmeXK0X62RkTs3L8s6R7gkeRjHTCgZNP+wI4k3r+ZeCqPnM0sV5pa0Q5HUkPe72pg/0yORcB4Sd0kDaJ4429lRNQDeySNTGZpTAAWljuPR85mlittOc9Z0gPAKOBkSXXAV4FRkoZTLE1sBW4AiIh1kmqB9UAjMCUi9v8OmExx5kcPYHHSUjk5m1mutGVZIyI+0Uz43pTtpwHTmomvBoa15txOzmaWK36es5lZBvnZGmZmGZSXZ2s4OZtZrvhh+2ZmGVTISWHDydnMcsU3BM3MMigf42YnZzPLGY+czcwyqFH5GDs7OZtZruQjNTs5m1nOuKxhZpZBnkpnZpZB+UjNTs5mljMua5iZZVBTTsbOTs5mliseOZuZZVB45Gxmlj0eOVuqe2pmMGbMFez6/Uucc87lAJx99hBmfXc6PXsex9bf1jFhwo3s2bO3wj21o6n/u6q45a6pBz7/+Wl9mTdjHr169+LCD19IFArsfvkP3PHFGbyy8xUABp01kM9P/zzH9zyOQhT43FU38WbDm5W6hA6nLafSSboPuArYFRHDkthJwIPAQIrvELw2Il5N1k0FJlF8cunnI+JnSfxc3nqH4KPATRGR2lGVWX/Eur6jKh9/Y7TSxRdfwOt7X+e+H9x5IDkv+9V/8OWv3M7TTy/nuol/w8BBp3Hrrd+qcE8r44N9zq50F9pdp06duH/VPG762N+x9w97+ePePwIw9vqPcfrg05h5y3fp1LkTsxZ/l2/d9C02b9hCrxN78fprr1Mo5GU8mO5n2xcf8aPyJw+8tsU55+6ttannk3QpsBeYW5Kcvwm8EhHTJd0M9I6Ir0gaAjwAjAD6AY8DZ0ZEk6SVwE3AcorJeWZEpL7ktVNLL8JaZ+nSFbzy6u4/iZ155hk8/fRyAB5f8jRXXz2mEl2zChl+8XDqf1vPrhd3HUjMAN2P635grHfupeeyZcMWNm/YAsCe3XuOmcTcVhqJFrdyIuIp4JWDwmOBOcnyHGBcSXx+RDRExBZgEzBCUl/ghIhYloyW55bsc0gua7Sjdes28tGPfpif/OTn/PXHr2JA/36V7pK1o1Efu4wnF/7ywOfrvjyRKz5+Oa/veZ0vX3szUCyDRATTfvh13nnSO/nlol/yb//73yvV5Q6pHW4I9omIeoCIqJd0ahKvojgy3q8uib2ZLB8cT3XYI2dJ16esq5a0WtLqQuH1wz1F7vyP6i8y+W+vY8XyxfTsdTz79rmOeKzo0rULIz90AU/9x9MHYrO/OYdPXzCBXyx4go9d91EAOnfpzLDzh/KNz32TL/3V3/P+0e9n+EXDK9XtDqnQilaaq5JWfQSnbq5EEinxVEdS1vjaoVZERE1EnBcR53XqdPwRnCJfNm78T8Z85JNcMPIvefDBhWzevLXSXbJ2cv4HzmPTc//J7pd2v23dEz9+kovHXATA7+tfYs2Ktbz26ms0vNHAqidW8e5hZ7R3dzu0aM2/klyVtJoWnGJnUqog+bkridcBA0q26w/sSOL9m4mnSk3OktYcoq0F+rTgIqzEKaf8GQCSuGXqTdTUzKtwj6y9jBo7iicXPnngc7+Bb5W0Rn5oJNs3Ff/qfeaXzzDorEF0696NTp07cfYFf8G2F7a1d3c7tNaMnA/TImBisjwRWFgSHy+pm6RBwGBgZVIC2SNppCQBE0r2OaRyNec+wJXAqwfFBfyqRZdxjJo3bxaXXXohJ598Els2r+a22+6gZ8/j+dvJ1wHw4x8/yuw5D1a2k9YuunXvxvsuOYc7b555IDZp6vX0P6M/hUKwq24XM2/5DgB7/7CXh+95mO88cidBsPIXq1j5i1WV6nqH1NSGM9AkPQCMAk6WVAd8FZgO1EqaBGwDrgGIiHWSaoH1QCMwJSL2vwx8Mm9NpVuctPRzp02lk3Qv8IOIWNrMuh9FxCfLneBYnUpn6Y7FqXRWXltMpfvk6Ve3OOf86LcLjvh8R0vqyDkiJqWsK5uYzczam7++bWaWQXmZFe7kbGa54jehmJllkMsaZmYZ1JazNSrJydnMcsVlDTOzDPINQTOzDHLN2cwsg1zWMDPLoKP9ApH24uRsZrnS5JGzmVn2uKxhZpZBLmuYmWWQR85mZhnkqXRmZhnkr2+bmWWQyxpmZhnk5GxmlkF5ma2R+vZtM7OOpkC0uJUjaauktZKelbQ6iZ0k6TFJLyQ/e5dsP1XSJkkbJV15JNfh5GxmuRKt+NdCH4iI4RFxXvL5ZmBJRAwGliSfkTQEGA8MBUYDd0nqfLjX4eRsZrnSFIUWt8M0FpiTLM8BxpXE50dEQ0RsATYBIw73JE7OZpYrEdHiJqla0uqSVn3w4YCfS3qmZF2fiKhPzlUPnJrEq4DtJfvWJbHD4huCZpYrrZmtERE1QE3KJhdFxA5JpwKPSXo+ZVs1d4oWd+YgHjmbWa60Zc05InYkP3cBCyiWKXZK6guQ/NyVbF4HDCjZvT+w43Cvw8nZzHKlENHilkbS8ZJ67V8GPgw8BywCJiabTQQWJsuLgPGSukkaBAwGVh7udbisYWa50obP1ugDLJAExVz5o4j4qaRVQK2kScA24BqAiFgnqRZYDzQCUyKi6XBP7uRsZrlyBLMw/kREbAbe20z8ZeDyQ+wzDZjWFud3cjazXClXrugonJzNLFf8yFAzswzyyNnMLIM8cjYzy6Cmw58gkSlOzmaWK3l5ZKiTs5nlih+2b2aWQR45m5llkGdrmJllkGdrmJllUFt9fbvSnJzNLFdcczYzyyDXnM3MMsgjZzOzDPI8ZzOzDPLI2cwsgzxbw8wsg3xD0Mwsg1zWMDPLIH9D0MwsgzxyNjPLoLzUnJWX3zIdgaTqiKipdD8sW/z/wprTqdIdOMZUV7oDlkn+f2Fv4+RsZpZBTs5mZhnk5Ny+XFe05vj/hb2NbwiamWWQR85mZhnk5GxmlkFOzu1E0mhJGyVtknRzpftjlSfpPkm7JD1X6b5Y9jg5twNJnYFZwF8CQ4BPSBpS2V5ZBswGRle6E5ZNTs7tYwSwKSI2R8Q+YD4wtsJ9sgqLiKeAVyrdD8smJ+f2UQVsL/lcl8TMzJrl5Nw+1EzMcxjN7JCcnNtHHTCg5HN/YEeF+mJmHYCTc/tYBQyWNEjSO4DxwKIK98nMMszJuR1ERCNwI/AzYANQGxHrKtsrqzRJDwDLgP8mqU7SpEr3ybLDX982M8sgj5zNzDLIydnMLIOcnM3MMsjJ2cwsg5yczcwyyMnZzCyDnJzNzDLo/wOzJ8hjEC3oUwAAAABJRU5ErkJggg==
-"
->
 </div>
 
 </div>
@@ -13868,25 +13827,26 @@ memory usage: 1.4+ MB
 <pre>precision    recall  f1-score   support
 
        False       1.00      1.00      1.00      3932
-        True       1.00      0.97      0.99       755
+        True       1.00      0.98      0.99       755
 
     accuracy                           1.00      4687
    macro avg       1.00      0.99      0.99      4687
 weighted avg       1.00      1.00      1.00      4687
 
+Number of features:  30
 </pre>
 </div>
 </div>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[54]:</div>
+    <div class="prompt output_prompt">Out[15]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>(None, None)</pre>
+<pre>(None, None, None)</pre>
 </div>
 
 </div>
@@ -13898,7 +13858,737 @@ weighted avg       1.00      1.00      1.00      4687
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A confusion matrix tells us values that were</p>
+<p>Looking at the confusion matrix, we can tell that this model, using 30 features, classified hazardous and non-hazardous asteroids fairly well.</p>
+<ul>
+<li>The top left corner, the True Negative quadrant, shows us that the model accurately predicted non-hazardous asteroids 3930 times.</li>
+<li>The top right corner tells us that the model predicted two False Positives, hazardous asteroids, that it believed were non-hazardous.</li>
+<li>The bottom left corner, the False Negative quadrant, tells us that the model classified 13 asteroids as non-hazardous when they were actually hazardous.</li>
+<li>In the bottom right corner, the True Positive quadrant, we can see the model accurately predicted hazardous asteroids 742 times.</li>
+</ul>
+<p>The score report tells us that the model predicted with 100% precision True (Hazardous) and False (Non-Hazardous) asteroids.
+I had wanted to find how few features could be used, but when I tried to set <code>n_features</code> I kept getting an error, so unfortunately, I was unable to explore that.</p>
+<h2 id="New-Model">New Model<a class="anchor-link" href="#New-Model">&#182;</a></h2><p>I had previously experimented with the BaggingClassifier in a previous project, but ended up not following through with it.  I wanted to attempt to use it again and felt this project was a good place to do so.  The bagging classifier, according to the text book, there are multiple rounds of bagging.  In each round, data is fit to a classifier, creating multiple random samples.  Once each classifier is fit to a bootstrap sample, they are combined using majority voting.  The results should be similar to the ones in the RandomForestClassification model above because Random Forests are actually special bagging classifiers.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">bag_class</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">dtypes_to_drop</span><span class="p">,</span> <span class="n">mdepth</span><span class="p">,</span> <span class="n">nestimators</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Input:</span>
+<span class="sd">        data : str : path to data</span>
+<span class="sd">        dtypes_to_drop : list : remove columns based on dtype</span>
+<span class="sd">        nestimators : list : number of trees to build</span>
+<span class="sd">        mdepth : np.arange int : range of depths</span>
+<span class="sd">        target : str : target variable</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        cm : graph : confusion matrix</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">exclude</span><span class="o">=</span><span class="n">dtypes_to_drop</span><span class="p">)</span>
+
+    <span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">target</span><span class="p">]</span>
+
+    <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+        <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">train_size</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span>
+    <span class="p">)</span>
+
+    <span class="n">sc</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
+    <span class="n">sc</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+    <span class="n">X_train_std</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+    <span class="n">X_test_std</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+    <span class="n">X_combined_std</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">X_train_std</span><span class="p">,</span> <span class="n">X_test_std</span><span class="p">))</span>
+    <span class="n">y_combined</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span><span class="p">))</span>
+
+    <span class="n">dt</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">()</span>
+
+    <span class="n">tree_parameters</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;criterion&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;gini&quot;</span><span class="p">,</span> <span class="s2">&quot;entropy&quot;</span><span class="p">),</span>
+        <span class="s2">&quot;splitter&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;best&quot;</span><span class="p">,</span> <span class="s2">&quot;random&quot;</span><span class="p">),</span>
+        <span class="s2">&quot;max_depth&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">d</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">mdepth</span><span class="p">],</span>
+    <span class="p">}</span>
+
+    <span class="n">grid_search_tree</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">dt</span><span class="p">,</span> <span class="n">tree_parameters</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    <span class="n">grid_search_tree_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">grid_search_tree</span><span class="o">.</span><span class="n">cv_results_</span><span class="p">)</span>
+
+    <span class="n">best_model_tree</span> <span class="o">=</span> <span class="n">grid_search_tree_data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:</span><span class="s2">&quot;mean_test_score&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+
+    <span class="n">best_tree</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span>
+        <span class="n">criterion</span><span class="o">=</span><span class="n">best_model_tree</span><span class="o">.</span><span class="n">param_criterion</span><span class="p">,</span>
+        <span class="n">splitter</span><span class="o">=</span><span class="n">best_model_tree</span><span class="o">.</span><span class="n">param_splitter</span><span class="p">,</span>
+        <span class="n">max_depth</span><span class="o">=</span><span class="n">best_model_tree</span><span class="o">.</span><span class="n">param_max_depth</span><span class="p">,</span>
+        <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+    <span class="n">bag</span> <span class="o">=</span> <span class="n">BaggingClassifier</span><span class="p">()</span>
+
+    <span class="n">bag_params</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;n_estimators&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">nestimators</span><span class="p">],</span>
+        <span class="s2">&quot;bootstrap&quot;</span><span class="p">:</span> <span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+    <span class="p">}</span>
+
+    <span class="n">grid_search_bag</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">bag</span><span class="p">,</span> <span class="n">bag_params</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    <span class="n">grid_search_bag_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">grid_search_bag</span><span class="o">.</span><span class="n">cv_results_</span><span class="p">)</span>
+
+    <span class="n">best_model_bag</span> <span class="o">=</span> <span class="n">grid_search_bag_data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:</span><span class="s2">&quot;mean_test_score&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+
+    <span class="n">best_bag</span> <span class="o">=</span> <span class="n">BaggingClassifier</span><span class="p">(</span>
+        <span class="n">base_estimator</span><span class="o">=</span><span class="n">best_tree</span><span class="p">,</span>
+        <span class="n">n_estimators</span><span class="o">=</span><span class="n">best_model_bag</span><span class="o">.</span><span class="n">param_n_estimators</span><span class="p">,</span>
+        <span class="n">bootstrap</span><span class="o">=</span><span class="n">best_model_bag</span><span class="o">.</span><span class="n">param_bootstrap</span><span class="p">,</span>
+        <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+    <span class="n">sr</span> <span class="o">=</span> <span class="n">classification_report</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">best_bag</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">))</span>
+
+    <span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">best_bag</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">cm</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;d&quot;</span><span class="p">)),</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">sr</span><span class="p">),</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of features: &quot;</span><span class="p">,</span> <span class="n">best_bag</span><span class="o">.</span><span class="n">n_features_</span><span class="p">),</span>
+    <span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bag_class</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="s2">&quot;nasa.csv&quot;</span><span class="p">,</span>
+    <span class="n">dtypes_to_drop</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;object&quot;</span><span class="p">,</span> <span class="s2">&quot;int64&quot;</span><span class="p">],</span>
+    <span class="n">mdepth</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+    <span class="n">nestimators</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">1000</span><span class="p">),</span>
+    <span class="n">target</span><span class="o">=</span><span class="s2">&quot;Hazardous&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_svg output_subarea ">
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with matplotlib (https://matplotlib.org/) -->
+<svg height="248.518125pt" version="1.1" viewBox="0 0 358.980125 248.518125" width="358.980125pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+*{stroke-linecap:butt;stroke-linejoin:round;}
+  </style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M -0 248.518125 
+L 358.980125 248.518125 
+L 358.980125 0 
+L -0 0 
+z
+" style="fill:none;"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 23.878125 224.64 
+L 291.718125 224.64 
+L 291.718125 7.2 
+L 23.878125 7.2 
+z
+" style="fill:#ffffff;"/>
+   </g>
+   <g id="QuadMesh_1">
+    <path clip-path="url(#pa408c511e0)" d="M 23.878125 7.2 
+L 157.798125 7.2 
+L 157.798125 115.92 
+L 23.878125 115.92 
+L 23.878125 7.2 
+" style="fill:#faebdd;"/>
+    <path clip-path="url(#pa408c511e0)" d="M 157.798125 7.2 
+L 291.718125 7.2 
+L 291.718125 115.92 
+L 157.798125 115.92 
+L 157.798125 7.2 
+" style="fill:#03051a;"/>
+    <path clip-path="url(#pa408c511e0)" d="M 23.878125 115.92 
+L 157.798125 115.92 
+L 157.798125 224.64 
+L 23.878125 224.64 
+L 23.878125 115.92 
+" style="fill:#07071d;"/>
+    <path clip-path="url(#pa408c511e0)" d="M 157.798125 115.92 
+L 291.718125 115.92 
+L 291.718125 224.64 
+L 157.798125 224.64 
+L 157.798125 115.92 
+" style="fill:#421b45;"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path d="M 0 0 
+L 0 3.5 
+" id="m430c6cbbf8" style="stroke:#000000;stroke-width:0.8;"/>
+      </defs>
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="90.838125" xlink:href="#m430c6cbbf8" y="224.64"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <!-- 0 -->
+      <defs>
+       <path d="M 31.78125 66.40625 
+Q 24.171875 66.40625 20.328125 58.90625 
+Q 16.5 51.421875 16.5 36.375 
+Q 16.5 21.390625 20.328125 13.890625 
+Q 24.171875 6.390625 31.78125 6.390625 
+Q 39.453125 6.390625 43.28125 13.890625 
+Q 47.125 21.390625 47.125 36.375 
+Q 47.125 51.421875 43.28125 58.90625 
+Q 39.453125 66.40625 31.78125 66.40625 
+z
+M 31.78125 74.21875 
+Q 44.046875 74.21875 50.515625 64.515625 
+Q 56.984375 54.828125 56.984375 36.375 
+Q 56.984375 17.96875 50.515625 8.265625 
+Q 44.046875 -1.421875 31.78125 -1.421875 
+Q 19.53125 -1.421875 13.0625 8.265625 
+Q 6.59375 17.96875 6.59375 36.375 
+Q 6.59375 54.828125 13.0625 64.515625 
+Q 19.53125 74.21875 31.78125 74.21875 
+z
+" id="DejaVuSans-48"/>
+      </defs>
+      <g transform="translate(87.656875 239.238437)scale(0.1 -0.1)">
+       <use xlink:href="#DejaVuSans-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="224.758125" xlink:href="#m430c6cbbf8" y="224.64"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <!-- 1 -->
+      <defs>
+       <path d="M 12.40625 8.296875 
+L 28.515625 8.296875 
+L 28.515625 63.921875 
+L 10.984375 60.40625 
+L 10.984375 69.390625 
+L 28.421875 72.90625 
+L 38.28125 72.90625 
+L 38.28125 8.296875 
+L 54.390625 8.296875 
+L 54.390625 0 
+L 12.40625 0 
+z
+" id="DejaVuSans-49"/>
+      </defs>
+      <g transform="translate(221.576875 239.238437)scale(0.1 -0.1)">
+       <use xlink:href="#DejaVuSans-49"/>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_3">
+      <defs>
+       <path d="M 0 0 
+L -3.5 0 
+" id="m7dddde9b2a" style="stroke:#000000;stroke-width:0.8;"/>
+      </defs>
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="23.878125" xlink:href="#m7dddde9b2a" y="61.56"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <!-- 0 -->
+      <g transform="translate(14.798438 64.123281)rotate(-90)scale(0.1 -0.1)">
+       <use xlink:href="#DejaVuSans-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_4">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="23.878125" xlink:href="#m7dddde9b2a" y="170.28"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <!-- 1 -->
+      <g transform="translate(14.798438 172.843281)rotate(-90)scale(0.1 -0.1)">
+       <use xlink:href="#DejaVuSans-49"/>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="text_5">
+    <!-- 3930 -->
+    <defs>
+     <path d="M 40.578125 39.3125 
+Q 47.65625 37.796875 51.625 33 
+Q 55.609375 28.21875 55.609375 21.1875 
+Q 55.609375 10.40625 48.1875 4.484375 
+Q 40.765625 -1.421875 27.09375 -1.421875 
+Q 22.515625 -1.421875 17.65625 -0.515625 
+Q 12.796875 0.390625 7.625 2.203125 
+L 7.625 11.71875 
+Q 11.71875 9.328125 16.59375 8.109375 
+Q 21.484375 6.890625 26.8125 6.890625 
+Q 36.078125 6.890625 40.9375 10.546875 
+Q 45.796875 14.203125 45.796875 21.1875 
+Q 45.796875 27.640625 41.28125 31.265625 
+Q 36.765625 34.90625 28.71875 34.90625 
+L 20.21875 34.90625 
+L 20.21875 43.015625 
+L 29.109375 43.015625 
+Q 36.375 43.015625 40.234375 45.921875 
+Q 44.09375 48.828125 44.09375 54.296875 
+Q 44.09375 59.90625 40.109375 62.90625 
+Q 36.140625 65.921875 28.71875 65.921875 
+Q 24.65625 65.921875 20.015625 65.03125 
+Q 15.375 64.15625 9.8125 62.3125 
+L 9.8125 71.09375 
+Q 15.4375 72.65625 20.34375 73.4375 
+Q 25.25 74.21875 29.59375 74.21875 
+Q 40.828125 74.21875 47.359375 69.109375 
+Q 53.90625 64.015625 53.90625 55.328125 
+Q 53.90625 49.265625 50.4375 45.09375 
+Q 46.96875 40.921875 40.578125 39.3125 
+z
+" id="DejaVuSans-51"/>
+     <path d="M 10.984375 1.515625 
+L 10.984375 10.5 
+Q 14.703125 8.734375 18.5 7.8125 
+Q 22.3125 6.890625 25.984375 6.890625 
+Q 35.75 6.890625 40.890625 13.453125 
+Q 46.046875 20.015625 46.78125 33.40625 
+Q 43.953125 29.203125 39.59375 26.953125 
+Q 35.25 24.703125 29.984375 24.703125 
+Q 19.046875 24.703125 12.671875 31.3125 
+Q 6.296875 37.9375 6.296875 49.421875 
+Q 6.296875 60.640625 12.9375 67.421875 
+Q 19.578125 74.21875 30.609375 74.21875 
+Q 43.265625 74.21875 49.921875 64.515625 
+Q 56.59375 54.828125 56.59375 36.375 
+Q 56.59375 19.140625 48.40625 8.859375 
+Q 40.234375 -1.421875 26.421875 -1.421875 
+Q 22.703125 -1.421875 18.890625 -0.6875 
+Q 15.09375 0.046875 10.984375 1.515625 
+z
+M 30.609375 32.421875 
+Q 37.25 32.421875 41.125 36.953125 
+Q 45.015625 41.5 45.015625 49.421875 
+Q 45.015625 57.28125 41.125 61.84375 
+Q 37.25 66.40625 30.609375 66.40625 
+Q 23.96875 66.40625 20.09375 61.84375 
+Q 16.21875 57.28125 16.21875 49.421875 
+Q 16.21875 41.5 20.09375 36.953125 
+Q 23.96875 32.421875 30.609375 32.421875 
+z
+" id="DejaVuSans-57"/>
+    </defs>
+    <g style="fill:#262626;" transform="translate(78.113125 64.319375)scale(0.1 -0.1)">
+     <use xlink:href="#DejaVuSans-51"/>
+     <use x="63.623047" xlink:href="#DejaVuSans-57"/>
+     <use x="127.246094" xlink:href="#DejaVuSans-51"/>
+     <use x="190.869141" xlink:href="#DejaVuSans-48"/>
+    </g>
+   </g>
+   <g id="text_6">
+    <!-- 2 -->
+    <defs>
+     <path d="M 19.1875 8.296875 
+L 53.609375 8.296875 
+L 53.609375 0 
+L 7.328125 0 
+L 7.328125 8.296875 
+Q 12.9375 14.109375 22.625 23.890625 
+Q 32.328125 33.6875 34.8125 36.53125 
+Q 39.546875 41.84375 41.421875 45.53125 
+Q 43.3125 49.21875 43.3125 52.78125 
+Q 43.3125 58.59375 39.234375 62.25 
+Q 35.15625 65.921875 28.609375 65.921875 
+Q 23.96875 65.921875 18.8125 64.3125 
+Q 13.671875 62.703125 7.8125 59.421875 
+L 7.8125 69.390625 
+Q 13.765625 71.78125 18.9375 73 
+Q 24.125 74.21875 28.421875 74.21875 
+Q 39.75 74.21875 46.484375 68.546875 
+Q 53.21875 62.890625 53.21875 53.421875 
+Q 53.21875 48.921875 51.53125 44.890625 
+Q 49.859375 40.875 45.40625 35.40625 
+Q 44.1875 33.984375 37.640625 27.21875 
+Q 31.109375 20.453125 19.1875 8.296875 
+z
+" id="DejaVuSans-50"/>
+    </defs>
+    <g style="fill:#ffffff;" transform="translate(221.576875 64.319375)scale(0.1 -0.1)">
+     <use xlink:href="#DejaVuSans-50"/>
+    </g>
+   </g>
+   <g id="text_7">
+    <!-- 75 -->
+    <defs>
+     <path d="M 8.203125 72.90625 
+L 55.078125 72.90625 
+L 55.078125 68.703125 
+L 28.609375 0 
+L 18.3125 0 
+L 43.21875 64.59375 
+L 8.203125 64.59375 
+z
+" id="DejaVuSans-55"/>
+     <path d="M 10.796875 72.90625 
+L 49.515625 72.90625 
+L 49.515625 64.59375 
+L 19.828125 64.59375 
+L 19.828125 46.734375 
+Q 21.96875 47.46875 24.109375 47.828125 
+Q 26.265625 48.1875 28.421875 48.1875 
+Q 40.625 48.1875 47.75 41.5 
+Q 54.890625 34.8125 54.890625 23.390625 
+Q 54.890625 11.625 47.5625 5.09375 
+Q 40.234375 -1.421875 26.90625 -1.421875 
+Q 22.3125 -1.421875 17.546875 -0.640625 
+Q 12.796875 0.140625 7.71875 1.703125 
+L 7.71875 11.625 
+Q 12.109375 9.234375 16.796875 8.0625 
+Q 21.484375 6.890625 26.703125 6.890625 
+Q 35.15625 6.890625 40.078125 11.328125 
+Q 45.015625 15.765625 45.015625 23.390625 
+Q 45.015625 31 40.078125 35.4375 
+Q 35.15625 39.890625 26.703125 39.890625 
+Q 22.75 39.890625 18.8125 39.015625 
+Q 14.890625 38.140625 10.796875 36.28125 
+z
+" id="DejaVuSans-53"/>
+    </defs>
+    <g style="fill:#ffffff;" transform="translate(84.475625 173.039375)scale(0.1 -0.1)">
+     <use xlink:href="#DejaVuSans-55"/>
+     <use x="63.623047" xlink:href="#DejaVuSans-53"/>
+    </g>
+   </g>
+   <g id="text_8">
+    <!-- 680 -->
+    <defs>
+     <path d="M 33.015625 40.375 
+Q 26.375 40.375 22.484375 35.828125 
+Q 18.609375 31.296875 18.609375 23.390625 
+Q 18.609375 15.53125 22.484375 10.953125 
+Q 26.375 6.390625 33.015625 6.390625 
+Q 39.65625 6.390625 43.53125 10.953125 
+Q 47.40625 15.53125 47.40625 23.390625 
+Q 47.40625 31.296875 43.53125 35.828125 
+Q 39.65625 40.375 33.015625 40.375 
+z
+M 52.59375 71.296875 
+L 52.59375 62.3125 
+Q 48.875 64.0625 45.09375 64.984375 
+Q 41.3125 65.921875 37.59375 65.921875 
+Q 27.828125 65.921875 22.671875 59.328125 
+Q 17.53125 52.734375 16.796875 39.40625 
+Q 19.671875 43.65625 24.015625 45.921875 
+Q 28.375 48.1875 33.59375 48.1875 
+Q 44.578125 48.1875 50.953125 41.515625 
+Q 57.328125 34.859375 57.328125 23.390625 
+Q 57.328125 12.15625 50.6875 5.359375 
+Q 44.046875 -1.421875 33.015625 -1.421875 
+Q 20.359375 -1.421875 13.671875 8.265625 
+Q 6.984375 17.96875 6.984375 36.375 
+Q 6.984375 53.65625 15.1875 63.9375 
+Q 23.390625 74.21875 37.203125 74.21875 
+Q 40.921875 74.21875 44.703125 73.484375 
+Q 48.484375 72.75 52.59375 71.296875 
+z
+" id="DejaVuSans-54"/>
+     <path d="M 31.78125 34.625 
+Q 24.75 34.625 20.71875 30.859375 
+Q 16.703125 27.09375 16.703125 20.515625 
+Q 16.703125 13.921875 20.71875 10.15625 
+Q 24.75 6.390625 31.78125 6.390625 
+Q 38.8125 6.390625 42.859375 10.171875 
+Q 46.921875 13.96875 46.921875 20.515625 
+Q 46.921875 27.09375 42.890625 30.859375 
+Q 38.875 34.625 31.78125 34.625 
+z
+M 21.921875 38.8125 
+Q 15.578125 40.375 12.03125 44.71875 
+Q 8.5 49.078125 8.5 55.328125 
+Q 8.5 64.0625 14.71875 69.140625 
+Q 20.953125 74.21875 31.78125 74.21875 
+Q 42.671875 74.21875 48.875 69.140625 
+Q 55.078125 64.0625 55.078125 55.328125 
+Q 55.078125 49.078125 51.53125 44.71875 
+Q 48 40.375 41.703125 38.8125 
+Q 48.828125 37.15625 52.796875 32.3125 
+Q 56.78125 27.484375 56.78125 20.515625 
+Q 56.78125 9.90625 50.3125 4.234375 
+Q 43.84375 -1.421875 31.78125 -1.421875 
+Q 19.734375 -1.421875 13.25 4.234375 
+Q 6.78125 9.90625 6.78125 20.515625 
+Q 6.78125 27.484375 10.78125 32.3125 
+Q 14.796875 37.15625 21.921875 38.8125 
+z
+M 18.3125 54.390625 
+Q 18.3125 48.734375 21.84375 45.5625 
+Q 25.390625 42.390625 31.78125 42.390625 
+Q 38.140625 42.390625 41.71875 45.5625 
+Q 45.3125 48.734375 45.3125 54.390625 
+Q 45.3125 60.0625 41.71875 63.234375 
+Q 38.140625 66.40625 31.78125 66.40625 
+Q 25.390625 66.40625 21.84375 63.234375 
+Q 18.3125 60.0625 18.3125 54.390625 
+z
+" id="DejaVuSans-56"/>
+    </defs>
+    <g style="fill:#ffffff;" transform="translate(215.214375 173.039375)scale(0.1 -0.1)">
+     <use xlink:href="#DejaVuSans-54"/>
+     <use x="63.623047" xlink:href="#DejaVuSans-56"/>
+     <use x="127.246094" xlink:href="#DejaVuSans-48"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_3">
+    <path clip-path="url(#p71f0ef05ac)" d="M 308.458125 224.64 
+L 308.458125 223.790625 
+L 308.458125 8.049375 
+L 308.458125 7.2 
+L 319.330125 7.2 
+L 319.330125 8.049375 
+L 319.330125 223.790625 
+L 319.330125 224.64 
+z
+" style="fill:#ffffff;stroke:#ffffff;stroke-linejoin:miter;stroke-width:0.01;"/>
+   </g>
+   <image height="217" id="imaged0642044bd" transform="scale(1 -1)translate(0 -217)" width="11" x="308" xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAAAsAAADZCAYAAAD2WsoCAAAABHNCSVQICAgIfAhkiAAAAV9JREFUaIHVmtsNAzEIwHjdEt1/zl5XwB+WaL4RMoakuag5z+eN5ZrM3MbS4ADBXSVlLq3AIhgoM7LhYRzx3OnZODF1qECxKTcym+3WbGgYE2g29sucDa3dEGO/zJOfBI82SMyG125vW61D6fB76qANgCGq05iRjSPMCIPtbpKZFbj+PPhbGySY2PAw5gYGazdhHoRxxIaGMe8+tbgH6wYGspFhMcMCAUYzZhIMRIvqEpwF0yS4SDDCgJnXsTFdXymzWCA47BhzNbABmQEGUifaGG02ELOmrsBVhmGENxteMLj3kMceqo5lBjdzlhncCyYIhsfMMMDPJsxMnixQZhhM3us0G0GeDT0bSWxEt4SBmuJ5ztEKFNtNMqM9CD55VRukgx4GssHOOtRBSx3c3RqGVyDK3Gj4bzCzdqN51jZs3pg60QYp8MbwZz9SZnP4iWfSbvQviysFsnZrZ51V4A9keCojHT7iJgAAAABJRU5ErkJggg==" y="-7"/>
+   <g id="matplotlib.axis_3"/>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_3">
+     <g id="line2d_5">
+      <defs>
+       <path d="M 0 0 
+L 3.5 0 
+" id="mc5f0c08770" style="stroke:#000000;stroke-width:0.8;"/>
+      </defs>
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="319.330125" xlink:href="#mc5f0c08770" y="197.072505"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <!-- 500 -->
+      <g transform="translate(326.330125 200.871724)scale(0.1 -0.1)">
+       <use xlink:href="#DejaVuSans-53"/>
+       <use x="63.623047" xlink:href="#DejaVuSans-48"/>
+       <use x="127.246094" xlink:href="#DejaVuSans-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_6">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="319.330125" xlink:href="#mc5f0c08770" y="169.394297"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <!-- 1000 -->
+      <g transform="translate(326.330125 173.193516)scale(0.1 -0.1)">
+       <use xlink:href="#DejaVuSans-49"/>
+       <use x="63.623047" xlink:href="#DejaVuSans-48"/>
+       <use x="127.246094" xlink:href="#DejaVuSans-48"/>
+       <use x="190.869141" xlink:href="#DejaVuSans-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_7">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="319.330125" xlink:href="#mc5f0c08770" y="141.71609"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <!-- 1500 -->
+      <g transform="translate(326.330125 145.515308)scale(0.1 -0.1)">
+       <use xlink:href="#DejaVuSans-49"/>
+       <use x="63.623047" xlink:href="#DejaVuSans-53"/>
+       <use x="127.246094" xlink:href="#DejaVuSans-48"/>
+       <use x="190.869141" xlink:href="#DejaVuSans-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_8">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="319.330125" xlink:href="#mc5f0c08770" y="114.037882"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <!-- 2000 -->
+      <g transform="translate(326.330125 117.837101)scale(0.1 -0.1)">
+       <use xlink:href="#DejaVuSans-50"/>
+       <use x="63.623047" xlink:href="#DejaVuSans-48"/>
+       <use x="127.246094" xlink:href="#DejaVuSans-48"/>
+       <use x="190.869141" xlink:href="#DejaVuSans-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_9">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="319.330125" xlink:href="#mc5f0c08770" y="86.359674"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <!-- 2500 -->
+      <g transform="translate(326.330125 90.158893)scale(0.1 -0.1)">
+       <use xlink:href="#DejaVuSans-50"/>
+       <use x="63.623047" xlink:href="#DejaVuSans-53"/>
+       <use x="127.246094" xlink:href="#DejaVuSans-48"/>
+       <use x="190.869141" xlink:href="#DejaVuSans-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_10">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="319.330125" xlink:href="#mc5f0c08770" y="58.681466"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <!-- 3000 -->
+      <g transform="translate(326.330125 62.480685)scale(0.1 -0.1)">
+       <use xlink:href="#DejaVuSans-51"/>
+       <use x="63.623047" xlink:href="#DejaVuSans-48"/>
+       <use x="127.246094" xlink:href="#DejaVuSans-48"/>
+       <use x="190.869141" xlink:href="#DejaVuSans-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_11">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="319.330125" xlink:href="#mc5f0c08770" y="31.003259"/>
+      </g>
+     </g>
+     <g id="text_15">
+      <!-- 3500 -->
+      <g transform="translate(326.330125 34.802477)scale(0.1 -0.1)">
+       <use xlink:href="#DejaVuSans-51"/>
+       <use x="63.623047" xlink:href="#DejaVuSans-53"/>
+       <use x="127.246094" xlink:href="#DejaVuSans-48"/>
+       <use x="190.869141" xlink:href="#DejaVuSans-48"/>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="patch_4">
+    <path d="M 308.458125 224.64 
+L 308.458125 223.790625 
+L 308.458125 8.049375 
+L 308.458125 7.2 
+L 319.330125 7.2 
+L 319.330125 8.049375 
+L 319.330125 223.790625 
+L 319.330125 224.64 
+z
+" style="fill:none;"/>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pa408c511e0">
+   <rect height="217.44" width="267.84" x="23.878125" y="7.2"/>
+  </clipPath>
+  <clipPath id="p71f0ef05ac">
+   <rect height="217.44" width="10.872" x="308.458125" y="7.2"/>
+  </clipPath>
+ </defs>
+</svg>
+
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>precision    recall  f1-score   support
+
+       False       0.98      1.00      0.99      3932
+        True       1.00      0.90      0.95       755
+
+    accuracy                           0.98      4687
+   macro avg       0.99      0.95      0.97      4687
+weighted avg       0.98      0.98      0.98      4687
+
+Number of features:  30
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[18]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(None, None, None)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Looking at the confusion matrix, we can tell that this model classified hazardous and non-hazardous asteroids fairly well.</p>
+<ul>
+<li>The top left corner, the True Negative quadrant, shows us that the model accurately predicted non-hazardous asteroids 3930 times.</li>
+<li>The top right corner tells us that the model predicted 2 False Positives, hazardous asteroids, that it believed were non-hazardous.</li>
+<li>The bottom left corner, the False Negative quadrant, tells us that the model classified 75 asteroids as non-hazardous when they were actually hazardous.</li>
+<li>In the bottom right corner, the True Positive quadrant, we can see the model accurately predicted hazardous asteroids 680 times.</li>
+</ul>
+<p>The score report tells us that the model predicted, with 100% precision, all True (Hazardous) and with 98% precision, all False (Non-Hazardous) asteroids.</p>
+<p>The models had similar scores, but if I had to choose one of these models to use to predict if an asteroid was hazardous or not, I would use the RandomForestClassifier as it predicted asteroids more accurately than the BaggingClassifier.</p>
 
 </div>
 </div>
