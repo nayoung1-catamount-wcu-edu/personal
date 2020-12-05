@@ -31,7 +31,7 @@ fluidPage(
       htmlOutput("date_selector")
     ),
     # print plot in main panel
-    mainPanel(plotOutput(outputId = "covid_ggplot"),),
+    mainPanel(plotOutput(outputId = "covid_ggplot"), ),
     
   )
 )

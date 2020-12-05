@@ -21,7 +21,7 @@ pandas_datareader
 chart_studio 
 pandas_bokeh 
 pylint 
-spellchecker 
-folium
-gdal
+spellchecker
+GDAL-3.1.4-cp37-cp37m-win_amd64.whl
+Fiona-1.8.17-cp37-cp37m-win_amd64.whl
 geopandas 

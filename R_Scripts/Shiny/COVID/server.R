@@ -11,7 +11,8 @@ server <- function(input, output, session) {
   
   # melt data
   covid_melt <-
-    melt(covid, id = c("date", "county", "state", "fips"))
+    melt(covid, id = c("date", "count
+y", "state", "fips"))
   
   # order county values ascending
   covid_melt <- covid_melt[order(covid_melt$county), ]
@@ -48,7 +49,7 @@ server <- function(input, output, session) {
   output$date_selector <- renderUI({
     dateRangeInput(inputId = "dates",
                    label = "Select a Range of Dates",
-                   start = "2020-11-01")
+                   start = "2020-01-01")
   })
   
   # plot cases and deaths by selected state and county in selected state
