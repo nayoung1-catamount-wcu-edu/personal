@@ -44,7 +44,8 @@ server <- function(input, output, session) {
   })
   # plot cases and deaths by selected state and count in selected state - plotly
   output$covid_plotly <- renderPlotly({
-    county_filter <- filter(covid_melt, county == input$county)
+    state_filter <- filter(covid_melt, state == input$state)
+    county_filter <- filter(state_filter, county == input$county)
     p <- ggplot(data = county_filter, aes(x = date,
                                           y = value,
                                           group = variable)) +
