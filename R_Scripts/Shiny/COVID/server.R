@@ -23,7 +23,7 @@ server <- function(input, output, session) {
       inputId = "state",
       label = "Choose a State/Territory:",
       choices = unique(covid_melt$state),
-      selected = "Alabama"
+      selected = unique(covid_melt$state[1])
     )
   })
   # output county_selector
