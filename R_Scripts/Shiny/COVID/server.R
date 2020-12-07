@@ -12,9 +12,9 @@ server <- function(input, output, session) {
   covid_melt <-
     melt(covid, id = c("date", "county", "state", "fips"))
   # order county values ascending
-  covid_melt <- covid_melt[order(covid_melt$county), ]
+  covid_melt <- covid_melt[order(covid_melt$county),]
   # order state values ascending
-  covid_melt <- covid_melt[order(covid_melt$state), ]
+  covid_melt <- covid_melt[order(covid_melt$state),]
   # convert date column to date dtype
   covid_melt$date <- as.Date(covid_melt$date, format = "%Y-%m-%d")
   # output state_selector
@@ -23,7 +23,7 @@ server <- function(input, output, session) {
       inputId = "state",
       label = "Choose a State/Territory:",
       choices = unique(covid_melt$state),
-      selected = ""
+      selected = "Alabama"
     )
   })
   # output county_selector
