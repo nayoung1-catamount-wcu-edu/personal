@@ -16,7 +16,7 @@ fluidPage(
   # set theme
   theme = shinytheme(theme = "flatly"),
   # set title
-  titlePanel(title = "COVID Case and Deaths - Updates Daily at 12p"),
+  titlePanel(title = "COVID Case and Deaths"),
   # create sidebar
   sidebarLayout(
     sidebarPanel(
