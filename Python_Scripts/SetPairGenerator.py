@@ -1,5 +1,3 @@
-#!/usr/bin/env python3.7
-
 # This code is an attempt to create a random list of pairs and rotate them
 # until all combinations have been achieved.
 

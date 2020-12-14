@@ -1,5 +1,3 @@
-#!/usr/bin/env python3.9
-
 ## Imports ##
 from spellchecker import SpellChecker
 import math

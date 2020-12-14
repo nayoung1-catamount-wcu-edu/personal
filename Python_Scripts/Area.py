@@ -3,6 +3,8 @@ from spellchecker import SpellChecker
 import math
 
 spell = SpellChecker()
+
+
 ## Area ##
 
 
@@ -12,14 +14,14 @@ def runProgram():
 
     for shape in find_shape:
         if (
-            shape == "square"
-            or shape == "rectangle"
-            or shape == "parallelogram"
-            or shape == "trapezoid"
-            or shape == "circle"
-            or shape == "triangle"
-            or shape == "equilateral triangle"
-            or shape == "ellipse"
+                shape == "square"
+                or shape == "rectangle"
+                or shape == "parallelogram"
+                or shape == "trapezoid"
+                or shape == "circle"
+                or shape == "triangle"
+                or shape == "equilateral triangle"
+                or shape == "ellipse"
         ):
             find_shape = shape
         else:

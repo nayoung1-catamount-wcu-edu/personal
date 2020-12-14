@@ -1,5 +1,3 @@
-#!/usr/bin/env python3.7
-
 # This code is an attempt to use a random number generator to eventually
 # create a 5 number summary.
 
