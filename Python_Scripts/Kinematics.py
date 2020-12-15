@@ -1,8 +1,3 @@
-# Imports
-from spellchecker import SpellChecker
-
-spell = SpellChecker()
-
 ## Kinematic Equations ##
 print(
     "Values are as follows: \nd = displacement: d/x/yi, d/x/yf",

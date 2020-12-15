@@ -1,15 +1,8 @@
 ## Imports ##
-from spellchecker import SpellChecker
 import math
 
-spell = SpellChecker()
-
-
-## Perimeter ##
 def runProgram():
-    find_shape = spell.candidates(
-        input("What shape do you want to find perimeter for? ")
-    )
+    find_shape = input("What shape do you want to find perimeter for? ")
 
     for shape in find_shape:
         if (
