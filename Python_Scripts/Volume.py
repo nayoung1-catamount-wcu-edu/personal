@@ -1,17 +1,11 @@
-## Imports ##
-from spellchecker import SpellChecker
 import math
-
-spell = SpellChecker()
 
 ## Volume ##
 
 
 def runProgram():
     print("Hello! This program will help you find volumes for different shapes.")
-    find_shape = spell.candidates(
-        input("What shape do you want to find an volume for? ")
-    )
+    find_shape = input("What shape do you want to find an volume for? ")
 
     for shape in find_shape:
         if (
