@@ -3,43 +3,29 @@
 
 # User input for the lowest value in a range.
 import random
+import sys
+import plotly.express as px
 
-enternumber = 0
+sys.tracebacklimit = 0
 
-while enternumber == 0:
-    try:
-        range_low = int(input("Lowest number of range: "))
-        enternumber = 1
-    except BaseException:
-        print("Bummer. That broke. Please enter a numeric value.")
 
-# User input for the highest value in a range.
-enternumber = 0
+def random_num_gen(range_low, range_high, vars):
+    """
+    inputs:
+        range_low : int : starting value for range
+        range_high : int : ending value for range
+        vars : int : number of values of produce
+    outputs:
+        list : vars number of random values in the specified range
+    """
+    if vars > range_high:
+        raise ValueError("Number of values is greater than max range.")
 
-while enternumber == 0:
-    try:
-        range_high = int(input("Highest number of range: "))
-        enternumber = 1
-    except BaseException:
-        print("Bummer. That broke. Please enter a numeric value.")
+    # Using the stated range to find 15 random variables and add it to a list.
+    random_list = random.sample(range(range_low, range_high), vars)
 
-# User input for how many variables to display
-enternumber = 0
+    # plotly plot
+    fig = px.box(random_list, points="all")
+    fig.update_layout()
 
-while enternumber == 0:
-    try:
-        amount_of_variables = int(input("How many numbers do you want? "))
-        enternumber = 1
-    except BaseException:
-        print("Bummer. That broke. Please enter a numeric value.")
-
-# Using the stated range to find 15 random variables and add it to a list.
-
-random_list = random.sample(range(range_low, range_high), amount_of_variables)
-print("Data has been successfully uploaded to randnumgen.txt.")
-
-# Save results in txt doc
-f = open("randnumgen.txt", "a+")
-f.write("%d,%d\n" % (range_low, range_high))
-f.write("%s\n" % (random_list))
-f.close()
+    return random_list, fig.show()
