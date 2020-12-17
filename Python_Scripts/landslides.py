@@ -81,13 +81,13 @@ def landslide_classification(target, train_size):
     # get results
     con_mat = confusion_matrix(y, y_pred)
     accuracy = np.trace(con_mat) / np.sum(con_mat).astype("float")
-    misclass = 1 - accuracy
+    misclassified = 1 - accuracy
 
     ax = plt.subplot()
     sns.heatmap(con_mat, annot=True, fmt="d", cmap="YlGnBu")
     plt.title(label=target + " Confusion Matrix")
     plt.xlabel(
-        "Predicted\naccuracy={:0.4f}; misclass={:0.4f}".format(accuracy, misclass)
+        "Predicted\naccuracy={:0.4f}; misclassified={:0.4f}".format(accuracy, misclassified)
     )
     plt.ylabel("True")
     ax.xaxis.set_ticklabels(["Positive", "Negative"])
