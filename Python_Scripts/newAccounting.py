@@ -19,7 +19,7 @@ def mixed_cost(fixed_cost, variable_cost, activity_level, mixed_cost):
     elif fixed_cost == nan:
         fixed_cost_value = (variable_cost * activity_level) - mixed_cost
     elif variable_cost == nan:
-        variable_cost_value = 
+        variable_cost_value = 13
 
     return print()
 

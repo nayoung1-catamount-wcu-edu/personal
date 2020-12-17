@@ -2,9 +2,6 @@
 
 #Solve normal distribution for 1 test
 normalcdf <- function(x, mean, sd) {
-  x <- as.double(readline(prompt="Enter value for x: "))
-  mean <- as.double(readline(prompt="Enter value for mean: "))
-  sd <- as.double(readline(prompt="Enter value for std dev: "))
   ans_greater_than_x <- 1 - pnorm(x, mean=mean, sd=sd)
   ans_less_than_x <- 1 - ans_greater_than_x
   cat("Answer if looking for greater than x:",
@@ -15,10 +12,6 @@ normalcdf <- function(x, mean, sd) {
 
 #Solve normal distribution for >1 test
 multi_normalcdf <- function(x,mean,sd,n) {
-  x <- as.double(readline(prompt="Enter value for x1: "))
-  mean <- as.double(readline(prompt="Enter value for mean: "))
-  sd <- as.double(readline(prompt="Enter value for std dev: "))
-  n <- as.double(readline(prompt='Enter number of tests: '))
   ans_greater_than_x <- 1 - pnorm(x, mean=mean, sd=sd)
   ans_less_than_x <- 1 - ans_greater_than_x
   cat("Answer if looking for greater than x:",
@@ -28,9 +21,8 @@ multi_normalcdf <- function(x,mean,sd,n) {
   }
 
 #Solve Z scores
-z_score <- function() {
-  x
+z_score <- function(x, sd) {
   mean <- mean(x)
-  sd
   ans <- (x-mean) / sd
+  print(round(ans, digits=4))
 }
