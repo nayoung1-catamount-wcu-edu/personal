@@ -1,5 +1,6 @@
 import pandas as pd
 import seaborn as sns
+import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.ensemble import RandomForestClassifier
@@ -79,13 +80,17 @@ def landslide_classification(target, train_size):
 
     # get results
     con_mat = confusion_matrix(y, y_pred)
-    sns.heatmap(con_mat, annot=True, fmt="d")
-    plt.xlabel("Actual")
-    plt.ylabel("Predicted")
-    plt.title("Confusion Matrix")
-    plt.text(0, 0, "True Positive")
-    plt.text(1, 0, "False Negative")
-    plt.text(0, 1, "False Positive")
-    plt.text(1, 1, "True Positive")
+    accuracy = np.trace(con_mat) / np.sum(con_mat).astype("float")
+    misclass = 1 - accuracy
+
+    ax = plt.subplot()
+    sns.heatmap(con_mat, annot=True, fmt="d", cmap="YlGnBu")
+    plt.title(label=target + " Confusion Matrix")
+    plt.xlabel(
+        "Predicted\naccuracy={:0.4f}; misclass={:0.4f}".format(accuracy, misclass)
+    )
+    plt.ylabel("True")
+    ax.xaxis.set_ticklabels(["Positive", "Negative"])
+    ax.yaxis.set_ticklabels(["Positive", "Negative"])
 
     return plt.show()
