@@ -1,0 +1,15 @@
+start_date,indicatorspeciestype,number_of_samples,num_of_exceedances,num_of_advisory_days
+2016,Microcystin,97,36,2952
+2017,Cylindrospermopsin,1,NULL,48
+2017,Microcystin,77,42,549
+2017,Saxitoxin,1,NULL,48
+2018,Anatoxin-A,1,NULL,1
+2018,Cylindrospermopsin,2,NULL,1
+2018,Microcystin,52,17,396
+2018,Saxitoxin,2,NULL,1
+2019,Anatoxin-A,6,NULL,154
+2019,Cylindrospermopsin,14,NULL,191
+2019,Microcystin,80,42,858
+2019,Saxitoxin,10,NULL,191
+2020,Microcystin,47,2,426
+2020,Saxitoxin,1,NULL,7
