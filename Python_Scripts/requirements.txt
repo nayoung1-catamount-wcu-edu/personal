@@ -1,4 +1,3 @@
-wheel
 pylint
 black
 jupyter
