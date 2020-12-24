@@ -1,6 +1,7 @@
 import sys
+import numpy
 
-
+# Mixed Cost
 def mixed_cost(fixed_cost, variable_cost, activity_level, mixed_cost):
     """
     Input
@@ -14,16 +15,16 @@ def mixed_cost(fixed_cost, variable_cost, activity_level, mixed_cost):
     ------
     cost : total mixed cost
     """
-    if mixed_cost == nan:
+    if mixed_cost == " ":
         mixed_cost_value = fixed_cost + (variable_cost * activity_level)
-    elif fixed_cost == nan:
+    elif fixed_cost == " ":
         fixed_cost_value = (variable_cost * activity_level) - mixed_cost
-    elif variable_cost == nan:
+    elif variable_cost == " ":
         variable_cost_value = 13
 
     return print()
 
-
+# Product Cost
 def product_cost(direct_materials, direct_labor, manu_overhead):
     """
     Input
@@ -37,55 +38,19 @@ def product_cost(direct_materials, direct_labor, manu_overhead):
     cost : total product cost
     """
     return print(
-        "\nTotal Product Cost: ", direct_materials + direct_labor + manu_overhead
+        "\nTotal Product Cost: ${:4.2f}".format(direct_materials + direct_labor + manu_overhead
+    ))
+
+# Period Cost
+def period_cost(se, ae):
+    """
+    inputs:
+        se : float : selling expenses
+        ae : float : administrative expenses
+
+    outputs:
+        cost : float : period cost
+    """
+    return print(
+        "\nThe total period cost is: ${:4.2f}".format(se + ae)
     )
-
-
-def run_program():
-    """
-    program skeleton
-    """
-    try:
-        print(
-            "\n1 Mixed Cost",
-            "\n2 Product Cost",
-            "\n3 Period Cost",
-            "\n4 Conversion Cost",
-            "\n5 Prime Cost",
-            "\n6 Variable Cost",
-            "\n7 Cost of Goods Sold",
-        )
-        equation_selection = int(
-            input("\nEnter value for equation you want to solve: ")
-        )
-        if equation_selection == 1:
-            mixed_cost(
-                float(input("\nTotal fixed cost: ")),
-                float(input("Variable cost: ")),
-                float(input("Level of activity: ")),
-            )
-            sys.exit()
-        elif equation_selection == 2:
-            product_cost(
-                float(input("\nDirect materials cost: ")),
-                float(input("Direct labor cost: ")),
-                float(input("Manufacturing overhead cost: ")),
-            )
-            sys.exit()
-        elif equation_selection == 3:
-            period_cost()
-        elif equation_selection == 4:
-            conversion_cost()
-        elif equation_selection == 5:
-            prime_cost()
-        elif equation_selection == 6:
-            variable_cost()
-        else:
-            cost_of_goods_sold()
-
-    except KeyboardInterrupt:
-        sys.exit()
-
-
-while True:
-    run_program()
