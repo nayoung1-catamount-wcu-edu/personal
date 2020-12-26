@@ -19,13 +19,9 @@ def random_num_gen(range_low, range_high, vars):
         list : vars number of random values in the specified range
     """
     if vars > range_high:
-        raise ValueError("Number of values is greater than max range.")
+        raise ValueError("This program does not repeat values.  The number of values is greater than max range.")
 
     # Using the stated range to find 15 random variables and add it to a list.
     random_list = random.sample(range(range_low, range_high), vars)
 
-    # plotly plot
-    fig = px.box(random_list, points="all")
-    fig.update_layout()
-
-    return random_list, fig.show()
+    return random_list
