@@ -28,6 +28,12 @@ fluidPage(
       htmlOutput("date_selector")
     ),
     # print plot in main panel
-    mainPanel(plotlyOutput(outputId = "covid_plotly"),),
+    mainPanel(
+      plotlyOutput(outputId = "covid_plotly"),
+      p("COVID Cases and Deaths updates every day at 12:00 pm EST"),
+      p("Source: ", 
+        a("NY Times", 
+          href="https://github.com/nytimes/covid-19-data")),
+    ),
   )
 )
