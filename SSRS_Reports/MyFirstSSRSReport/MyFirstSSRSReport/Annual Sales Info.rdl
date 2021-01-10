@@ -17,6 +17,9 @@
           <QueryParameter Name="@pYear">
             <Value>=Parameters!pYear.Value</Value>
           </QueryParameter>
+          <QueryParameter Name="@pSalesperson">
+            <Value>=Parameters!pSalesperson.Value</Value>
+          </QueryParameter>
         </QueryParameters>
         <CommandText>SELECT fs.[City Key] AS CityKey, dd.[Calendar Year] AS DeliveryYear, du.Customer AS CustomerName, du.[Primary Contact] AS PrimaryContact, dc.City, dc.[State Province] AS StateProvince, de.Employee AS SalesPerson, 
                   SUM(fs.[Total Excluding Tax]) AS TotalExcludingTax
@@ -25,7 +28,7 @@ FROM     Fact.Sale AS fs INNER JOIN
                   Dimension.Date AS dd ON fs.[Delivery Date Key] = dd.Date INNER JOIN
                   Dimension.Customer AS du ON fs.[Bill To Customer Key] = du.[Customer Key] INNER JOIN
                   Dimension.Employee AS de ON fs.[Salesperson Key] = de.[Employee Key]
-WHERE dd.[Calendar Year]  IN (@pYear)
+WHERE dd.[Calendar Year]  IN (@pYear) AND de.[Employee] IN (@pSalesperson)
 GROUP BY fs.[City Key], dd.[Calendar Year], du.Customer, du.[Primary Contact], dc.City, dc.[State Province], de.Employee
 ORDER BY CustomerName, dc.City, StateProvince, DeliveryYear, SalesPerson</CommandText>
       </Query>
@@ -69,12 +72,34 @@ ORDER BY CustomerName, dc.City, StateProvince, DeliveryYear, SalesPerson</Comman
     </DataSet>
     <DataSet Name="Years">
       <SharedDataSet>
-        <SharedDataSetReference>Year</SharedDataSetReference>
+        <SharedDataSetReference>Years</SharedDataSetReference>
       </SharedDataSet>
       <Fields>
         <Field Name="Calendar_Year">
           <DataField>Calendar_Year</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="RecentYears">
+      <SharedDataSet>
+        <SharedDataSetReference>RecentYears</SharedDataSetReference>
+      </SharedDataSet>
+      <Fields>
+        <Field Name="Calendar_Year">
+          <DataField>Calendar_Year</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="Salespeople">
+      <SharedDataSet>
+        <SharedDataSetReference>Salespeople</SharedDataSetReference>
+      </SharedDataSet>
+      <Fields>
+        <Field Name="SalespersonName">
+          <DataField>SalespersonName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
     </DataSet>
@@ -1221,8 +1246,32 @@ ORDER BY CustomerName, dc.City, StateProvince, DeliveryYear, SalesPerson</Comman
     </ReportSection>
   </ReportSections>
   <ReportParameters>
+    <ReportParameter Name="pSalesperson">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>Salespeople</DataSetName>
+          <ValueField>SalespersonName</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Sales People</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>Salespeople</DataSetName>
+          <ValueField>SalespersonName</ValueField>
+          <LabelField>SalespersonName</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
     <ReportParameter Name="pYear">
       <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>RecentYears</DataSetName>
+          <ValueField>Calendar_Year</ValueField>
+        </DataSetReference>
+      </DefaultValue>
       <Prompt>Sales Year</Prompt>
       <ValidValues>
         <DataSetReference>
@@ -1241,8 +1290,13 @@ ORDER BY CustomerName, dc.City, StateProvince, DeliveryYear, SalesPerson</Comman
       <CellDefinitions>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
-          <RowIndex>0</RowIndex>
+          <RowIndex>1</RowIndex>
           <ParameterName>pYear</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>pSalesperson</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>

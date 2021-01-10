@@ -50,6 +50,8 @@
     <Reports>@(Report)</Reports>
   </PropertyGroup>
   <ItemGroup>
+    <DataSet Include="RecentYears.rsd" />
+    <DataSet Include="Salespeople.rsd" />
     <DataSet Include="Years.rsd" />
   </ItemGroup>
   <ItemGroup>
