@@ -3,74 +3,31 @@
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="CustomerData">
-      <ConnectionProperties>
-        <DataProvider>SQL</DataProvider>
-        <ConnectString>Data Source=TITANIUM-BOOK;Initial Catalog=WideWorldImportersDW</ConnectString>
-        <IntegratedSecurity>true</IntegratedSecurity>
-      </ConnectionProperties>
-      <rd:SecurityType>Integrated</rd:SecurityType>
-      <rd:DataSourceID>0c186c2c-db0d-43fa-bf49-c27d681000a1</rd:DataSourceID>
+    <DataSource Name="WideWorldImportersDW">
+      <DataSourceReference>WideWorldImportersDW</DataSourceReference>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>541745ce-299a-4f32-a227-95c94e6fd0f7</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSet1">
+    <DataSet Name="CustomerData">
       <Query>
-        <DataSourceName>CustomerData</DataSourceName>
-        <CommandText>-- Main Report Query
-SELECT fs.[City Key] AS CityKey
-     , dd.[Calendar Year] AS DeliveryYear
-     , du.[Customer] AS CustomerName
-     , du.[Primary Contact] AS PrimaryContact
-     , dc.[City]
-     , dc.[State Province] AS StateProvince
-     , de.[Employee] AS SalesPerson
-     , SUM(fs.[Total Excluding Tax]) AS TotalExcludingTax
-  FROM [Fact].[Sale] fs
-  JOIN [Dimension].[City] dc
-    ON fs.[City Key] = dc.[City Key]
-  JOIN [Dimension].[Date] dd
-    ON fs.[Delivery Date Key] = dd.[Date]
-  JOIN [Dimension].[Customer] du
-    ON fs.[Bill To Customer Key] = du.[Customer Key]
-  JOIN [Dimension].[Employee] de 
-    ON fs.[Salesperson Key] = de.[Employee Key]
- GROUP BY
-       fs.[City Key] 
-     , dd.[Calendar Year] 
-     , du.[Customer] 
-     , du.[Primary Contact] 
-     , dc.[City]
-     , dc.[State Province] 
-     , de.[Employee]
- ORDER BY 
-       du.[Customer] 
-     , dc.[City]
-     , dc.[State Province] 
-     , dd.[Calendar Year] 
-     , de.[Employee]
-
-
--- Populate the Year parameter
-SELECT DISTINCT  
-       [Calendar Year]
-  FROM [Dimension].[Date]
- ORDER BY [Calendar Year]
-
--- Get the most recent 4 years
-SELECT DISTINCT  
-       [Calendar Year]
-  FROM [Dimension].[Date]
- WHERE [Calendar Year] &gt; YEAR(GETDATE()) - 4 
- ORDER BY [Calendar Year]
-
--- Populate the Salesperson Parameter
-SELECT DISTINCT 
-       [Employee] AS [SalespersonName]
-  FROM [Dimension].[Employee]
- WHERE [Is Salesperson] = 1
- ORDER BY [Employee]</CommandText>
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <DataSourceName>WideWorldImportersDW</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@pYear">
+            <Value>=Parameters!pYear.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>SELECT fs.[City Key] AS CityKey, dd.[Calendar Year] AS DeliveryYear, du.Customer AS CustomerName, du.[Primary Contact] AS PrimaryContact, dc.City, dc.[State Province] AS StateProvince, de.Employee AS SalesPerson, 
+                  SUM(fs.[Total Excluding Tax]) AS TotalExcludingTax
+FROM     Fact.Sale AS fs INNER JOIN
+                  Dimension.City AS dc ON fs.[City Key] = dc.[City Key] INNER JOIN
+                  Dimension.Date AS dd ON fs.[Delivery Date Key] = dd.Date INNER JOIN
+                  Dimension.Customer AS du ON fs.[Bill To Customer Key] = du.[Customer Key] INNER JOIN
+                  Dimension.Employee AS de ON fs.[Salesperson Key] = de.[Employee Key]
+WHERE dd.[Calendar Year]  IN (@pYear)
+GROUP BY fs.[City Key], dd.[Calendar Year], du.Customer, du.[Primary Contact], dc.City, dc.[State Province], de.Employee
+ORDER BY CustomerName, dc.City, StateProvince, DeliveryYear, SalesPerson</CommandText>
       </Query>
       <Fields>
         <Field Name="CityKey">
@@ -110,65 +67,48 @@ SELECT DISTINCT
         </Field>
       </Fields>
     </DataSet>
+    <DataSet Name="Years">
+      <SharedDataSet>
+        <SharedDataSetReference>Year</SharedDataSetReference>
+      </SharedDataSet>
+      <Fields>
+        <Field Name="Calendar_Year">
+          <DataField>Calendar_Year</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
   </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
         <ReportItems>
-          <Textbox Name="textbox1">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Annual Sales Info</Value>
-                    <Style>
-                      <FontFamily>Segoe UI Light</FontFamily>
-                      <FontSize>24pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>textbox1</rd:DefaultName>
-            <Height>0.43in</Height>
-            <Width>8in</Width>
-            <Style>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Tablix Name="table1">
+          <Tablix Name="Tablix1">
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>1.87381in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>1.87381in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>1.87381in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>1.87381in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>1.87381in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>0.23in</Height>
+                  <Height>0.25in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox12">
+                        <Textbox Name="Textbox2">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -177,42 +117,21 @@ SELECT DISTINCT
                                 <TextRun>
                                   <Value>Customer</Value>
                                   <Style>
-                                    <FontFamily />
-                                    <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Color>#666666</Color>
+                                    <Color>White</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style>
-                                    <FontFamily />
-                                    <FontSize>11pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
-                                    <Color>#666666</Color>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox12</rd:DefaultName>
+                          <rd:DefaultName>Textbox2</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
-                            </Border>
-                            <BottomBorder>
                               <Style>Solid</Style>
-                            </BottomBorder>
+                            </Border>
+                            <BackgroundColor>DarkGreen</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -223,7 +142,7 @@ SELECT DISTINCT
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox14">
+                        <Textbox Name="Textbox4">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -232,26 +151,21 @@ SELECT DISTINCT
                                 <TextRun>
                                   <Value>City State</Value>
                                   <Style>
-                                    <FontFamily />
-                                    <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Color>#666666</Color>
+                                    <Color>White</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox14</rd:DefaultName>
+                          <rd:DefaultName>Textbox4</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
-                            </Border>
-                            <BottomBorder>
                               <Style>Solid</Style>
-                            </BottomBorder>
+                            </Border>
+                            <BackgroundColor>DarkGreen</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -262,7 +176,7 @@ SELECT DISTINCT
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox16">
+                        <Textbox Name="Textbox6">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -271,26 +185,21 @@ SELECT DISTINCT
                                 <TextRun>
                                   <Value>Delivery Year</Value>
                                   <Style>
-                                    <FontFamily />
-                                    <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Color>#666666</Color>
+                                    <Color>White</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox16</rd:DefaultName>
+                          <rd:DefaultName>Textbox6</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
-                            </Border>
-                            <BottomBorder>
                               <Style>Solid</Style>
-                            </BottomBorder>
+                            </Border>
+                            <BackgroundColor>DarkGreen</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -301,7 +210,7 @@ SELECT DISTINCT
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox18">
+                        <Textbox Name="Textbox1">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -310,26 +219,21 @@ SELECT DISTINCT
                                 <TextRun>
                                   <Value>Sales Person</Value>
                                   <Style>
-                                    <FontFamily />
-                                    <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Color>#666666</Color>
+                                    <Color>White</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox18</rd:DefaultName>
+                          <rd:DefaultName>Textbox1</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
-                            </Border>
-                            <BottomBorder>
                               <Style>Solid</Style>
-                            </BottomBorder>
+                            </Border>
+                            <BackgroundColor>DarkGreen</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -340,7 +244,7 @@ SELECT DISTINCT
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox21">
+                        <Textbox Name="Textbox5">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -349,26 +253,21 @@ SELECT DISTINCT
                                 <TextRun>
                                   <Value>Total Excluding Tax</Value>
                                   <Style>
-                                    <FontFamily />
-                                    <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Color>#666666</Color>
+                                    <Color>White</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox21</rd:DefaultName>
+                          <rd:DefaultName>Textbox5</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
-                            </Border>
-                            <BottomBorder>
                               <Style>Solid</Style>
-                            </BottomBorder>
+                            </Border>
+                            <BackgroundColor>DarkGreen</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -393,8 +292,7 @@ SELECT DISTINCT
                                 <TextRun>
                                   <Value>=Fields!CustomerName.Value</Value>
                                   <Style>
-                                    <FontFamily />
-                                    <Color>#333333</Color>
+                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -405,10 +303,9 @@ SELECT DISTINCT
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
-                            </Border>
-                            <BottomBorder>
                               <Style>Solid</Style>
-                            </BottomBorder>
+                            </Border>
+                            <BackgroundColor>LightGrey</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -425,11 +322,11 @@ SELECT DISTINCT
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.21in</Height>
+                  <Height>0.25in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox39">
+                        <Textbox Name="Textbox23">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -437,23 +334,18 @@ SELECT DISTINCT
                               <TextRuns>
                                 <TextRun>
                                   <Value />
-                                  <Style>
-                                    <FontFamily />
-                                    <Color>#333333</Color>
-                                  </Style>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox39</rd:DefaultName>
+                          <rd:DefaultName>Textbox23</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
-                            </Border>
-                            <BottomBorder>
                               <Style>Solid</Style>
-                            </BottomBorder>
+                            </Border>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -472,10 +364,7 @@ SELECT DISTINCT
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!CityState.Value</Value>
-                                  <Style>
-                                    <FontFamily />
-                                    <Color>#333333</Color>
-                                  </Style>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -485,10 +374,8 @@ SELECT DISTINCT
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
-                            </Border>
-                            <BottomBorder>
                               <Style>Solid</Style>
-                            </BottomBorder>
+                            </Border>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -507,10 +394,7 @@ SELECT DISTINCT
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!DeliveryYear.Value</Value>
-                                  <Style>
-                                    <FontFamily />
-                                    <Color>#333333</Color>
-                                  </Style>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -520,10 +404,8 @@ SELECT DISTINCT
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
-                            </Border>
-                            <BottomBorder>
                               <Style>Solid</Style>
-                            </BottomBorder>
+                            </Border>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -542,10 +424,7 @@ SELECT DISTINCT
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!SalesPerson.Value</Value>
-                                  <Style>
-                                    <FontFamily />
-                                    <Color>#333333</Color>
-                                  </Style>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -555,10 +434,8 @@ SELECT DISTINCT
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
-                            </Border>
-                            <BottomBorder>
                               <Style>Solid</Style>
-                            </BottomBorder>
+                            </Border>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -578,9 +455,7 @@ SELECT DISTINCT
                                 <TextRun>
                                   <Value>=Fields!TotalExcludingTax.Value</Value>
                                   <Style>
-                                    <FontFamily />
                                     <Format>'$'#,0.00;('$'#,0.00)</Format>
-                                    <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -593,10 +468,8 @@ SELECT DISTINCT
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
-                            </Border>
-                            <BottomBorder>
                               <Style>Solid</Style>
-                            </BottomBorder>
+                            </Border>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -613,17 +486,16 @@ SELECT DISTINCT
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox28">
+                        <Textbox Name="CustomerName">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>= "Total for " + Fields!CustomerName.Value</Value>
+                                  <Value>="Total for " + Fields!CustomerName.Value</Value>
                                   <Style>
-                                    <FontFamily />
-                                    <Color>#333333</Color>
+                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -632,14 +504,12 @@ SELECT DISTINCT
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox28</rd:DefaultName>
+                          <rd:DefaultName>CustomerName</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
-                            </Border>
-                            <BottomBorder>
                               <Style>Solid</Style>
-                            </BottomBorder>
+                            </Border>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -654,19 +524,17 @@ SELECT DISTINCT
                     <TablixCell />
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox32">
+                        <Textbox Name="Textbox15">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!TotalExcludingTax.Value)</Value>
+                                  <Value>=SUM(Fields!TotalExcludingTax.Value)</Value>
                                   <Style>
-                                    <FontFamily />
                                     <FontWeight>Bold</FontWeight>
                                     <Format>'$'#,0.00;('$'#,0.00)</Format>
-                                    <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -675,14 +543,12 @@ SELECT DISTINCT
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox32</rd:DefaultName>
+                          <rd:DefaultName>Textbox15</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
-                            </Border>
-                            <BottomBorder>
                               <Style>Solid</Style>
-                            </BottomBorder>
+                            </Border>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -692,6 +558,50 @@ SELECT DISTINCT
                         </Textbox>
                       </CellContents>
                     </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox25">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox25</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>5</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
                   </TablixCells>
                 </TablixRow>
               </TablixRows>
@@ -708,7 +618,8 @@ SELECT DISTINCT
             <TablixRowHierarchy>
               <TablixMembers>
                 <TablixMember>
-                  <KeepTogether>true</KeepTogether>
+                  <KeepWithGroup>After</KeepWithGroup>
+                  <RepeatOnNewPage>true</RepeatOnNewPage>
                 </TablixMember>
                 <TablixMember>
                   <Group Name="CustomerName">
@@ -726,15 +637,10 @@ SELECT DISTINCT
                       <KeepWithGroup>After</KeepWithGroup>
                     </TablixMember>
                     <TablixMember>
-                      <Group Name="table1_Details_Group">
-                        <DataElementName>Detail</DataElementName>
-                      </Group>
-                      <TablixMembers>
-                        <TablixMember />
-                      </TablixMembers>
-                      <DataElementName>Detail_Collection</DataElementName>
-                      <DataElementOutput>Output</DataElementOutput>
-                      <KeepTogether>true</KeepTogether>
+                      <Group Name="Details" />
+                    </TablixMember>
+                    <TablixMember>
+                      <KeepWithGroup>Before</KeepWithGroup>
                     </TablixMember>
                     <TablixMember>
                       <KeepWithGroup>Before</KeepWithGroup>
@@ -743,19 +649,569 @@ SELECT DISTINCT
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>DataSet1</DataSetName>
-            <Top>0.43in</Top>
-            <Height>0.94in</Height>
-            <Width>5in</Width>
-            <ZIndex>1</ZIndex>
-            <Style />
+            <DataSetName>CustomerData</DataSetName>
+            <Top>2.10738in</Top>
+            <Left>0.14905in</Left>
+            <Height>1.25in</Height>
+            <Width>9.36905in</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
           </Tablix>
+          <Chart Name="Chart2">
+            <ChartCategoryHierarchy>
+              <ChartMembers>
+                <ChartMember>
+                  <Group Name="Chart2_CategoryGroup">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!DeliveryYear.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!DeliveryYear.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <Label>=Fields!DeliveryYear.Value</Label>
+                </ChartMember>
+              </ChartMembers>
+            </ChartCategoryHierarchy>
+            <ChartSeriesHierarchy>
+              <ChartMembers>
+                <ChartMember>
+                  <Group Name="Chart2_SeriesGroup">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!SalesPerson.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!SalesPerson.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <Label>=Fields!SalesPerson.Value</Label>
+                </ChartMember>
+              </ChartMembers>
+            </ChartSeriesHierarchy>
+            <ChartData>
+              <ChartSeriesCollection>
+                <ChartSeries Name="TotalExcludingTax">
+                  <ChartDataPoints>
+                    <ChartDataPoint>
+                      <ChartDataPointValues>
+                        <Y>=Sum(Fields!TotalExcludingTax.Value)</Y>
+                      </ChartDataPointValues>
+                      <ChartDataLabel>
+                        <Style />
+                      </ChartDataLabel>
+                      <Style />
+                      <ChartMarker>
+                        <Style />
+                      </ChartMarker>
+                      <DataElementOutput>Output</DataElementOutput>
+                    </ChartDataPoint>
+                  </ChartDataPoints>
+                  <Type>Line</Type>
+                  <Style />
+                  <ChartEmptyPoints>
+                    <Style />
+                    <ChartMarker>
+                      <Style />
+                    </ChartMarker>
+                    <ChartDataLabel>
+                      <Style />
+                    </ChartDataLabel>
+                  </ChartEmptyPoints>
+                  <ValueAxisName>Primary</ValueAxisName>
+                  <CategoryAxisName>Primary</CategoryAxisName>
+                  <ChartSmartLabel>
+                    <CalloutLineColor>Black</CalloutLineColor>
+                    <MinMovingDistance>0pt</MinMovingDistance>
+                  </ChartSmartLabel>
+                </ChartSeries>
+              </ChartSeriesCollection>
+            </ChartData>
+            <ChartAreas>
+              <ChartArea Name="Default">
+                <ChartCategoryAxes>
+                  <ChartAxis Name="Primary">
+                    <Style>
+                      <Border>
+                        <Color>Gainsboro</Color>
+                        <Style>None</Style>
+                      </Border>
+                      <FontSize>8pt</FontSize>
+                      <Color>#5c5c5c</Color>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption />
+                      <Style>
+                        <FontSize>9pt</FontSize>
+                        <Color>#5c5c5c</Color>
+                      </Style>
+                    </ChartAxisTitle>
+                    <ChartMajorGridLines>
+                      <Enabled>False</Enabled>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>Dotted</Style>
+                        </Border>
+                      </Style>
+                    </ChartMinorGridLines>
+                    <ChartMajorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </ChartMajorTickMarks>
+                    <ChartMinorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                      <Length>0.5</Length>
+                    </ChartMinorTickMarks>
+                    <CrossAt>NaN</CrossAt>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                  <ChartAxis Name="Secondary">
+                    <Style>
+                      <Border>
+                        <Color>Gainsboro</Color>
+                        <Style>None</Style>
+                      </Border>
+                      <FontSize>8pt</FontSize>
+                      <Color>#5c5c5c</Color>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption />
+                      <Style>
+                        <FontSize>9pt</FontSize>
+                        <Color>#5c5c5c</Color>
+                      </Style>
+                    </ChartAxisTitle>
+                    <ChartMajorGridLines>
+                      <Enabled>False</Enabled>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>Dotted</Style>
+                        </Border>
+                      </Style>
+                    </ChartMinorGridLines>
+                    <ChartMajorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </ChartMajorTickMarks>
+                    <ChartMinorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                      <Length>0.5</Length>
+                    </ChartMinorTickMarks>
+                    <CrossAt>NaN</CrossAt>
+                    <Location>Opposite</Location>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                </ChartCategoryAxes>
+                <ChartValueAxes>
+                  <ChartAxis Name="Primary">
+                    <Style>
+                      <Border>
+                        <Color>Gainsboro</Color>
+                        <Style>None</Style>
+                      </Border>
+                      <FontSize>8pt</FontSize>
+                      <Format>'$'0;('$'0)</Format>
+                      <Color>#5c5c5c</Color>
+                      <rd:FormatSymbolCulture>en-US</rd:FormatSymbolCulture>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption />
+                      <Style>
+                        <FontSize>9pt</FontSize>
+                        <Color>#5c5c5c</Color>
+                      </Style>
+                    </ChartAxisTitle>
+                    <ChartMajorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>Dotted</Style>
+                        </Border>
+                      </Style>
+                    </ChartMinorGridLines>
+                    <ChartMajorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </ChartMajorTickMarks>
+                    <ChartMinorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                      <Length>0.5</Length>
+                    </ChartMinorTickMarks>
+                    <CrossAt>NaN</CrossAt>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                  <ChartAxis Name="Secondary">
+                    <Style>
+                      <Border>
+                        <Color>Gainsboro</Color>
+                        <Style>None</Style>
+                      </Border>
+                      <FontSize>8pt</FontSize>
+                      <Color>#5c5c5c</Color>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption />
+                      <Style>
+                        <FontSize>9pt</FontSize>
+                        <Color>#5c5c5c</Color>
+                      </Style>
+                    </ChartAxisTitle>
+                    <ChartMajorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>Dotted</Style>
+                        </Border>
+                      </Style>
+                    </ChartMinorGridLines>
+                    <ChartMajorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </ChartMajorTickMarks>
+                    <ChartMinorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                      <Length>0.5</Length>
+                    </ChartMinorTickMarks>
+                    <CrossAt>NaN</CrossAt>
+                    <Location>Opposite</Location>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                </ChartValueAxes>
+                <Style>
+                  <BackgroundColor>#00ffffff</BackgroundColor>
+                  <BackgroundGradientType>None</BackgroundGradientType>
+                </Style>
+              </ChartArea>
+            </ChartAreas>
+            <ChartLegends>
+              <ChartLegend Name="Default">
+                <Style>
+                  <BackgroundGradientType>None</BackgroundGradientType>
+                  <FontSize>8pt</FontSize>
+                </Style>
+                <Position>RightCenter</Position>
+                <ChartLegendTitle>
+                  <Caption />
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </ChartLegendTitle>
+                <HeaderSeparatorColor>Black</HeaderSeparatorColor>
+                <ColumnSeparatorColor>Black</ColumnSeparatorColor>
+              </ChartLegend>
+            </ChartLegends>
+            <ChartTitles>
+              <ChartTitle Name="Default">
+                <Caption>Salesperson Performance</Caption>
+                <Style>
+                  <BackgroundGradientType>None</BackgroundGradientType>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextAlign>Left</TextAlign>
+                  <VerticalAlign>Top</VerticalAlign>
+                  <Color>#a6a6a6</Color>
+                </Style>
+                <Position>TopLeft</Position>
+              </ChartTitle>
+            </ChartTitles>
+            <Palette>Pacific</Palette>
+            <ChartBorderSkin>
+              <Style>
+                <BackgroundColor>Gray</BackgroundColor>
+                <BackgroundGradientType>None</BackgroundGradientType>
+                <Color>White</Color>
+              </Style>
+            </ChartBorderSkin>
+            <ChartNoDataMessage Name="NoDataMessage">
+              <Caption>No Data Available</Caption>
+              <Style>
+                <BackgroundGradientType>None</BackgroundGradientType>
+                <FontWeight>Bold</FontWeight>
+                <TextAlign>General</TextAlign>
+                <VerticalAlign>Top</VerticalAlign>
+              </Style>
+            </ChartNoDataMessage>
+            <DataSetName>CustomerData</DataSetName>
+            <Top>0.06944in</Top>
+            <Left>0.14905in</Left>
+            <Height>1.99627in</Height>
+            <Width>9.36905in</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Color>LightGrey</Color>
+                <Style>None</Style>
+              </Border>
+              <BackgroundColor>White</BackgroundColor>
+              <BackgroundGradientType>None</BackgroundGradientType>
+            </Style>
+          </Chart>
         </ReportItems>
-        <Height>1.37in</Height>
+        <Height>3.50421in</Height>
         <Style />
       </Body>
-      <Width>9in</Width>
+      <Width>9.70833in</Width>
       <Page>
+        <PageHeader>
+          <Height>0.51389in</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Image Name="CompanyLogo">
+              <Source>Embedded</Source>
+              <Value>Emoticon_Smile_Green</Value>
+              <Sizing>FitProportional</Sizing>
+              <Left>0.14905in</Left>
+              <Height>0.5in</Height>
+              <Width>0.5in</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Image>
+            <Textbox Name="Textbox30">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Annual Customer Sales</Value>
+                      <Style>
+                        <FontSize>20pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox30</rd:DefaultName>
+              <Top>0.01389in</Top>
+              <Left>4.05381in</Left>
+              <Height>0.5in</Height>
+              <Width>5.46429in</Width>
+              <ZIndex>1</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+          </ReportItems>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </PageHeader>
+        <PageFooter>
+          <Height>0.93452in</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Textbox Name="Textbox31">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>= "Printed by " + User!UserID + vbCrLf + "Printed on " + Globals!ExecutionTime</Value>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                        <Color>DimGray</Color>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox31</rd:DefaultName>
+              <Top>0.22563in</Top>
+              <Left>0.14905in</Left>
+              <Height>0.53571in</Height>
+              <Width>1.87381in</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox32">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>= "Copyright " + CStr(Year(Now)) + vbCrLf + "Wide World Importers Inc."</Value>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                        <Color>DimGray</Color>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox32</rd:DefaultName>
+              <Top>0.22563in</Top>
+              <Left>3.89667in</Left>
+              <Height>0.53571in</Height>
+              <Width>1.87381in</Width>
+              <ZIndex>1</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox33">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>="Page " + FormatNumber(Globals!OverallPageNumber, 0) + " of " + FormatNumber(Globals!OverallTotalPages, 0)</Value>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                        <Color>DimGray</Color>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox33</rd:DefaultName>
+              <Top>0.22563in</Top>
+              <Left>7.64429in</Left>
+              <Height>0.53571in</Height>
+              <Width>1.87381in</Width>
+              <ZIndex>2</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+          </ReportItems>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </PageFooter>
         <LeftMargin>1in</LeftMargin>
         <RightMargin>1in</RightMargin>
         <TopMargin>1in</TopMargin>
@@ -764,14 +1220,71 @@ SELECT DISTINCT
       </Page>
     </ReportSection>
   </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="pYear">
+      <DataType>String</DataType>
+      <Prompt>Sales Year</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>Years</DataSetName>
+          <ValueField>Calendar_Year</ValueField>
+          <LabelField>Calendar_Year</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+  </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
       <NumberOfColumns>4</NumberOfColumns>
       <NumberOfRows>2</NumberOfRows>
+      <CellDefinitions>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>pYear</ParameterName>
+        </CellDefinition>
+      </CellDefinitions>
     </GridLayoutDefinition>
   </ReportParametersLayout>
+  <EmbeddedImages>
+    <EmbeddedImage Name="Emoticon_Smile_Green">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAAUMAAAFCCAYAAABrb7+iAAAACXBIWXMAAAsTAAALEwEAmpwYAAA55mlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMwNjcgNzkuMTU3NzQ3LCAyMDE1LzAzLzMwLTIzOjQwOjQyICAgICAgICAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIKICAgICAgICAgICAgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIgogICAgICAgICAgICB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIKICAgICAgICAgICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOmV4aWY9Imh0dHA6Ly9ucy5h
+ZG9iZS5jb20vZXhpZi8xLjAvIj4KICAgICAgICAgPHhtcDpDcmVhdG9yVG9vbD5BZG9iZSBQaG90b3Nob3AgQ0MgMjAxNSAoTWFjaW50b3NoKTwveG1wOkNyZWF0b3JUb29sPgogICAgICAgICA8eG1wOkNyZWF0ZURhdGU+MjAxNS0xMi0yOFQxNDoyMDoyNC0wNjowMDwveG1wOkNyZWF0ZURhdGU+CiAgICAgICAgIDx4bXA6TW9kaWZ5RGF0ZT4yMDE1LTEyLTI4VDE0OjI3OjQyLTA2OjAwPC94bXA6TW9kaWZ5RGF0ZT4KICAgICAgICAgPHhtcDpNZXRhZGF0YURhdGU+MjAxNS0xMi0yOFQxNDoyNzo0Mi0wNjowMDwveG1wOk1ldGFkYXRhRGF0ZT4KICAgICAgICAgPGRjOmZvcm1hdD5pbWFnZS9wbmc8L2RjOmZvcm1hdD4KICAgICAgICAgPHBob3Rvc2hvcDpDb2xvck1vZGU+MzwvcGhvdG9zaG9wOkNvbG9yTW9kZT4KICAgICAgICAgPHhtcE1NOkluc3RhbmNlSUQ+eG1wLmlpZDo5NmY4Mzk1Yi0yY2Q5LTQyNzktYjRkMC1mZWZlZmZkMGEzMTE8L3htcE1NOkluc3RhbmNlSUQ+CiAgICAgICAgIDx4bXBNTTpEb2N1bWVudElEPnhtcC5kaWQ6ZTQ4ODc3NDktMWZiNi00NjczLWE3YjItODM1MzRkMDI4MTJlPC94bXBNTTpEb2N1bWVudElEPgogICAgICAgICA8eG1wTU06T3JpZ2luYWxEb2N1bWVudElEPnhtcC5kaWQ6ZTQ4ODc3NDktMWZiNi00NjczLWE3YjItODM1MzRkMDI4MTJlPC94bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ+CiAgICAgICAgIDx4bXBNTTpIaXN0b3J5PgogICAgICAgICAgICA8cmRmOlNlcT4KICAgICAgICAg
+ICAgICAgPHJkZjpsaSByZGY6cGFyc2VUeXBlPSJSZXNvdXJjZSI+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDphY3Rpb24+Y3JlYXRlZDwvc3RFdnQ6YWN0aW9uPgogICAgICAgICAgICAgICAgICA8c3RFdnQ6aW5zdGFuY2VJRD54bXAuaWlkOmU0ODg3NzQ5LTFmYjYtNDY3My1hN2IyLTgzNTM0ZDAyODEyZTwvc3RFdnQ6aW5zdGFuY2VJRD4KICAgICAgICAgICAgICAgICAgPHN0RXZ0OndoZW4+MjAxNS0xMi0yOFQxNDoyMDoyNC0wNjowMDwvc3RFdnQ6d2hlbj4KICAgICAgICAgICAgICAgICAgPHN0RXZ0OnNvZnR3YXJlQWdlbnQ+QWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKE1hY2ludG9zaCk8L3N0RXZ0OnNvZnR3YXJlQWdlbnQ+CiAgICAgICAgICAgICAgIDwvcmRmOmxpPgogICAgICAgICAgICAgICA8cmRmOmxpIHJkZjpwYXJzZVR5cGU9IlJlc291cmNlIj4KICAgICAgICAgICAgICAgICAgPHN0RXZ0OmFjdGlvbj5zYXZlZDwvc3RFdnQ6YWN0aW9uPgogICAgICAgICAgICAgICAgICA8c3RFdnQ6aW5zdGFuY2VJRD54bXAuaWlkOjk2ZjgzOTViLTJjZDktNDI3OS1iNGQwLWZlZmVmZmQwYTMxMTwvc3RFdnQ6aW5zdGFuY2VJRD4KICAgICAgICAgICAgICAgICAgPHN0RXZ0OndoZW4+MjAxNS0xMi0yOFQxNDoyNzo0Mi0wNjowMDwvc3RFdnQ6d2hlbj4KICAgICAgICAgICAgICAgICAgPHN0RXZ0OnNvZnR3YXJlQWdlbnQ+QWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKE1hY2ludG9zaCk8L3N0RXZ0OnNvZnR3YXJlQWdl
+bnQ+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDpjaGFuZ2VkPi88L3N0RXZ0OmNoYW5nZWQ+CiAgICAgICAgICAgICAgIDwvcmRmOmxpPgogICAgICAgICAgICA8L3JkZjpTZXE+CiAgICAgICAgIDwveG1wTU06SGlzdG9yeT4KICAgICAgICAgPHRpZmY6T3JpZW50YXRpb24+MTwvdGlmZjpPcmllbnRhdGlvbj4KICAgICAgICAgPHRpZmY6WFJlc29sdXRpb24+NzIwMDAwLzEwMDAwPC90aWZmOlhSZXNvbHV0aW9uPgogICAgICAgICA8dGlmZjpZUmVzb2x1dGlvbj43MjAwMDAvMTAwMDA8L3RpZmY6WVJlc29sdXRpb24+CiAgICAgICAgIDx0aWZmOlJlc29sdXRpb25Vbml0PjI8L3RpZmY6UmVzb2x1dGlvblVuaXQ+CiAgICAgICAgIDxleGlmOkNvbG9yU3BhY2U+NjU1MzU8L2V4aWY6Q29sb3JTcGFjZT4KICAgICAgICAgPGV4aWY6UGl4ZWxYRGltZW5zaW9uPjMyMzwvZXhpZjpQaXhlbFhEaW1lbnNpb24+CiAgICAgICAgIDxleGlmOlBpeGVsWURpbWVuc2lvbj4zMjI8L2V4aWY6UGl4ZWxZRGltZW5zaW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAKPD94cGFja2V0IGVuZD0idyI/PsLo69IAAAAgY0hSTQAAeiUAAICDAAD5/wAAgOkAAHUwAADqYAAAOpgAABdvkl/FRgAAHqZJREFUeNrsnb1vG1e6h38x0obgrRlgmc6qlimWKqMbq4+Y3pYMuJMMS52sxnYjq4sD250BS3YfKr2c1ZbSFqut
+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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
   <Language>en-US</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
-  <rd:ReportID>999b3f6f-28bb-4d71-ac34-e0a81d3479a5</rd:ReportID>
+  <rd:ReportID>8e0f3877-25c7-4d93-899d-03c67a4196d0</rd:ReportID>
 </Report>
