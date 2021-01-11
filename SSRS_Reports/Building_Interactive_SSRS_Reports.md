@@ -48,3 +48,61 @@ To implement interactive sorting:
 Use ID fields to sort in the background
 
 ## Implementing Show/Hide Property
+
+To remove `?`from page selector:
+
+- Add page footer
+- Add text box with Built-in Overall Total Page count
+- To hide that text box:
+  - Text box properties
+  - Visibilites
+    - Hide
+
+To show/hide a column:
+
+- Right click column header
+- Column Visibility
+  - Hide
+
+To show/hide values based on value:
+
+- IIF(expression, true-value, false-value)
+
+  - expression = any boolean expression
+  - true-value = the return value in the expression is TRUE
+  - false-value = the return value in the expression is FALSE
+
+- Add parameter
+
+  - Available Values
+    - add Yes/1, No/0
+  - Default Values
+    - add 1
+
+- Show/hide row based on parameter
+  - Select row
+    - Row Visibility
+    - Show or hide based on an expression
+      - `IIF(expression, true-value, IIF(expression, true-value, false-value))`
+
+## Implementing Filters
+
+To implement filters:
+
+- Tablix Properties
+- Filters
+
+| Static                       | Dynamic                    |
+| ---------------------------- | -------------------------- |
+| Predetermined filter         | Have options or conditions |
+| Placed by the designer       | Allows the users to choose |
+| Cannot be changed at runtime |                            |
+
+Search Parameter filter:
+
+- Parameters
+  - Allow blank values
+- Tablix Parameters
+  - Filters
+  - Search Parameters
+  - Like
