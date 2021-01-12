@@ -136,3 +136,70 @@ Search Parameter filter:
 | Gets the list of values from a query | Specified in teh Report Parameter |
 
 ## Implementing Drilldown
+
+Benefits of Drill Down Reports
+
+- Get a bird's eye view of the data
+- Observe different levels of data at a time
+- Improved rendering and loading time
+
+Type of Drill Down
+
+- Standard Drilldown
+
+  - Initial Toggle State is Collapsed
+
+- Reverse Drilldown
+
+  - Initial Toggle State is Expanded
+
+- Conditional Initial Visibility
+
+  - Depends on the Initial Toggle State on a Parameter
+
+- Understanding the Drill Down Implementation
+  - Parent and Child Groups
+  - If initial toggle state = false
+    - Collapsed
+    - Child items are hidden
+    - Standard drilldown
+  - If initial toggle state = true
+    - Expanded
+    - Child items are shown
+    - Reversed drilldown
+
+## Implementing Drill Through
+
+What are Drill Through Reports?
+
+- Shows details of the summarized data
+- Can drill through another report
+
+Benefits of Drill Through Reports
+
+- Summarized view to a detailed view
+- Observe same level of data in detail
+- Improved rendering and loading time
+
+## Implementing Actions
+
+Jump Actions
+
+- Go to Report (Drill through action)
+- Go to Bookmark
+- Go to URL
+
+Reports linked together should sit in the same report server.
+
+To go to URL using JavaScript:
+
+- `"javascript:void(window.open('[link]', '_blank'))"`
+  - JS code only works from a browser, so you always have to deploy and run it from a browser.
+
+## Implementing a Document Map
+
+Document Map
+
+- Similar to a table of contents
+- Persists when the report is exported to Excel or PDF
+- Sidebar that can be hidden
