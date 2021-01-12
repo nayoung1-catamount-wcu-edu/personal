@@ -134,3 +134,5 @@ Search Parameter filter:
 | ------------------------------------ | --------------------------------- |
 | Dynamic                              | Static                            |
 | Gets the list of values from a query | Specified in teh Report Parameter |
+
+## Implementing Drilldown
