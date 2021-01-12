@@ -106,3 +106,31 @@ Search Parameter filter:
   - Filters
   - Search Parameters
   - Like
+
+## Creating Dynamic Reports in SSRS Using Parameters
+
+### Types of filters
+
+| Dataset Filter                        | Report Filter                                                                        |
+| ------------------------------------- | ------------------------------------------------------------------------------------ |
+| Filter before teh dataset is returned | Filter after the dataset has been returned - available in the varilus levels of data |
+| Can be bound to a parameter           | Can be bound to a report parameter                                                   |
+| Optimal and preferred for performance |                                                                                      |
+
+### Types of parameters
+
+| Dataset Parameter                        | Report Parameter                                               |
+| ---------------------------------------- | -------------------------------------------------------------- |
+| Also called query parameter              | Contains the settings of the parameter                         |
+| Perform a filter within the source query | Can be hidden, internal, or visible                            |
+|                                          | Can be used to interact with the user                          |
+|                                          | May be associated to a dataset parameter                       |
+|                                          | Can be used in filtering, formatting, or visibility conditions |
+|                                          | Can be associated to a dataset filter                          |
+
+### Query Based vs Static Parameters
+
+| Query Based Parameters               | Static Parameters                 |
+| ------------------------------------ | --------------------------------- |
+| Dynamic                              | Static                            |
+| Gets the list of values from a query | Specified in teh Report Parameter |
