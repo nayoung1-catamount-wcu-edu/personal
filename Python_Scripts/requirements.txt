@@ -9,5 +9,6 @@ sklearn
 matplotlib
 seaborn
 plotly
-https://download.lfd.uci.edu/pythonlibs/z4tqcw5k/GDAL-3.2.1-cp38-cp38-win_amd64.whl
+Fiona
+GDAL
 geopandas
