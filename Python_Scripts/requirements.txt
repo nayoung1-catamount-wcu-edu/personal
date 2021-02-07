@@ -1,6 +1,6 @@
+wheel 
 pylint
 black
-jupyter
 jupyter_contrib_nbextensions
 jupyter_nbextensions_configurator
 pandas
@@ -9,6 +9,3 @@ sklearn
 matplotlib
 seaborn
 plotly
-Fiona
-GDAL
-geopandas
