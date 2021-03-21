@@ -7,6 +7,60 @@ from scipy.integrate import quad
 import os
 import time
 
+
+# Program
+
+try:
+
+    def runProgram():
+        clear()
+        problem = int(
+            input(
+                "What type of problem are you solving?\n\nList:\n1 Event Probabilty\n2 Random Mean\n3 Probability Distribution\n4 Binomial Distribution\n5 Normal Distribution\n6 Sample Mean\n7 Sample Proportion\n\n"
+            )
+        )
+        if problem == 1:
+            clear()
+            print("\nSolving Event Probability")
+            event_probability()
+        elif problem == 2:
+            clear()
+            print("\nSolving for Random Mean")
+            random_mean()
+        elif problem == 3:
+            clear()
+            print("\nSolving for probability distribution.")
+            probability_distribution()
+        elif problem == 4:
+            clear()
+            print("\nSolving for binomial distribution.")
+            binomial_distribution()
+        elif problem == 5:
+            clear()
+            print("\nSolving for normal distribution.")
+            normal_distribution()
+        elif problem == 6:
+            clear()
+            print("\nSolving for sample mean.")
+            sample_mean()
+        elif problem == 7:
+            clear()
+            print("\nSolving for sample proportion.")
+            sample_proportion()
+        else:
+            exit()
+
+    while True:
+        runProgram()
+
+# Error catching
+except statistics.StatisticsError:
+    print("\nPlease enter at least 2 values.\n")
+
+except ValueError:
+    print("\nThat did not work.  Please enter a numerical value.\n")
+
+
 # Clear terminal
 def clear():
     os.system("cls")
@@ -137,7 +191,8 @@ def binomial_distribution():
         * ((1 - p) ** (n - x))
     )
 
-    print("\nProbability of", x, "successes from", n, "trials is:", round(Pr, 10))
+    print("\nProbability of", x, "successes from",
+          n, "trials is:", round(Pr, 10))
 
 
 # Normal Distributions
@@ -225,56 +280,3 @@ def sample_proportion():
         "\nProbability: ",
         round(z, 10),
     )
-
-
-# Program
-
-try:
-
-    def runProgram():
-        clear()
-        problem = int(
-            input(
-                "What type of problem are you solving?\n\nList:\n1 Event Probabilty\n2 Random Mean\n3 Probability Distribution\n4 Binomial Distribution\n5 Normal Distribution\n6 Sample Mean\n7 Sample Proportion\n\n"
-            )
-        )
-        if problem == 1:
-            clear()
-            print("\nSolving Event Probability")
-            event_probability()
-        elif problem == 2:
-            clear()
-            print("\nSolving for Random Mean")
-            random_mean()
-        elif problem == 3:
-            clear()
-            print("\nSolving for probability distribution.")
-            probability_distribution()
-        elif problem == 4:
-            clear()
-            print("\nSolving for binomial distribution.")
-            binomial_distribution()
-        elif problem == 5:
-            clear()
-            print("\nSolving for normal distribution.")
-            normal_distribution()
-        elif problem == 6:
-            clear()
-            print("\nSolving for sample mean.")
-            sample_mean()
-        elif problem == 7:
-            clear()
-            print("\nSolving for sample proportion.")
-            sample_proportion()
-        else:
-            exit()
-
-    while True:
-        runProgram()
-
-# Error catching
-except statistics.StatisticsError:
-    print("\nPlease enter at least 2 values.\n")
-
-except ValueError:
-    print("\nThat did not work.  Please enter a numerical value.\n")
