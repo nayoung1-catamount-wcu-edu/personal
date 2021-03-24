@@ -1,4 +1,5 @@
 library(shiny)
+library(shinythemes)
 
 fluidPage(
     theme = shinytheme(theme = "flatly"),
