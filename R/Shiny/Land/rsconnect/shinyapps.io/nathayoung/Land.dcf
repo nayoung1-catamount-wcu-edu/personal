@@ -1,0 +1,12 @@
+name: Land
+title: Land
+username:
+account: nathayoung
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3873603
+bundleId: 4402872
+url: https://nathayoung.shinyapps.io/Land/
+when: 1616893470.48776
+asMultiple: FALSE
+asStatic: FALSE

@@ -1,9 +1,10 @@
 library(shiny)
 library(shinythemes)
+library(plotly)
 
 fluidPage(
     theme = shinytheme(theme = "flatly"),
-    titlePanel(title = "Demographics Data"),
+    titlePanel(title = "Land Data"),
     sidebarLayout(
         sidebarPanel(
             htmlOutput("state_selector"),
@@ -11,7 +12,7 @@ fluidPage(
             htmlOutput("date_selector"),
         ),
         mainPanel(
-            plotlyOutput(outputId = "demographics_plotly")
+            plotlyOutput(outputId = "plotly")
         )
     )
 )

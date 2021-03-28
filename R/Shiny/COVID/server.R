@@ -38,21 +38,25 @@ server <- function(input, output, session) {
   })
   # output range of dates
   output$date_selector <- renderUI({
-    dateRangeInput(inputId = "dates",
-                   label = "Select a Range of Dates",
-                   start = "2020-01-01")
+    dateRangeInput(
+      inputId = "dates",
+      label = "Select a Range of Dates",
+      start = "2020-01-01"
+    )
   })
   # plot cases and deaths by selected state and count in selected state - plotly
   output$covid_plotly <- renderPlotly({
     state_filter <- filter(covid_melt, state == input$state)
     county_filter <- filter(state_filter, county == input$county)
-    p <- ggplot(data = county_filter, aes(x = date,
-                                          y = value,
-                                          group = variable)) +
+    p <- ggplot(data = county_filter, aes(
+      x = date,
+      y = value,
+      group = variable
+    )) +
       geom_line(aes(color = variable)) +
       geom_point(aes(color = variable)) +
       scale_x_date(limits = c(input$dates[1], input$dates[2]))
     ggplotly(p +
-               ggtitle("COVID Cases and Deaths by County"))
+      ggtitle("COVID Cases and Deaths by County"))
   })
 }

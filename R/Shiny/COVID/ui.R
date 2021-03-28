@@ -6,34 +6,32 @@ library(plotly)
 covid <-
   read.csv(file.path("Data/covid-19-data", "us-counties.csv"))
 
-
-
 # convert date column to date dtype
 covid$date <- as.Date(covid$date, format = "%Y-%m-%d")
 
 # build ui
 fluidPage(
-  # set theme
+# set theme
   theme = shinytheme(theme = "flatly"),
-  # set title
+# set title
   titlePanel(title = "COVID Cases and Deaths"),
-  # create sidebar
+# create sidebar
   sidebarLayout(
     sidebarPanel(
-      # user input state value
+# user input state value
       htmlOutput("state_selector"),
-      # user input county value eventually based on state value
+# user input county value eventually based on state value
       htmlOutput("county_selector"),
-      # user input date range
+# user input date range
       htmlOutput("date_selector")
     ),
-    # print plot in main panel
+# print plot in main panel
     mainPanel(
       plotlyOutput(outputId = "covid_plotly"),
       p("COVID Cases and Deaths updates every day around 5pm EST."),
-      p("Source: ", 
-        a("NY Times", 
-          href="https://github.com/nytimes/covid-19-data")),
+      p("Source: ",
+        a("NY Times",
+          href = "https://github.com/nytimes/covid-19-data")),
     ),
   )
 )
