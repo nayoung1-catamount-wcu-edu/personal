@@ -12,7 +12,7 @@ fluidPage(
             htmlOutput("date_selector"),
         ),
         mainPanel(
-            plotlyOutput(outputId = "plotly")
+            plotlyOutput(outputId = "land_plotly")
         )
     )
 )

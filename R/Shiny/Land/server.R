@@ -3,42 +3,41 @@ library(dplyr)
 library(tidyverse)
 library(ggplot2)
 
-server <- function(input, output, session) {
-  con <- RODBC::odbcDriverConnect(
-    "Driver={SQL Server Native Client 11.0};
+con <- RODBC::odbcDriverConnect(
+  "Driver={SQL Server Native Client 11.0};
     Server=localhost;
     Database=DataDashboard;
     Trusted_Connection=Yes"
-  )
+)
 
+server <- function(input, output, session) {
   # Get data
   data <- RODBC::sqlQuery(con, "select * from vLand")
 
   # Split region column into County and State for filters
   data <- separate(data,
-    "Region Name",
-    c("County", "State"),
-    sep = ","
-  )
+                   "Region Name",
+                   c("County", "State"),
+                   sep = ",")
 
   # Order data by County ascending
-  data <- data[order(data$County),]
+  data <- data[order(data$County), ]
 
   # Order data by State ascending
-  data <- data[order(data$State),]
+  data <- data[order(data$State), ]
 
   # Convert date column to datetime
-  data$Date <- as.Date(data$date,
-    format = "%Y-%m-%d"
-  )
+  data$Date <- as.Date(data$Date,
+                       format = "%Y-%m-%d")
 
   # output State selector
   output$state_selector <- renderUI({
     selectInput(
       inputId = "state",
       label = "Choose a State:",
+
       choices = unique(data$state),
-      selectd = unique(data$state[1])
+      selected = unique(data$state[1])
     )
   })
 
@@ -53,28 +52,25 @@ server <- function(input, output, session) {
     )
   })
 
-  # range of dates
+  # output range of dates
   output$date_selector <- renderUI({
-    dateRangeInput(
-      inputId = "dates",
-      label = "Select a Range of Dates",
-      start = "2020-01-01"
-    )
+    dateRangeInput(inputId = "dates",
+                   label = "Select a Range of Dates",
+                   start = "2020-01-01")
   })
 
   # plot data
-  output$plotly <- renderPlotly({
+  output$land_plotly <- renderPlotly({
     state_filter <- filter(data, state == input$state)
-    county_filter <- filter(data, state == input$county)
-    p <- ggplot(data = county_filter, aes(
-      x = "Date",
-      y = "Estimated Value",
-      group = "Measure Name"
-    )) +
+    county_filter <- filter(data, county == input$county)
+    p <- ggplot(data = county_filter,
+                aes(x = "Date",
+                    y = "Estimated Value",
+                    group = "Measure Name")) +
       geom_line(aes(color = "Measure Name")) +
       geom_point(aes(color = "Measure_Name")) +
       scale_x_date(limits = c(input$dates[1], input$dates[2]))
     ggplotly(p +
-      ggtitle("Land Data"))
+               ggtitle("Land Data"))
   })
 }
