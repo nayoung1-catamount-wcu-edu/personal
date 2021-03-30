@@ -14,14 +14,14 @@ con <- RODBC::odbcDriverConnect(
 )
 
 # Get data
-data <- RODBC::sqlQuery(con, "select * from vLand")
+data <- RODBC::sqlQuery(con, "select top 5000 * from vLand")
 
 # Convert date column to datetime
 data$Date <- as.Date(data$Date,
                      format = "%Y-%m-%d")
 
 fluidPage(
-    theme = shinytheme(theme = "flatly"),
+    theme = shinytheme(theme = "darkly"),
     titlePanel(title = "Land Data"),
     sidebarLayout(
         sidebarPanel(

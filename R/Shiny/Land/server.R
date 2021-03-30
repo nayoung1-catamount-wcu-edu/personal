@@ -12,22 +12,26 @@ con <- RODBC::odbcDriverConnect(
 
 server <- function(input, output, session) {
   # Get data
-  data <- RODBC::sqlQuery(con, "select * from vLand")
+  df <- RODBC::sqlQuery(con, "select top 50000 * from vLand")
 
   # Split region column into County and State for filters
-  data <- separate(data,
+  df <- separate(df,
                    "Region Name",
                    c("County", "State"),
                    sep = ",")
 
+  # rename columns
+  df <- rename(df, Estimated_Value = "Estimated Value")
+  df <- rename(df, Measure_Name = "Measure Name")
+
   # Order data by County ascending
-  data <- data[order(data$County), ]
+  df <- df[order(df$County), ]
 
   # Order data by State ascending
-  data <- data[order(data$State), ]
+  df<- df[order(df$State), ]
 
   # Convert date column to datetime
-  data$Date <- as.Date(data$Date,
+  df$Date <- as.Date(df$Date,
                        format = "%Y-%m-%d")
 
   # output State selector
@@ -35,15 +39,14 @@ server <- function(input, output, session) {
     selectInput(
       inputId = "state",
       label = "Choose a State:",
-
-      choices = unique(data$State),
-      selected = unique(data$State[1])
+      choices = unique(df$State),
+      selected = unique(df$State[1])
     )
   })
 
   # output County selector
   output$county_selector <- renderUI({
-    available <- data[data$State == input$state, "county"]
+    available <- df[df$State == input$state, "county"]
     selectInput(
       inputId = "county",
       label = "Choose a County/Munisipality:",
@@ -56,21 +59,24 @@ server <- function(input, output, session) {
   output$date_selector <- renderUI({
     dateRangeInput(inputId = "dates",
                    label = "Select a Range of Dates",
-                   start = "2020-01-01")
+                   start = "2000-01-01")
   })
+
 
   # plot data
   output$land_plotly <- renderPlotly({
-    state_filter <- filter(data, State == input$state)
+    state_filter <- filter(df, State == input$state)
     county_filter <- filter(state_filter, County == input$county)
     p <- ggplot(data = county_filter,
-                aes(x = "Date",
-                    y = "Estimated Value",
-                    group = "Measure Name")) +
-      geom_line(aes(color = "Measure Name")) +
-      geom_point(aes(color = "Measure Name")) #+
-      #scale_x_date(limits = c(input$dates[1], input$dates[2]))
+                    aes(x = Date,
+                    y = Estimated_Value)) +
+      geom_point() +
+      geom_point(data = county_filter, aes(y = Estimated_Value, color=Measure_Name))
+                    #group = Measure_Name)) +
+      #geom_line(aes(color = Estimated_Value)) +
+      #geom_point(aes(color = Measure_Name)) +
+      scale_x_date(limits = c(input$dates[1], input$dates[2]))
     ggplotly(p +
-               ggtitle("Land Data"))
+    ggtitle("Land Data"))
   })
 }
