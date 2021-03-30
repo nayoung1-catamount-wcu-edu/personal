@@ -2,6 +2,7 @@ library(RODBC)
 library(dplyr)
 library(tidyverse)
 library(ggplot2)
+library(scales)
 
 con <- RODBC::odbcDriverConnect(
   "Driver={SQL Server Native Client 11.0};
@@ -12,7 +13,7 @@ con <- RODBC::odbcDriverConnect(
 
 server <- function(input, output, session) {
   # Get data
-  df <- RODBC::sqlQuery(con, "select top 50000 * from vLand")
+  df <- RODBC::sqlQuery(con, "select * from vLand")
 
   # Split region column into County and State for filters
   df <- separate(df,
@@ -28,7 +29,7 @@ server <- function(input, output, session) {
   df <- df[order(df$County), ]
 
   # Order data by State ascending
-  df<- df[order(df$State), ]
+  df <- df[order(df$State), ]
 
   # Convert date column to datetime
   df$Date <- as.Date(df$Date,
@@ -66,12 +67,12 @@ server <- function(input, output, session) {
   # plot data
   output$land_plotly <- renderPlotly({
     state_filter <- filter(df, State == input$state)
-    county_filter <- filter(state_filter, County == input$county)
-    p <- ggplot(data = county_filter,
+    #county_filter <- filter(state_filter, County == input$county)
+    p <- ggplot(data = state_filter,
                     aes(x = Date,
                     y = Estimated_Value)) +
       geom_point() +
-      geom_point(data = county_filter, aes(y = Estimated_Value, color=Measure_Name))
+      geom_point(data = state_filter, aes(y = Estimated_Value, color=Measure_Name))
                     #group = Measure_Name)) +
       #geom_line(aes(color = Estimated_Value)) +
       #geom_point(aes(color = Measure_Name)) +
