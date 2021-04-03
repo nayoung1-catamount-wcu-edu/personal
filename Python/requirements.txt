@@ -9,7 +9,7 @@ cligj==0.7.1
 cycler==0.10.0
 Fiona @ https://download.lfd.uci.edu/pythonlibs/w4tscw6k/Fiona-1.8.18-cp38-cp38-win_amd64.whl
 flatbuffers==1.12
-gast==0.3.3
+gast==0.4.0
 GDAL @ https://download.lfd.uci.edu/pythonlibs/w4tscw6k/GDAL-3.2.2-cp38-cp38-win_amd64.whl
 geopandas==0.9.0
 google-auth==1.28.0
