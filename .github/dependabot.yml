@@ -11,9 +11,3 @@ updates:
       interval: "daily"
     commit-message:
       prefix: "pip"
-  - package-ecosystem: "install.packages"
-    directory: "/R/"
-    schedule:
-      interval: "daily"
-    commit-message:
-      prefix: "install.packages"
