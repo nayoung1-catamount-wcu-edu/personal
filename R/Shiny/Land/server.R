@@ -67,15 +67,13 @@ server <- function(input, output, session) {
   # plot data
   output$land_plotly <- renderPlotly({
     state_filter <- filter(df, State == input$state)
-    #county_filter <- filter(state_filter, County == input$county)
-    p <- ggplot(data = state_filter,
+    county_filter <- filter(state_filter, County == input$county)
+    p <- ggplot(data = county_filter,
                     aes(x = Date,
-                    y = Estimated_Value)) +
-      geom_point() +
-      geom_point(data = state_filter, aes(y = Estimated_Value, color=Measure_Name))
-                    #group = Measure_Name)) +
-      #geom_line(aes(color = Estimated_Value)) +
-      #geom_point(aes(color = Measure_Name)) +
+                    y = Estimated_Value,
+                    group = Measure_Name)) +
+      geom_line(aes(color = Measure_Name)) +
+      geom_point(aes(color = Measure_Name)) +
       scale_x_date(limits = c(input$dates[1], input$dates[2]))
     ggplotly(p +
     ggtitle("Land Data"))
