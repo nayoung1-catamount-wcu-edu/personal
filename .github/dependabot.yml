@@ -9,5 +9,3 @@ updates:
     directory: "/Python/" # Location of package manifests
     schedule:
       interval: "daily"
-    default_assignees:
-      - "nathayoung"
