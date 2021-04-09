@@ -8,6 +8,6 @@ updates:
   - package-ecosystem: "pip" # See documentation for possible values
     directory: "/Python/" # Location of package manifests
     schedule:
-      interval: "daily"
-    commit-message:
-      prefix: "pip"
+      interval: "live"
+    default_assignees:
+      - "nathayoung"
