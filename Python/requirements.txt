@@ -21,8 +21,8 @@ google-auth-oauthlib==0.4.4
 google-pasta==0.2.0
 greenlet==1.0.0
 grpcio==1.34.1
-h5py==3.2.1
-idna==2.10
+h5py==3.1.0
+idna==3.1
 ipykernel==5.5.3
 ipython==7.22.0
 ipython-genutils==0.2.0
@@ -49,7 +49,7 @@ nbconvert==6.0.7
 nbformat==5.1.3
 nest-asyncio==1.5.1
 notebook==6.3.0
-numpy==1.19.5
+numpy==1.20.2
 oauthlib==3.1.0
 opt-einsum==3.3.0
 packaging==20.9
@@ -79,13 +79,13 @@ requests==2.25.1
 requests-oauthlib==1.3.0
 retrying==1.3.3
 rsa==4.7.2
-scikit-learn==0.24.1
+scikit-learn==0.24.2
 scipy==1.6.3
 seaborn==0.11.1
 Send2Trash==1.5.0
 six==1.15.0
 sklearn==0.0
-SQLAlchemy==1.4.11
+SQLAlchemy==1.4.12
 tensorboard==2.5.0
 tensorboard-data-server==0.6.0
 tensorboard-plugin-wit==1.8.0
