@@ -23,7 +23,7 @@ greenlet==1.0.0
 grpcio==1.37.1
 h5py==3.2.1
 idna==3.1
-ipykernel==5.5.3
+ipykernel==5.5.4
 ipython==7.23.0
 ipython-genutils==0.2.0
 ipywidgets==7.6.3
