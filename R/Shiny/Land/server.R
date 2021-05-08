@@ -6,7 +6,7 @@ library(scales)
 
 con <- RODBC::odbcDriverConnect(
   "Driver={SQL Server Native Client 11.0};
-    Server=localhost;
+    Server=TITANIUM-BOOK;
     Database=DataDashboard;
     Trusted_Connection=Yes"
 )
@@ -26,10 +26,10 @@ server <- function(input, output, session) {
   df <- rename(df, Measure_Name = "Measure Name")
 
   # Order data by County ascending
-  df <- df[order(df$County), ]
+  df <- df[order(df$County),]
 
   # Order data by State ascending
-  df <- df[order(df$State), ]
+  df <- df[order(df$State),]
 
   # Convert date column to datetime
   df$Date <- as.Date(df$Date,

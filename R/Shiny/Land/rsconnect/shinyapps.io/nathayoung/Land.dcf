@@ -5,8 +5,7 @@ account: nathayoung
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 3873603
-bundleId: 4410972
+bundleId: 4572816
 url: https://nathayoung.shinyapps.io/Land/
-when: 1617097605.80248
-asMultiple: FALSE
-asStatic: FALSE
+when: 1620443733.8108
+lastSyncTime: 1620443733.8108

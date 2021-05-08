@@ -7,7 +7,7 @@ library(tidyverse)
 
 con <- RODBC::odbcDriverConnect(
     "Driver={SQL Server Native Client 11.0};
-    Server=localhost;
+    Server=TITANIUM-BOOK;
     Database=DataDashboard;
     Trusted_Connection=Yes"
 
