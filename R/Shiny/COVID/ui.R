@@ -28,6 +28,7 @@ fluidPage(
 # print plot in main panel
     mainPanel(
       plotlyOutput(outputId = "covid_plotly"),
+      p("This project has become too large for ShinyApps.io and thus will no longer be updated, though data will still be collected."),
       p("COVID Cases and Deaths updates every day around 5pm EST."),
       p("Source: ",
         a("NY Times",
