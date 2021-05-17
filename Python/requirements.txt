@@ -14,7 +14,7 @@ click-plugins==1.1.1
 cligj==0.7.1
 colorama==0.4.4
 cycler==0.10.0
-decorator==5.0.7
+decorator==5.0.9
 defusedxml==0.7.1
 entrypoints==0.3
 Fiona @ https://download.lfd.uci.edu/pythonlibs/w4tscw6k/Fiona-1.8.19-cp39-cp39-win_amd64.whl
