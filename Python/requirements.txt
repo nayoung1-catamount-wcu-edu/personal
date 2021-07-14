@@ -75,7 +75,7 @@ pyodbc==4.0.31
 pyparsing==2.4.7
 pyproj==3.1.0
 pyrsistent==0.18.0
-python-dateutil==2.8.1
+python-dateutil==2.8.2
 pytz==2021.1
 pywin32==301
 pywinpty==1.1.3
