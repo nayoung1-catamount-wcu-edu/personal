@@ -23,7 +23,7 @@ google-auth==1.33.1
 google-auth-oauthlib==0.4.4
 google-pasta==0.2.0
 greenlet==1.1.0
-grpcio==1.38.1
+grpcio==1.39.0
 h5py==3.3.0
 idna==3.2
 ipykernel==6.0.3
