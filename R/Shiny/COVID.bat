@@ -1,3 +1,6 @@
+git fetch
+git pull
+
 cd COVID\Data\covid-19-data
 
 git fetch
