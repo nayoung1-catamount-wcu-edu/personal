@@ -9,3 +9,5 @@ updates:
     directory: "/Python/" # Location of package manifests
     schedule:
       interval: "daily"
+    labels:
+     - "Python"
