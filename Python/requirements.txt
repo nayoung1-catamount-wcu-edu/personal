@@ -9,7 +9,7 @@ cachetools==4.2.4
 certifi==2021.10.8
 cffi==1.14.6
 chardet==4.0.0
-click==8.0.1
+click==8.0.3
 click-plugins==1.1.1
 cligj==0.7.2
 colorama==0.4.4
