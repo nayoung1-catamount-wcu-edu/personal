@@ -5,7 +5,7 @@ account: nathayoung
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 3234280
-bundleId: 5170954
+bundleId: 5171693
 url: https://nathayoung.shinyapps.io/COVID/
-when: 1635041146.56838
-lastSyncTime: 1635041146.56838
+when: 1635079319.27019
+lastSyncTime: 1635079319.27019
