@@ -66,7 +66,7 @@ Pillow==8.4.0
 plotly==5.3.1
 prometheus-client==0.11.0
 prompt-toolkit==3.0.21
-protobuf==3.19.0
+protobuf==3.19.1
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
 pycparser==2.20
