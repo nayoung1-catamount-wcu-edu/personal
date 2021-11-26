@@ -10,7 +10,7 @@ cd..
 cd..
 cd..
 
-"C:\Program Files\R\R-4.1.1\bin\R.exe" -e rsconnect::deployApp('C:/Users/natha/OneDrive/Desktop/GitHub/Personal/R/Shiny/COVID')
+"C:\Program Files\R\R-4.1.2\bin\R.exe" -e rsconnect::deployApp('C:/Users/natha/OneDrive/Desktop/GitHub/Personal/R/Shiny/COVID')
 
 git add *
 git commit -a -m "Updating COVID data for R Shiny App - %date%"
