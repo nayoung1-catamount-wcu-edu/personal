@@ -72,7 +72,7 @@ pyasn1-modules==0.2.8
 pycparser==2.21
 Pygments==2.11.2
 pyodbc==4.0.32
-pyparsing==3.0.6
+pyparsing==3.0.7
 pyproj==3.3.0
 pyrsistent==0.18.1
 python-dateutil==2.8.2
