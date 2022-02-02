@@ -11,3 +11,5 @@ updates:
       interval: "daily"
     labels:
      - "python"
+    assignees:
+     - "nathayoung"
