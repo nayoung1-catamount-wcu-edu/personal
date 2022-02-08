@@ -94,7 +94,7 @@ Shapely==1.8.0
 six==1.16.0
 sklearn==0.0
 SQLAlchemy==1.4.31
-statsmodels==0.13.1
+statsmodels==0.13.2
 tensorboard==2.8.0
 tensorboard-data-server==0.6.1
 tensorboard-plugin-wit==1.8.1
