@@ -111,4 +111,4 @@ wcwidth==0.2.5
 webencodings==0.5.1
 Werkzeug==2.0.3
 widgetsnbextension==3.5.2
-wrapt==1.13.3
+wrapt==1.14.0
