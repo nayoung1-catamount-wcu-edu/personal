@@ -42,7 +42,7 @@ jupyterlab-pygments==0.1.2
 jupyterlab-widgets==1.0.2
 keras-nightly==2.9.0.dev2022031407
 Keras-Preprocessing==1.1.2
-kiwisolver==1.3.2
+kiwisolver==1.4.0
 Markdown==3.3.6
 MarkupSafe==2.1.0
 matplotlib==3.5.1
