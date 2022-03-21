@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "iQ1AlUKb+G6K7KZ7zsQOrfhYWp0lhnHfgwfa2OmIv7UdYLIAfEZDHyprXbu05+2OoCkD5DMBE3weLDELlN2nmg==",
+  "dgSpecHash": "Wo3MdRtFDo7G999ktxwEsbd/o4fYxcP4+XNQrKeMIyIb6R7zFmc8ZQRah2EVAUZXuqfErrmRqcLBHg+AyXlflw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\natha\\OneDrive\\Desktop\\GitHub\\personal\\C#_Scripts\\NumberGuessingGame\\NumberGuessingGame\\NumberGuessingGame.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\natha\\OneDrive\\Desktop\\GitHub\\personal\\C#\\NumberGuessingGame\\NumberGuessingGame\\NumberGuessingGame.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\natha\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.23\\microsoft.netcore.app.host.win-x64.3.1.23.nupkg.sha512",
+    "C:\\Users\\natha\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\natha\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\natha\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+  ],
   "logs": []
 }

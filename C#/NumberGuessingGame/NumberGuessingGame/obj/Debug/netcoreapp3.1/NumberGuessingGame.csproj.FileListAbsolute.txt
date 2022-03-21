@@ -11,3 +11,17 @@ C:\Users\natha\OneDrive\Desktop\GitHub\personal\C#_Scripts\NumberGuessingGame\Nu
 C:\Users\natha\OneDrive\Desktop\GitHub\personal\C#_Scripts\NumberGuessingGame\NumberGuessingGame\obj\Debug\netcoreapp3.1\NumberGuessingGame.dll
 C:\Users\natha\OneDrive\Desktop\GitHub\personal\C#_Scripts\NumberGuessingGame\NumberGuessingGame\obj\Debug\netcoreapp3.1\NumberGuessingGame.pdb
 C:\Users\natha\OneDrive\Desktop\GitHub\personal\C#_Scripts\NumberGuessingGame\NumberGuessingGame\obj\Debug\netcoreapp3.1\NumberGuessingGame.genruntimeconfig.cache
+C:\Users\natha\OneDrive\Desktop\GitHub\personal\C#\NumberGuessingGame\NumberGuessingGame\bin\Debug\netcoreapp3.1\NumberGuessingGame.exe
+C:\Users\natha\OneDrive\Desktop\GitHub\personal\C#\NumberGuessingGame\NumberGuessingGame\bin\Debug\netcoreapp3.1\NumberGuessingGame.deps.json
+C:\Users\natha\OneDrive\Desktop\GitHub\personal\C#\NumberGuessingGame\NumberGuessingGame\bin\Debug\netcoreapp3.1\NumberGuessingGame.runtimeconfig.json
+C:\Users\natha\OneDrive\Desktop\GitHub\personal\C#\NumberGuessingGame\NumberGuessingGame\bin\Debug\netcoreapp3.1\NumberGuessingGame.runtimeconfig.dev.json
+C:\Users\natha\OneDrive\Desktop\GitHub\personal\C#\NumberGuessingGame\NumberGuessingGame\bin\Debug\netcoreapp3.1\NumberGuessingGame.dll
+C:\Users\natha\OneDrive\Desktop\GitHub\personal\C#\NumberGuessingGame\NumberGuessingGame\bin\Debug\netcoreapp3.1\NumberGuessingGame.pdb
+C:\Users\natha\OneDrive\Desktop\GitHub\personal\C#\NumberGuessingGame\NumberGuessingGame\obj\Debug\netcoreapp3.1\NumberGuessingGame.csproj.AssemblyReference.cache
+C:\Users\natha\OneDrive\Desktop\GitHub\personal\C#\NumberGuessingGame\NumberGuessingGame\obj\Debug\netcoreapp3.1\NumberGuessingGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\natha\OneDrive\Desktop\GitHub\personal\C#\NumberGuessingGame\NumberGuessingGame\obj\Debug\netcoreapp3.1\NumberGuessingGame.AssemblyInfoInputs.cache
+C:\Users\natha\OneDrive\Desktop\GitHub\personal\C#\NumberGuessingGame\NumberGuessingGame\obj\Debug\netcoreapp3.1\NumberGuessingGame.AssemblyInfo.cs
+C:\Users\natha\OneDrive\Desktop\GitHub\personal\C#\NumberGuessingGame\NumberGuessingGame\obj\Debug\netcoreapp3.1\NumberGuessingGame.csproj.CoreCompileInputs.cache
+C:\Users\natha\OneDrive\Desktop\GitHub\personal\C#\NumberGuessingGame\NumberGuessingGame\obj\Debug\netcoreapp3.1\NumberGuessingGame.dll
+C:\Users\natha\OneDrive\Desktop\GitHub\personal\C#\NumberGuessingGame\NumberGuessingGame\obj\Debug\netcoreapp3.1\NumberGuessingGame.pdb
+C:\Users\natha\OneDrive\Desktop\GitHub\personal\C#\NumberGuessingGame\NumberGuessingGame\obj\Debug\netcoreapp3.1\NumberGuessingGame.genruntimeconfig.cache
