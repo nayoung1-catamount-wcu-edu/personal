@@ -16,5 +16,3 @@ git add *
 git commit -a -m "Updating COVID data for R Shiny App - %date%"
 
 git push
-
-pause
