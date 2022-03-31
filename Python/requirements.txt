@@ -93,7 +93,7 @@ Send2Trash==1.8.0
 Shapely==1.8.1.post1
 six==1.16.0
 sklearn==0.0
-SQLAlchemy==1.4.32
+SQLAlchemy==1.4.33
 statsmodels==0.13.2
 tensorboard==2.8.0
 tensorboard-data-server==0.6.1
