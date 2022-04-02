@@ -24,6 +24,8 @@ def play(word_choice):
     print("You have", tries, "attempts to guess the word.")
     print(word_completion)
     print("\n")
+    
+    
     while not guessed and tries > 0:
         guess = input("Please guess a letter or word: ").upper()
         if len(guess) == 1 and guess.isalpha():
