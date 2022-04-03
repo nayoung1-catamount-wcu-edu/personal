@@ -2,10 +2,11 @@ import requests
 import random
 import click
 
-word_site = 'https://www.mit.edu/~ecprice/wordlist.10000'
+word_site = "https://www.mit.edu/~ecprice/wordlist.10000"
 
 response = requests.get(word_site)
 words = response.content.decode().splitlines()
+
 
 def get_word():
     word_choice = random.choice(words)
@@ -24,8 +25,7 @@ def play(word_choice):
     print("You have", tries, "attempts to guess the word.")
     print(word_completion)
     print("\n")
-    
-    
+
     while not guessed and tries > 0:
         guess = input("Please guess a letter or word: ").upper()
         if len(guess) == 1 and guess.isalpha():
@@ -59,13 +59,18 @@ def play(word_choice):
             print("Not a valid guess.")
         print("You have", tries, "tries left.")
         print(word_completion)
-        print("\n") 
+        print("\n")
     if guessed:
         wins += 1
         print("Congrats, you guessed the word! You win!")
     else:
         losses += 1
-        print("Sorry, you ran out of tries.  The word was " + word_choice + ". Maybe next time!")
+        print(
+            "Sorry, you ran out of tries.  The word was "
+            + word_choice
+            + ". Maybe next time!"
+        )
+
 
 def main():
     word = get_word()
@@ -74,6 +79,7 @@ def main():
         click.clear()
         word = get_word()
         play(word)
+
 
 if __name__ == "__main__":
     main()
