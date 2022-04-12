@@ -40,7 +40,7 @@ jupyter-console==6.4.3
 jupyter-core==4.9.2
 jupyterlab-pygments==0.2.0
 jupyterlab-widgets==1.1.0
-keras-nightly==2.10.0.dev2022041107
+keras-nightly==2.10.0.dev2022041207
 Keras-Preprocessing==1.1.2
 kiwisolver==1.4.2
 Markdown==3.3.6
