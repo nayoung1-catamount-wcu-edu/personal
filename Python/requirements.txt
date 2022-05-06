@@ -43,7 +43,7 @@ jupyterlab-widgets==1.1.0
 keras-nightly==2.10.0.dev2022050507
 Keras-Preprocessing==1.1.2
 kiwisolver==1.4.2
-Markdown==3.3.6
+Markdown==3.3.7
 MarkupSafe==2.1.1
 matplotlib==3.5.2
 mistune<3.0.0
