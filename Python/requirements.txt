@@ -98,7 +98,7 @@ statsmodels==0.13.2
 tensorboard==2.9.0
 tensorboard-data-server==0.6.1
 tensorboard-plugin-wit==1.8.1
-tensorflow-estimator==2.8.0
+tensorflow-estimator==2.9.0
 termcolor==1.1.0
 terminado==0.13.3
 testpath==0.6.0
