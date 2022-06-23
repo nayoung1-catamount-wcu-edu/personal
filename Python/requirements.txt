@@ -23,7 +23,7 @@ google-auth==2.8.0
 #google-auth-oauthlib==0.5.1
 google-pasta==0.2.0
 greenlet==1.1.2
-grpcio==1.46.3
+grpcio==1.47.0
 h5py==3.7.0
 idna==3.3
 ipykernel==6.15.0
@@ -39,7 +39,7 @@ jupyter-client==7.3.4
 jupyter-console==6.4.3
 jupyter-core==4.10.0
 jupyterlab-pygments==0.2.2
-jupyterlab-widgets==1.1.0
+jupyterlab-widgets==1.1.1
 keras-nightly==2.10.0
 Keras-Preprocessing==1.1.2
 kiwisolver==1.4.3
