@@ -1,9 +1,8 @@
 import os
-
-from black import out
-from numpy import inner
 from getbibleverse import verse_lookup
 import pandas as pd
+from sklearn.model_selection import train_test_split
+import nltk
 
 os.system("cls")
 
@@ -64,7 +63,13 @@ try:
 
         output = pd.concat([output, data], ignore_index=True)
 
-    print(output)
+    for index, row in output.iterrows():
+        if '"' in row['text']:
+            clean_text = row['text'].replace('"', "")
+        
+            verse = clean_text.lower().split(' ')
+            print(verse)
+        # print(set(row['text'].lower().split(' ')))
 
 except Exception:
     raise Exception
