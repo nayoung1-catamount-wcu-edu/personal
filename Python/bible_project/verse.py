@@ -1,8 +1,11 @@
 import os
+
+from textblob import Sentence
 from getbibleverse import verse_lookup
 import pandas as pd
 from sklearn.model_selection import train_test_split
 import nltk
+nltk.download('averaged_perceptron_tagger')
 
 os.system("cls")
 
@@ -64,12 +67,9 @@ try:
         output = pd.concat([output, data], ignore_index=True)
 
     for index, row in output.iterrows():
-        if '"' in row['text']:
-            clean_text = row['text'].replace('"', "")
-        
-            verse = clean_text.lower().split(' ')
-            print(verse)
-        # print(set(row['text'].lower().split(' ')))
+        text = nltk.word_tokenize(row['text'])
+
+        print(nltk.pos_tag(text))
 
 except Exception:
     raise Exception
