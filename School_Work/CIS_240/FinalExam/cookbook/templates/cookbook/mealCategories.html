@@ -1,0 +1,20 @@
+{% extends "cookbook/base.html" %}
+
+{% block content %}
+
+<p>Meal Categories:</p>
+
+<ul>
+  {% for mealCategory in mealCategories %}
+    <li>
+      <a href="{% url 'cookbook:mealCategory' mealCategory.id %}">{{ mealCategory }}</a>
+    </li>
+  {% empty %}
+    <li>No meal categories have been added yet.</li>
+  {% endfor %}
+
+</ul>
+
+<a href="{% url 'cookbook:new_mealCategory' %}">Add a new meal category:</a>
+
+{% endblock content %}

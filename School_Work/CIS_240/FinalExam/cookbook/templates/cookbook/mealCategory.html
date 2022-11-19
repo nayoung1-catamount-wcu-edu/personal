@@ -1,0 +1,23 @@
+{% extends 'cookbook/base.html' %}
+
+{% block content %}
+
+<p>Meal Category: {{ mealCategory }}</p>
+
+<p>Recipe:</p>
+<ul>
+{% for recipe in recipes %}
+  <li>
+    <p>{{ recipe.dateAdded|date:'M d, Y H:i' }}</p>
+    <p>{{ recipe.MealCategory|linebreaks }}</p>
+    <p>{{ recipe.recipeName|linebreaks }}</p>
+    <p>{{ recipe.ingredients|linebreaks }}</p>
+  </li>
+{% empty %}
+  <li>
+    There are no recipes for this meal category yet.
+  </li>
+{% endfor %}
+</ul>
+
+{% endblock content %}

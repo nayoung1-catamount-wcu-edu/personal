@@ -1,0 +1,10 @@
+{% extends "cookbook/base.html" %}
+
+{% block content %}
+  <p>Add a new Meal Category:</p>
+    <form action="{% url 'cookbook:new_mealCategory' %}" method='post'>
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button name= "submit">add Meal Category</button>
+    </form>
+{% endblock content %}

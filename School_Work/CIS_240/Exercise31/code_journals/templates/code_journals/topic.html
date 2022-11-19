@@ -1,0 +1,28 @@
+{% extends 'code_journals/base.html' %}
+
+{% block content %}
+
+  <p>
+    <a href="{% url 'code_journals:new_entry' topic.id %}">add new entry</a>
+  </p>
+
+{% for entry in entries %}
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3>
+        {{ entry.date_added|date:'M d, Y H:i' }}
+        <small>
+          <a href="{% url 'code_journals:edit_entry' entry.id %}">edit entry</a>
+        </small>
+      </h3>
+      <div class="panel-body">
+        {{ entry.text|linebreaks }}
+      </div>
+  </div><!-- panel -->
+
+{% empty %}
+    There are not entries for this topic yet.
+{% endfor %}  
+
+
+{% endblock content %}

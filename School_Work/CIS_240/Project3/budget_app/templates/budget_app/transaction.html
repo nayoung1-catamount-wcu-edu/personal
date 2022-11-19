@@ -1,0 +1,24 @@
+{% extends 'budget_app/base.html' %}
+
+{% block content %}
+
+<p>Transaction: {{ transaction }}</p>
+
+<p>Entries:</p>
+<ul>
+{% for entry in entries %}
+  <li>
+    <p>{{ entry.date_added|date:'M d, Y H:i' }}</p>
+    <p>{{ entry.merchant|linebreaks }}</p>
+    <p>{{ entry.transaction|linebreaks }}</p>
+    <p>{{ entry.transaction_amount|linebreaks }}</p>
+    <p>{{ entry.description|linebreaks }}</p>
+  </li>
+{% empty %}
+  <li>
+    There are no entries for this transaction yet.
+  </li>
+{% endfor %}
+</ul>
+
+{% endblock content %}

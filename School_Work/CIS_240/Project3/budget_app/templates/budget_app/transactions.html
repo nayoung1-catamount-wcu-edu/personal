@@ -1,0 +1,20 @@
+{% extends "budget_app/base.html" %}
+
+{% block content %}
+
+<p>Transactions</p>
+
+<ul>
+  {% for transaction in transactions %}
+    <li>
+      <a href="{% url 'budget_app:transaction' transaction.id %}">{{ transaction }}</a>
+    </li>
+  {% empty %}
+    <li>No transactions have been added yet.</li>
+  {% endfor %}
+
+</ul>
+
+<a href="{% url 'budget_app:new_transaction' %}">Add a new transaction:</a>
+
+{% endblock content %}

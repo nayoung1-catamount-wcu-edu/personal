@@ -1,0 +1,126 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../static/css/new-styles.css">
+        <style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+        </style>
+        <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../static/css/new-styles.css">
+        <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../static/css/new-styles.css">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+    <body>
+            <body class="studentroster-style"></body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Grade Center</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>CIS 240 - Grade Center</h1>
+        <p>Computer Information Systems Exercise</p>
+      </div>
+    </div>
+
+    <div class="container">
+    <div class="page-header">
+        <h1>{{ Pageheader }}</h1>
+        <h2>All Grades</h2>
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+          <div class="row">
+              <div class="col-md-12">
+                  <table class="table table-striped"
+                      <thead>
+                      <tr>
+                          <th>Grade ID</th>
+                          <th>Grade</th>  
+                          <th>Exercise Name</th>
+                          <th>Exercise Due Date</th>
+                      </tr>
+                      </thead>
+                     <tbody>
+                        {% for grade in grades %}
+                        <tr>
+                            <td>{{ grade.gradeID }}</td>
+                            <td>{{ grade.grade }}</td>
+                            <td>{{ grade.exerciseName }}</td>
+                            <td>{{ grade.exerciseDueDate }}</td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+              </div>
+            </div>
+      </div>
+
+      <div class="page-header">
+        <h1>Add a Student</h1>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8">
+            <form method="POST">
+                <div class="form-group">
+                    <label>Grade ID</label>
+                    <input type="number" class="form-control" placeholder="Grade ID" name="gradeID" required>
+                </div>
+                <div class="form-group">
+                    <label>Grade</label>
+                    <input type="text" class="form-control" placeholder="Grade" name="grade" required>
+                </div>
+                <div class="form-group">
+                    <label>Exercise Name</label>
+                    <input type="text" class="form-control" placeholder="Exercise Name" name="exerciseName" required>
+                </div>
+                <div class="form-group">
+                    <label>Due Date</label>
+                    <input type="text" class="form-control" placeholder="Due Date" name="exerciseDueDate">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            </div>
+        </div>
+
+        <hr>
+        <footer>
+            <p>&copy; 2018</p>
+        </footer>
+    </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+        <script src="../static/css/bootstrap.min.css"></script>
+        <script src="../static/css/new-styles.css"></script>
+        
+        <script src="../static/css/new-styles.css"></script>
+    </body>
+</html>
