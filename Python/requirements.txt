@@ -40,7 +40,7 @@ google-pasta==0.2.0
 greenlet==1.1.2
 grpcio==1.46.1
 h5py==3.6.0
-idna==3.3
+idna==3.4
 imageio==2.21.1
 iniconfig==1.1.1
 ipykernel==6.15.2
