@@ -134,7 +134,7 @@ SQLAlchemy==1.4.36
 stack-data==0.2.0
 statsmodels==0.13.2
 tableau-api-lib==0.1.38
-tenacity==8.0.1
+tenacity==8.1.0
 tensorboard==2.9.0
 tensorboard-data-server==0.6.1
 tensorboard-plugin-wit==1.8.1
