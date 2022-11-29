@@ -2,7 +2,7 @@ absl-py==1.0.0
 argon2-cffi==21.3.0
 argon2-cffi-bindings==21.2.0
 astroid==2.11.5
-asttokens==2.0.5
+asttokens==2.2.0
 astunparse==1.6.3
 async-generator==1.10
 atomicwrites==1.4.1
