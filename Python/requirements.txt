@@ -150,7 +150,7 @@ tornado==6.1
 traitlets==5.2.0
 typeguard==2.13.3
 typing_extensions==4.2.0
-urllib3==1.26.9
+urllib3==1.26.13
 wcwidth==0.2.5
 webencodings==0.5.1
 Werkzeug==2.2.2
