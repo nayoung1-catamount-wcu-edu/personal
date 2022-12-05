@@ -106,7 +106,7 @@ Pygments==2.13.0
 pylint==2.15.7
 pyodbc==4.0.32
 pyparsing==3.0.9
-pyproj==3.3.1
+pyproj==3.4.0
 pyrsistent==0.18.1
 pytest==7.2.0
 python-dateutil==2.8.2
