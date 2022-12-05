@@ -13,7 +13,7 @@ black==22.10.0
 bleach==5.0.0
 cachetools==5.0.0
 certifi==2021.10.8
-cffi==1.15.0
+cffi==1.15.1
 chardet==4.0.0
 charset-normalizer==2.0.12
 chart-studio==1.1.0
