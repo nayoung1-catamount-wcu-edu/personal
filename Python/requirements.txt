@@ -14,7 +14,7 @@ bleach==5.0.0
 cachetools==5.0.0
 certifi==2021.10.8
 cffi==1.15.1
-chardet==4.0.0
+chardet==5.1.0
 charset-normalizer==2.0.12
 chart-studio==1.1.0
 click==8.1.3
