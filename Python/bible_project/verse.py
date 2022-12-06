@@ -1,11 +1,15 @@
 import os
 
-from textblob import Sentence
 from getbibleverse import verse_lookup
 import pandas as pd
 from sklearn.model_selection import train_test_split
-import nltk
-nltk.download('averaged_perceptron_tagger')
+import spacy
+from spacy.lang.en.stop_words import STOP_WORDS
+from string import punctuation
+from heapq import nlargest
+
+stopwords = list(STOP_WORDS)
+nlp = spacy.load('en_core_web_sm')
 
 os.system("cls")
 
@@ -59,17 +63,54 @@ try:
 
 # Sentiment analysis
     else:
+        print('hi')
         pass
 
     for i in range(len(books)):
         data = pd.json_normalize(verse_lookup(book=books[i], chapter=chapters[i], verses=verses[i]))
 
         output = pd.concat([output, data], ignore_index=True)
+    
+    text = " ".join(output.text)
 
-    for index, row in output.iterrows():
-        text = nltk.word_tokenize(row['text'])
+    word_frequencies = {}
+    sentence_scores = {}
+    punctuation = punctuation + '\n'
+    doc = nlp(text)
+    
+    tokens = [token.text for token in doc]
 
-        print(nltk.pos_tag(text))
+    for word in doc:
+        word = word.text.lower()
+        if word not in stopwords:
+            if word not in punctuation:
+                if word not in word_frequencies.keys():
+                    word_frequencies[word] = 1
+                else:
+                    word_frequencies[word] += 1
+    
+    max_freq = max(word_frequencies.values())
+    for word in word_frequencies.keys():
+        word_frequencies[word] = word_frequencies[word]/max_freq
+    
+    sentence_tokens = [sent for sent in doc.sents]
+    
+    for sent in sentence_tokens:
+        for word in sent:
+            word = word.text.lower()
+            if word in word_frequencies.keys():
+                if sent not in sentence_scores.keys():
+                    sentence_scores[sent] = word_frequencies[word]
+                else:
+                    sentence_scores[sent] += word_frequencies[word]
+
+    select_length = int(len(sentence_tokens)*0.3)
+    summary = nlargest(select_length, sentence_scores, key = sentence_scores.get)
+
+    final_summary = [word.text for word in summary]
+    summary = ' '.join(final_summary)
+
+    print(summary)
 
 except Exception:
     raise Exception
