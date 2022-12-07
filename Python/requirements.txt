@@ -31,7 +31,7 @@ et-xmlfile==1.1.0
 executing==1.2.0
 fastjsonschema==2.15.3
 Flask==2.2.2
-flatbuffers==22.11.23
+flatbuffers==22.12.6
 fonttools==4.38.0
 gast==0.5.3
 google-auth==2.6.6
