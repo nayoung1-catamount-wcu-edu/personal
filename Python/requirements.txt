@@ -79,7 +79,7 @@ networkx==2.8.8
 notebook==6.5.2
 numpy==1.23.5
 nums-from-string==0.1.2
-oauthlib==3.2.1
+oauthlib==3.2.2
 openpyxl==3.0.9
 opt-einsum==3.3.0
 packaging==21.3
