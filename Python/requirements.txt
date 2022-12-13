@@ -47,7 +47,7 @@ ipykernel==6.15.2
 ipython==8.4.0
 ipython-genutils==0.2.0
 ipywidgets==7.7.0
-isort==5.10.1
+isort==5.11.2
 itsdangerous==2.1.2
 jedi==0.18.2
 Jinja2==3.1.2
