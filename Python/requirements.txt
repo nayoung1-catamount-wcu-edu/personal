@@ -143,7 +143,7 @@ termcolor==2.1.1
 terminado==0.17.1
 testpath==0.6.0
 threadpoolctl==3.1.0
-tifffile==2022.8.12
+tifffile==2022.10.10
 tinycss2==1.1.1
 tomli==2.0.1
 tornado==6.2
