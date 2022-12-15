@@ -90,7 +90,7 @@ pathspec==0.10.2
 patsy==0.5.2
 pickleshare==0.7.5
 Pillow==9.3.0
-platformdirs==2.5.4
+platformdirs==2.6.0
 plotly==5.8.0
 pluggy==1.0.0
 prometheus-client==0.14.1
