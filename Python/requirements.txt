@@ -132,7 +132,7 @@ sklearn==0.0.post1
 soupsieve==2.3.2.post1
 SQLAlchemy==1.4.45
 stack-data==0.6.2
-statsmodels==0.13.2
+statsmodels==0.13.5
 tableau-api-lib==0.1.50
 tenacity==8.1.0
 tensorboard==2.11.0
