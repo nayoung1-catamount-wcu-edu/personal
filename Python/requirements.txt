@@ -51,7 +51,7 @@ jupyterlab-pygments==0.2.2
 jupyterlab-widgets==3.0.3
 =======
 jupyterlab-widgets==3.0.5
-keras-nightly==2.12.0.dev2022123008
+keras-nightly==2.12.0.dev2023010108
 Keras-Preprocessing==1.1.2
 >>>>>>> 4cab6c86d73d7352e75fa977b4c2a48f2da367ed
 kiwisolver==1.4.4
