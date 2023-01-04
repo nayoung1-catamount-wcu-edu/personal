@@ -21,10 +21,10 @@ bible_books = [
     "Job",
     "Psalms",
     "Proverb",
-    "Ecclesiaste",
-    "Song of Solomo",
+    "Ecclesiastes",
+    "Song of Solomon",
     "Isaia",
-    "Jeremia",
+    "Jeremiah",
     "Lamentations",
     "Ezekiel",
     "Daniel",
@@ -72,12 +72,13 @@ bible_books = [
 
 def verse_lookup(book, chapter, verses):
 
-    try:
+    if book not in bible_books:
+        return print("Cannot find that book.")
+
+    else:
         url = "https://labs.bible.org/api?passage="
         payload = "{}+{}:{}&type=json".format(book, chapter, verses)
 
         verse = requests.get(url + payload).json()
-        return verse
 
-    except ValueError:
-        print("that failed")
+        return verse
