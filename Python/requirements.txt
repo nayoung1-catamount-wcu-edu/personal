@@ -116,7 +116,7 @@ sniffio==1.3.0
 soupsieve==2.3.2.post1
 spacy==3.4.3
 spacy-legacy==3.0.10
-spacy-loggers==1.0.3
+spacy-loggers==1.0.4
 SQLAlchemy==1.4.44
 srsly==2.4.5
 stack-data==0.6.1
