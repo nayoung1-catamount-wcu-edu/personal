@@ -29,7 +29,7 @@ executing==1.2.0
 fastjsonschema==2.16.2
 fonttools==4.38.0
 google-auth==2.15.0
-google-auth-oauthlib==0.4.6
+google-auth-oauthlib==0.8.0
 greenlet==2.0.1
 grpcio==1.51.1
 idna==3.4
