@@ -132,7 +132,7 @@ tinycss2==1.2.1
 tomli==2.0.1
 torch==1.13.1
 torchaudio==0.13.0
-torchvision==0.14.0
+torchvision==0.14.1
 tornado==6.2
 tqdm==4.64.1
 traitlets==5.9.0
