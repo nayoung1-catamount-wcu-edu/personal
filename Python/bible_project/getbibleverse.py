@@ -20,10 +20,10 @@ bible_books = [
     "Esther",
     "Job",
     "Psalms",
-    "Proverb",
+    "Proverbs",
     "Ecclesiastes",
     "Song of Solomon",
-    "Isaia",
+    "Isaiah",
     "Jeremiah",
     "Lamentations",
     "Ezekiel",
@@ -73,7 +73,7 @@ bible_books = [
 def verse_lookup(book, chapter, verses):
 
     if book not in bible_books:
-        return print("Cannot find that book.")
+        return print("Cannot find {} in book list.".format(book))
 
     else:
         url = "https://labs.bible.org/api?passage="
