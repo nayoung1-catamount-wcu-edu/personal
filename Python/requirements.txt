@@ -9,7 +9,7 @@ attrs==22.1.0
 backcall==0.2.0
 beautifulsoup4==4.11.1
 black==22.12.0
-bleach==5.0.1
+bleach==6.0.0
 blis==0.7.9
 cachetools==5.2.1
 catalogue==2.0.8
