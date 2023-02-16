@@ -7,7 +7,7 @@ astroid==2.13.5
 asttokens==2.2.1
 attrs==22.1.0
 backcall==0.2.0
-beautifulsoup4==4.11.1
+beautifulsoup4==4.11.2
 black==22.12.0
 bleach==6.0.0
 blis==0.7.9
