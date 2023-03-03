@@ -36,7 +36,7 @@ fqdn==1.5.1
 google-auth==2.16.1
 google-auth-oauthlib==0.4.6
 greenlet==2.0.1
-grpcio==1.51.1
+grpcio==1.51.3
 idna==3.4
 ipykernel==6.21.2
 ipython==8.10.0
