@@ -71,7 +71,7 @@ mccabe==0.7.0
 mistune==2.0.5
 murmurhash==1.0.9
 mypy-extensions==1.0.0
-nbclassic==0.5.1
+nbclassic==0.5.5
 nbclient==0.7.3
 nbconvert==7.2.7
 nbformat==5.8.0
