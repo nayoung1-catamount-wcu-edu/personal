@@ -133,7 +133,7 @@ soupsieve==2.4
 spacy==3.5.2
 spacy-legacy==3.0.12
 spacy-loggers==1.0.4
-SQLAlchemy==2.0.6
+SQLAlchemy==2.0.9
 srsly==2.4.6
 stack-data==0.6.1
 tenacity==8.1.0
