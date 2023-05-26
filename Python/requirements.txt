@@ -92,7 +92,7 @@ Pillow==9.5.0
 platformdirs==3.5.1
 plotly==5.14.1
 preshed==3.0.8
-prometheus-client==0.16.0
+prometheus-client==0.17.0
 prompt-toolkit==3.0.38
 protobuf==4.23.1
 psutil==5.9.5
