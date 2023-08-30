@@ -16,7 +16,7 @@ catalogue==2.0.9
 certifi==2023.7.22
 cffi==1.15.1
 charset-normalizer==3.1.0
-click==8.1.6
+click==8.1.7
 colorama==0.4.6
 comm==0.1.4
 confection==0.1.1
