@@ -69,7 +69,7 @@ matplotlib==3.7.2
 matplotlib-inline==0.1.6
 mccabe==0.7.0
 mistune==3.0.1
-murmurhash==1.0.9
+murmurhash==1.0.10
 mypy-extensions==1.0.0
 nbclassic==1.0.0
 nbclient==0.8.0
