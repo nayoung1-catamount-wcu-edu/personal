@@ -13,22 +13,32 @@ rocket_launch = get_results(rocket_launch_data_url)
 
 rocket_launch_data = pd.DataFrame(rocket_launch).reset_index().drop("index", axis=1)
 
-rocket_launch_data["date"] = rocket_launch_data["date"].astype(str)
-rocket_launch_data["time"] = rocket_launch_data["time"].astype(str)
+rocket_launch_data['key'] = rocket_launch_data.index
 
-print(tabulate(rocket_launch_data, headers='keys', tablefmt='fancy_grid'))
+rocket_launch_data["Launch Date"] = rocket_launch_data["Launch Date"].astype(str)
+rocket_launch_data["Launch Time"] = rocket_launch_data["Launch Time"].astype(str)
+
+weather_data = pd.DataFrame()
 
 for i in rocket_launch_data.index:
     weather = get_weather(
         weather_url,
-        rocket_launch_data["pad.latitude"][i],
-        rocket_launch_data["pad.longitude"][i],
-        (rocket_launch_data["date"][i]),
-        (rocket_launch_data["time"][i]),
+        rocket_launch_data["Latitude"][i],
+        rocket_launch_data["Longitude"][i],
+        (rocket_launch_data["Launch Date"][i]),
+        (rocket_launch_data["Launch Time"][i]),
     )
 
-    print(
-        "\nWeather for {}:\n".format(rocket_launch_data.name[i]),
-        tabulate(weather, headers="keys", tablefmt="fancy_grid"),
-        sep="",
-    )
+    weather["key"] = i
+
+    weather_data = pd.concat([weather_data, weather])
+
+launch_data = pd.merge(rocket_launch_data, weather_data, how="left", on="key")
+
+launch_data = launch_data.drop(columns=["key"], axis=1)
+
+print(
+    "Weather Data for Next {} Rocket Launches in the USA\n\n".format(launch_data.shape[0]),
+    tabulate(launch_data, headers="keys", tablefmt="fancy_grid"),
+    sep="",
+)

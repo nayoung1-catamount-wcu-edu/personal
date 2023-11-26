@@ -24,6 +24,8 @@ def get_results(url):
 
     data = pd.json_normalize(clean_data["results"])
 
+    data = data[data["pad.location.name"].str.contains("USA")]
+
     data["window_start"] = pd.to_datetime(data["window_start"]).dt.round("60min")
     data["date"] = data["window_start"].dt.date
     data["time"] = data["window_start"].dt.time
@@ -44,12 +46,26 @@ def get_results(url):
 
     data = data[columns_to_keep]
 
-    data = data[data['pad.location.name'].str.contains('USA')]
+    data = data.rename(
+        columns={
+            "name": "Launch Name",
+            "status.name": "Status",
+            "launch_service_provider.name": "Launch Service Provider",
+            "rocket.configuration.name": "Configuration",
+            "mission.name": "Mission",
+            "pad.name": "Launch Pad",
+            "pad.latitude": "Latitude",
+            "pad.longitude": "Longitude",
+            "pad.location.name": "Location",
+            "date": "Launch Date",
+            "time": "Launch Time",
+        }
+    )
 
     return data
 
 
 # %%
-# get_results(base_url)
+#get_results(base_url)
 
 # %%

@@ -35,13 +35,23 @@ def get_weather(base_url, lat, lon, dt, tm):
     periods = pd.json_normalize(properties_json["properties"])
     periods_data = pd.json_normalize(periods["periods"][0])
 
+    periods_data = periods_data[periods_data["startTime"].str.contains(str(day_filter))]
+
+    periods_data = periods_data[
+        periods_data["startTime"].str.contains(str(time_filter))
+    ]
+
+    periods_data["Temperature"] = periods_data[
+        ["temperature", "temperatureUnit"]
+    ].apply(lambda row: " ".join(row.values.astype(str)), axis=1)
+
+    periods_data["Wind"] = periods_data[["windSpeed", "windDirection"]].apply(
+        lambda row: " ".join(row.values.astype(str)), axis=1
+    )
+
     columns_to_keep = [
-        "startTime",
-        "endTime",
-        "temperature",
-        "temperatureUnit",
-        "windSpeed",
-        "windDirection",
+        "Temperature",
+        "Wind",
         "shortForecast",
         "probabilityOfPrecipitation.value",
         "dewpoint.value",
@@ -49,8 +59,14 @@ def get_weather(base_url, lat, lon, dt, tm):
     ]
     periods_data = periods_data[columns_to_keep]
 
-    periods_data = periods_data[periods_data['startTime'].str.contains(str(day_filter))]
-    periods_data = periods_data[periods_data['startTime'].str.contains(str(time_filter))]
+    periods_data = periods_data.rename(
+        columns={
+            "shortForecast": "Forecast",
+            "probabilityOfPrecipitation.value": "Chance of Precipitation",
+            "dewpoint.value": "Dewpoint",
+            "relativeHumidity.value": "Humidity",
+        }
+    )
 
     return periods_data
 
