@@ -135,7 +135,7 @@ spacy-legacy==3.0.12
 spacy-loggers==1.0.4
 SQLAlchemy==2.0.21
 srsly==2.4.7
-stack-data==0.6.1
+stack-data==0.6.3
 tenacity==8.2.2
 tensorboard==2.14.0
 tensorboard-data-server==0.7.2
