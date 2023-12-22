@@ -35,7 +35,7 @@ fonttools==4.46.0
 fqdn==1.5.1
 google-auth==2.25.2
 google-auth-oauthlib==1.0.0
-greenlet==2.0.2
+greenlet==3.0.3
 idna==3.6
 grpcio==1.60.0
 ipykernel==6.25.1
