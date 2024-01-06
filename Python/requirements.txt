@@ -137,7 +137,7 @@ SQLAlchemy==2.0.21
 srsly==2.4.8
 stack-data==0.6.3
 tenacity==8.2.3
-tensorboard==2.14.0
+tensorboard==2.15.1
 tensorboard-data-server==0.7.2
 tensorboard-plugin-wit==1.8.1
 terminado==0.18.0
