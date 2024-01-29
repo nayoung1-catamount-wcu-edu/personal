@@ -55,7 +55,7 @@ jupyter-events==0.6.3
 jupyter_client==8.6.0
 jupyter_core==5.7.1
 jupyter_server==2.12.1
-jupyter_server_terminals==0.4.4
+jupyter_server_terminals==0.5.2
 jupyterlab-pygments==0.3.0
 jupyterlab-widgets==3.0.7
 keras-nightly==2.15.0.dev2023092207
