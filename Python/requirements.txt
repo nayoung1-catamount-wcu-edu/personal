@@ -141,7 +141,7 @@ tensorboard==2.15.1
 tensorboard-data-server==0.7.2
 tensorboard-plugin-wit==1.8.1
 terminado==0.18.0
-textblob==0.17.1
+textblob==0.18.0.post0
 thinc==8.2.2
 threadpoolctl==3.2.0
 tinycss2==1.2.1
