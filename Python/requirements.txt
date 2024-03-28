@@ -65,7 +65,7 @@ langcodes==3.3.0
 lazy-object-proxy==1.10.0
 Markdown==3.6
 MarkupSafe==2.1.5
-matplotlib==3.8.2
+matplotlib==3.8.3
 matplotlib-inline==0.1.6
 mccabe==0.7.0
 mistune==3.0.2
