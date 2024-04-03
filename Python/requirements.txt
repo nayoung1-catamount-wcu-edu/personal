@@ -99,7 +99,7 @@ psutil==5.9.8
 pure-eval==0.2.2
 pyasn1==0.6.0
 pyasn1-modules==0.4.0
-pycparser==2.21
+pycparser==2.22
 pydantic==2.6.4
 Pygments==2.17.2
 pylint==3.1.0
