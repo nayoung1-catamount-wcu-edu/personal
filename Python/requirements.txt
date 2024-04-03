@@ -98,7 +98,7 @@ protobuf==5.26.0
 psutil==5.9.8
 pure-eval==0.2.2
 pyasn1==0.6.0
-pyasn1-modules==0.3.0
+pyasn1-modules==0.4.0
 pycparser==2.21
 pydantic==2.6.4
 Pygments==2.17.2
