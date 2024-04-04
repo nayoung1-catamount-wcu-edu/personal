@@ -94,7 +94,7 @@ plotly==5.20.0
 preshed==3.0.9
 prometheus-client==0.20.0
 prompt-toolkit==3.0.43
-protobuf==5.26.0
+protobuf==5.26.1
 psutil==5.9.8
 pure-eval==0.2.2
 pyasn1==0.6.0
