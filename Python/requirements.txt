@@ -84,7 +84,7 @@ oauthlib==3.2.2
 packaging==24.0
 pandas==2.2.1
 pandocfilters==1.5.1
-parso==0.8.3
+parso==0.8.4
 pathspec==0.12.1
 pathy==0.11.0
 pickleshare==0.7.5
