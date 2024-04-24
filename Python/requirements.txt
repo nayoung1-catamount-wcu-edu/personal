@@ -61,7 +61,7 @@ jupyterlab-widgets==3.0.10
 keras-nightly==3.2.1.dev2024041603
 Keras-Preprocessing==1.1.2
 kiwisolver==1.4.5
-langcodes==3.3.0
+langcodes==3.4.0
 lazy-object-proxy==1.10.0
 Markdown==3.6
 MarkupSafe==2.1.5
