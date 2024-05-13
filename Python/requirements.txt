@@ -136,7 +136,7 @@ spacy-loggers==1.0.5
 SQLAlchemy==2.0.29
 srsly==2.4.8
 stack-data==0.6.3
-tenacity==8.2.3
+tenacity==8.3.0
 tensorboard==2.16.2
 tensorboard-data-server==0.7.2
 tensorboard-plugin-wit==1.8.1
