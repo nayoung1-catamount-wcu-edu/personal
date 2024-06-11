@@ -33,7 +33,7 @@ executing==2.0.1
 fastjsonschema==2.19.1
 fonttools==4.53.0
 fqdn==1.5.1
-google-auth==2.29.0
+google-auth==2.30.0
 google-auth-oauthlib==1.2.0
 greenlet==3.0.3
 idna==3.7
