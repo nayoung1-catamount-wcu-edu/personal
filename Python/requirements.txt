@@ -81,7 +81,7 @@ notebook==7.2.0
 notebook_shim==0.2.4
 numpy==1.26.4
 oauthlib==3.2.2
-packaging==24.0
+packaging==24.1
 pandas==2.2.2
 pandocfilters==1.5.1
 parso==0.8.4
