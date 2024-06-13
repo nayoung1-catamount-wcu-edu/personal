@@ -93,7 +93,7 @@ platformdirs==4.2.2
 plotly==5.22.0
 preshed==3.0.9
 prometheus-client==0.20.0
-prompt-toolkit==3.0.46
+prompt-toolkit==3.0.47
 protobuf==5.27.1
 psutil==5.9.8
 pure-eval==0.2.2
