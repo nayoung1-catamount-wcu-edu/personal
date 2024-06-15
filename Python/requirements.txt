@@ -19,7 +19,7 @@ charset-normalizer==3.3.2
 click==8.1.7
 colorama==0.4.6
 comm==0.2.2
-confection==0.1.4
+confection==0.1.5
 contourpy==1.2.1
 cycler==0.12.1
 cymem==2.0.8
