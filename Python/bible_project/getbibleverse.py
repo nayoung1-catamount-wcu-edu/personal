@@ -1,6 +1,6 @@
 import requests
 
-bible_books = [
+BIBLE_BOOKS = [
     "Genesis",
     "Exodus",
     "Leviticus",
@@ -71,14 +71,36 @@ bible_books = [
 
 
 def verse_lookup(book, chapter, verses):
+    """
+    Look up a verse in the Bible.
 
-    if book not in bible_books:
-        return print("Cannot find {} in book list.".format(book))
+    Parameters:
+    book (str): The book of the Bible.
+    chapter (int): The chapter number.
+    verses (str): The verse numbers.
 
-    else:
-        url = "https://labs.bible.org/api?passage="
-        payload = "{}+{}:{}&type=json".format(book, chapter, verses)
+    Returns:
+    dict: The verse details.
+    """
 
-        verse = requests.get(url + payload).json()
+    # Check if the book is in the list of Bible books
+    if book not in BIBLE_BOOKS:
+        print(f"Cannot find {book} in book list.")
+        return None
 
-        return verse
+    # Define the API URL and payload
+    url = "https://labs.bible.org/api?passage="
+    payload = f"{book}+{chapter}:{verses}&type=json"
+
+    # Make the API request
+    try:
+        response = requests.get(url + payload)
+        response.raise_for_status()
+    except requests.exceptions.RequestException as e:
+        print(f"Request failed: {e}")
+        return None
+
+    # Parse the JSON response
+    verse = response.json()
+
+    return verse
