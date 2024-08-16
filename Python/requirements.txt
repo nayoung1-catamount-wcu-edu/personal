@@ -63,7 +63,7 @@ Keras-Preprocessing==1.1.2
 kiwisolver==1.4.5
 langcodes==3.4.0
 lazy-object-proxy==1.10.0
-Markdown==3.6
+Markdown==3.7
 MarkupSafe==2.1.5
 matplotlib==3.9.2
 matplotlib-inline==0.1.7
