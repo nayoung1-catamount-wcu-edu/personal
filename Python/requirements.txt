@@ -37,7 +37,7 @@ google-auth==2.34.0
 google-auth-oauthlib==1.2.1
 greenlet==3.0.3
 idna==3.7
-grpcio==1.65.4
+grpcio==1.65.5
 ipykernel==6.29.5
 ipython==8.26.0
 ipython-genutils==0.2.0
