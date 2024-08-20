@@ -11,7 +11,7 @@ beautifulsoup4==4.12.3
 black==24.8.0
 bleach==6.1.0
 blis==1.0.0
-cachetools==5.4.0
+cachetools==5.5.0
 catalogue==2.0.10
 certifi==2024.7.4
 cffi==1.17.0
