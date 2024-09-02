@@ -58,7 +58,7 @@ jupyter_server==2.14.2
 jupyter_server_terminals==0.5.3
 jupyterlab-pygments==0.3.0
 jupyterlab-widgets==3.0.13
-keras-nightly==3.5.0.dev2024082503
+keras-nightly==3.5.0.dev2024090203
 Keras-Preprocessing==1.1.2
 kiwisolver==1.4.5
 langcodes==3.4.0
