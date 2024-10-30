@@ -90,7 +90,7 @@ pathy==0.11.0
 pickleshare==0.7.5
 Pillow==11.0.0
 platformdirs==4.3.6
-plotly==5.23.0
+plotly==5.24.1
 preshed==3.0.9
 prometheus-client==0.21.0
 prompt-toolkit==3.0.48
