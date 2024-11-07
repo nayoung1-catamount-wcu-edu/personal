@@ -103,7 +103,7 @@ pycparser==2.22
 pydantic==2.9.2
 Pygments==2.18.0
 pylint==3.3.1
-pyodbc==5.1.0
+pyodbc==5.2.0
 pyparsing==3.1.4
 pyrsistent==0.20.0
 python-dateutil==2.9.0.post0
