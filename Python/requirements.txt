@@ -13,7 +13,7 @@ bleach==6.2.0
 blis==1.0.1
 cachetools==5.5.0
 catalogue==2.0.10
-certifi==2024.8.30
+certifi==2024.12.14
 cffi==1.17.1
 charset-normalizer==3.4.0
 click==8.1.7
