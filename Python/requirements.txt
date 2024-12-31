@@ -95,7 +95,7 @@ preshed==3.0.9
 prometheus-client==0.21.0
 prompt-toolkit==3.0.48
 protobuf==5.29.2
-psutil==6.1.0
+psutil==6.1.1
 pure-eval==0.2.3
 pyasn1==0.6.1
 pyasn1-modules==0.4.1
