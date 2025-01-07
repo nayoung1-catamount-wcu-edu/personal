@@ -104,7 +104,7 @@ pydantic==2.10.4
 Pygments==2.18.0
 pylint==3.3.3
 pyodbc==5.2.0
-pyparsing==3.2.0
+pyparsing==3.2.1
 pyrsistent==0.20.0
 python-dateutil==2.9.0.post0
 python-json-logger==3.2.1
