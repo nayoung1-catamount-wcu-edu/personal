@@ -112,7 +112,7 @@ pytz==2024.2
 pywin32==308
 pywinpty==2.0.14
 PyYAML==6.0.2
-pyzmq==26.2.0
+pyzmq==26.2.1
 qtconsole==5.6.1
 QtPy==2.4.2
 regex==2024.11.6
